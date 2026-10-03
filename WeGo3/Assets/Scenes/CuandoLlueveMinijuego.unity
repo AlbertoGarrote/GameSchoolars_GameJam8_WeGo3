@@ -1824,7 +1824,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1423023444}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: cambiarCondicion
+        m_MethodName: CambiarEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
