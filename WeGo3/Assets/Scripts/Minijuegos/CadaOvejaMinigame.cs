@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CadaOvejaMinigame : MonoBehaviour
 {
@@ -13,15 +15,28 @@ public class CadaOvejaMinigame : MonoBehaviour
 
     public GameObject botonContinuar;
 
+    public TMP_Text textoTiempo;
+    public TMP_Text textoInicio;
+    public GameObject panelInicio;
+
+    public GameObject temporizadorInicial;
+
+    public GameObject panelVictoria;
+    public GameObject panelDerrota;
+
+    public GameObject contador;
+
     [Header("Configuración de Tiempo")]
     public float tiempoLimite = 15f;
     private float tiempoRestante;
     private bool juegoActivo = false;
-    private bool bloquearInteraccion = false; // <-- EVITA CLICS MIENTRAS COMPRUEBA
+    private bool bloquearInteraccion = false; 
     private int parejasRestantes = 3;
 
     private ItemEmparejable primerSeleccionado;
     private ItemEmparejable segundoSeleccionado;
+
+    private List<GameObject> ovejasInstanciadas = new List<GameObject>();
 
     private void Awake()
     {
@@ -31,6 +46,25 @@ public class CadaOvejaMinigame : MonoBehaviour
 
     private void Start()
     {
+        panelInicio.SetActive(true);
+        temporizadorInicial.SetActive(false);
+    }
+
+    public void ComenzarBoton()
+    {
+        StartCoroutine(ComenzarJuego());
+    }
+
+    private IEnumerator ComenzarJuego()
+    {
+        panelInicio.SetActive(false);
+        temporizadorInicial.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        textoInicio.text = "LISTOS...?";
+        yield return new WaitForSeconds(2f);
+        textoInicio.text = "¡YA!";
+        yield return new WaitForSeconds(1f);
+        temporizadorInicial.SetActive(false);
         GenerarTableroAleatorio();
         IniciarJuego();
     }
@@ -59,6 +93,8 @@ public class CadaOvejaMinigame : MonoBehaviour
 
                 GameObject nuevoObjeto = Instantiate(prefabsParejas[id], puntosDeSpawn[indiceSpawn].position, Quaternion.identity);
 
+                ovejasInstanciadas.Add(nuevoObjeto);
+
                 ItemEmparejable item = nuevoObjeto.GetComponent<ItemEmparejable>();
                 if (item != null)
                 {
@@ -74,6 +110,7 @@ public class CadaOvejaMinigame : MonoBehaviour
         parejasRestantes = prefabsParejas.Count;
         juegoActivo = true;
         bloquearInteraccion = false;
+        ActualizarTextoTiempo();
     }
 
     private void Update()
@@ -81,18 +118,25 @@ public class CadaOvejaMinigame : MonoBehaviour
         if (!juegoActivo) return;
 
         tiempoRestante -= Time.deltaTime;
+        ActualizarTextoTiempo();
+
         if (tiempoRestante <= 0)
         {
-            juegoActivo = false;
-            Debug.Log("¡Se acabó el tiempo!");
-            botonContinuar.SetActive(true);
+            StartCoroutine(Perder());
+        }
+    }
 
+    private void ActualizarTextoTiempo()
+    {
+        if (textoTiempo != null)
+        {
+            int segundos = Mathf.Max(0, Mathf.CeilToInt(tiempoRestante));
+            textoTiempo.text = segundos.ToString();
         }
     }
 
     public void SeleccionarItem(ItemEmparejable item)
     {
-        // Ignora el clic si el juego acabó, si se está comprobando una pareja, o si clicas el mismo objeto
         if (!juegoActivo || bloquearInteraccion || item == primerSeleccionado) return;
 
         if (primerSeleccionado == null)
@@ -104,7 +148,7 @@ public class CadaOvejaMinigame : MonoBehaviour
         {
             segundoSeleccionado = item;
             segundoSeleccionado.MarcarComoSeleccionado(true);
-            bloquearInteraccion = true; // <-- BLOQUEA NUEVOS CLICS
+            bloquearInteraccion = true; 
             StartCoroutine(VerificarPareja());
         }
     }
@@ -121,9 +165,7 @@ public class CadaOvejaMinigame : MonoBehaviour
 
             if (parejasRestantes <= 0)
             {
-                juegoActivo = false;
-                Debug.Log("¡Ganaste!");
-                botonContinuar.SetActive(true);
+                StartCoroutine(Ganar());
             }
         }
         else
@@ -134,6 +176,33 @@ public class CadaOvejaMinigame : MonoBehaviour
 
         primerSeleccionado = null;
         segundoSeleccionado = null;
-        bloquearInteraccion = false; // <-- DESBLOQUEA INTERACCIÓN
+        bloquearInteraccion = false; 
+    }
+
+    private IEnumerator Ganar()
+    {
+        juegoActivo = false;
+        contador.SetActive(false);
+        panelVictoria.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        botonContinuar.SetActive(true);
+    }
+
+    private IEnumerator Perder()
+    {
+        juegoActivo = false;
+        contador.SetActive(false);
+
+        foreach (GameObject oveja in ovejasInstanciadas)
+        {
+            if (oveja != null)
+            {
+                oveja.SetActive(false);
+            }
+        }
+
+        panelDerrota.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        botonContinuar.SetActive(true);
     }
 }

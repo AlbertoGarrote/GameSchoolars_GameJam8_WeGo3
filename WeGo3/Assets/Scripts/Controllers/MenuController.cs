@@ -14,10 +14,11 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
-    public void cambiarCondicion()
+    public void cambiarCondicion(string escenaCambiar)
     {
         PlayerPrefs.SetInt("CondicionEspecialGuardada", 1);
         PlayerPrefs.Save();
+        StartCoroutine(CorrutinaCambioEscenaEspecial(escenaCambiar));
     }
 
     private IEnumerator CorrutinaCambioEscena(string escenaCambiar)
@@ -25,6 +26,21 @@ public class MenuController : MonoBehaviour
         TransicionController.Instance.ReproducirSalida();
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(escenaCambiar);
+    }
+
+    private IEnumerator CorrutinaCambioEscenaEspecial(string escenaCambiar)
+    {
+        TransicionController.Instance.ReproducirSalida();
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(escenaCambiar);
+    }
+
+    public void AbrirEnlace(string urlDestino)
+    {
+        if (!string.IsNullOrEmpty(urlDestino))
+        {
+            Application.OpenURL(urlDestino);
+        }
     }
 
 }
