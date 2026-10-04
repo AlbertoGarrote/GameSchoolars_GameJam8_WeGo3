@@ -13,7 +13,7 @@ public class DialogoManager : MonoBehaviour
     [SerializeField] private GameObject panelDialogo;
     [SerializeField] private TMP_Text textoNombre;
     [SerializeField] private TMP_Text textoCuerpo;
-    [SerializeField] private Image imagenRetrato;
+    [SerializeField] private RawImage imagenRetrato;
 
     [Header("Configuración de Sonido")]
     [SerializeField] private AudioSource audioSource;
@@ -91,7 +91,7 @@ public class DialogoManager : MonoBehaviour
         if (imagenRetrato != null)
         {
             imagenRetrato.gameObject.SetActive(lineaActual.retrato != null);
-            imagenRetrato.sprite = lineaActual.retrato;
+            imagenRetrato.texture = lineaActual.retrato != null ? lineaActual.retrato.texture : null;
         }
 
         textoActualCompleto = lineaActual.texto;
