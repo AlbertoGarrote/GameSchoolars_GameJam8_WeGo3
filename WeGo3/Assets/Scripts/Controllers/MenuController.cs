@@ -1,12 +1,10 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class MenuController : MonoBehaviour
 {
     public void CambiarEscena(string escenaCambiar)
     {
-        StartCoroutine(CorrutinaCambioEscena(escenaCambiar));  
+        TransicionController.Instance.CargarEscena(escenaCambiar);
     }
 
     public void Salir()
@@ -14,25 +12,11 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
-    public void cambiarCondicion(string escenaCambiar)
+    public void CambiarCondicion(string escenaCambiar)
     {
         PlayerPrefs.SetInt("CondicionEspecialGuardada", 1);
         PlayerPrefs.Save();
-        StartCoroutine(CorrutinaCambioEscenaEspecial(escenaCambiar));
-    }
-
-    private IEnumerator CorrutinaCambioEscena(string escenaCambiar)
-    {
-        TransicionController.Instance.ReproducirSalida();
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(escenaCambiar);
-    }
-
-    private IEnumerator CorrutinaCambioEscenaEspecial(string escenaCambiar)
-    {
-        TransicionController.Instance.ReproducirSalida();
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene(escenaCambiar);
+        TransicionController.Instance.CargarEscena(escenaCambiar, 5f); // Salida especial de 5 segundos
     }
 
     public void AbrirEnlace(string urlDestino)
@@ -42,5 +26,4 @@ public class MenuController : MonoBehaviour
             Application.OpenURL(urlDestino);
         }
     }
-
 }

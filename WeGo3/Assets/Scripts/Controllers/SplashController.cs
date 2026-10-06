@@ -19,17 +19,9 @@ public class SplashController : MonoBehaviour
     IEnumerator EsperarYCambiarEscena()
     {
         yield return new WaitForSeconds(4f);
-        TransicionController.Instance.ReproducirSalida();
-        yield return new WaitForSeconds(1f);
+        string escenaDestino = condicionEspecial ? "MenuPrincipal2" : "MenuPrincipal1";
 
-        if (condicionEspecial)
-        {
-            SceneManager.LoadScene("MenuPrincipal2");
-        }
-        else
-        {
-            SceneManager.LoadScene("MenuPrincipal1");
-        }
+        TransicionController.Instance.CargarEscena(escenaDestino);
     }
 
 }

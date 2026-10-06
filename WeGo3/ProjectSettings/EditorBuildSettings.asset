@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenaVideo.unity
     guid: 5c99fc218778fc747ac887f00269f121
+  - enabled: 1
+    path: "Assets/Scenes/Ba\xF1o.unity"
+    guid: 893fc0eedba23bd4eb2d8c415aa9e277
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

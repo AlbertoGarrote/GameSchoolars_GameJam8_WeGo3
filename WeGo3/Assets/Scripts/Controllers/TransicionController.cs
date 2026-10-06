@@ -1,14 +1,16 @@
 using System.Collections;
-using System.Transactions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TransicionController : MonoBehaviour
 {
     public static TransicionController Instance { get; private set; }
-    public GameObject panelEntrada;
 
-    public GameObject panelSalida;
+    [Header("UI Paneles")]
+    [SerializeField] private GameObject panelEntrada;
+    [SerializeField] private GameObject panelSalida;
+
+    public bool CambiandoEscena { get; private set; }
 
     private void Awake()
     {
@@ -39,9 +41,22 @@ public class TransicionController : MonoBehaviour
         StartCoroutine(CorrutinaEntrada());
     }
 
-    public void ReproducirSalida()
+    public void CargarEscena(string nombreEscena, float duracionSalida = 1f)
     {
-        StartCoroutine(CorrutinaSalida());
+        if (CambiandoEscena || string.IsNullOrEmpty(nombreEscena)) return;
+        StartCoroutine(CorrutinaTransicionCompleta(nombreEscena, duracionSalida));
+    }
+
+    private IEnumerator CorrutinaTransicionCompleta(string nombreEscena, float duracionSalida)
+    {
+        CambiandoEscena = true;
+
+        if (panelEntrada != null) panelEntrada.SetActive(false);
+        if (panelSalida != null) panelSalida.SetActive(true);
+
+        yield return new WaitForSeconds(duracionSalida);
+
+        SceneManager.LoadScene(nombreEscena);
     }
 
     private IEnumerator CorrutinaEntrada()
@@ -51,22 +66,10 @@ public class TransicionController : MonoBehaviour
         if (panelEntrada != null)
         {
             panelEntrada.SetActive(true);
-
-
             yield return new WaitForSeconds(1f);
             panelEntrada.SetActive(false);
         }
-    }
 
-    private IEnumerator CorrutinaSalida()
-    {
-        if (panelEntrada != null) panelEntrada.SetActive(false);
-
-        if (panelSalida != null)
-        {
-            panelSalida.SetActive(true);
-
-            yield return new WaitForSeconds(1f);
-        }
+        CambiandoEscena = false;
     }
 }

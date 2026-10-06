@@ -55,7 +55,7 @@ public class LlamadaSceneController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(2f);
-        menuController.cambiarCondicion("EscenaInicial");
+        menuController.CambiarCondicion("EscenaInicial");
 
     }
 }

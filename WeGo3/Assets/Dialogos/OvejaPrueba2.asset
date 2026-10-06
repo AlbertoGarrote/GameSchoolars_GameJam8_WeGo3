@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
-  m_Name: OvejaPrueba
+  m_Name: OvejaPrueba2
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Oveja
@@ -18,13 +18,7 @@ MonoBehaviour:
     retrato: {fileID: -8504504408042065948, guid: 9a06d64ea0273444e9aaa0506c4f5dcb, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
   - nombrePersonaje: Oveja
-    texto: "\xBFQuieres Ir al ba\xF1o?"
+    texto: "vAS AL BA\xD1O"
     retrato: {fileID: -8504504408042065948, guid: 9a06d64ea0273444e9aaa0506c4f5dcb, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  opciones:
-  - textoOpcion: "S\xED"
-    siguienteDialogo: {fileID: 0}
-    escenaACargar: "Ba\xF1o"
-  - textoOpcion: No
-    siguienteDialogo: {fileID: 11400000, guid: 29be5dbc78fce3242b4113f3b6aed7b8, type: 2}
-    escenaACargar: 
+  opciones: []

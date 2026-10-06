@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c264db75ad0cee49965cbf7d090ef56
+guid: abe1504b6f02f7843866c2d461aa0bf5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8271322593813463206
-    second: WEGOGYMSONcartel_0
+      213: -6632269709350124100
+    second: "ba\xF1o_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WEGOGYMSONcartel_0
+      name: "ba\xF1o_0"
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 36
-        height: 51
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6a00ae26314a9c270800000000000000
-      internalID: 8271322593813463206
+      spriteID: cb54a9fa6d175f3a0800000000000000
+      internalID: -6632269709350124100
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8f5549aab46695f4eaba9bfdd244751b
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WEGOGYMSONcartel_0: 8271322593813463206
+      "ba\xF1o_0": -6632269709350124100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

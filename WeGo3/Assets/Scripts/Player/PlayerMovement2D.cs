@@ -9,7 +9,6 @@ public class PlayerMovement2D : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 entradaMovimiento;
 
-    // AÑADIDO: Guarda el último vector de dirección registrado (por defecto mira hacia abajo)
     public Vector2 DireccionMirada { get; private set; } = Vector2.down;
 
     private void Awake()
@@ -19,7 +18,11 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void Update()
     {
-        if (DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo)
+        // Bloqueo de movimiento si hay un diálogo activo o se está cambiando de escena
+        bool estaEnDialogo = DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo;
+        bool estaCambiandoEscena = TransicionController.Instance != null && TransicionController.Instance.CambiandoEscena;
+
+        if (estaEnDialogo || estaCambiandoEscena)
         {
             entradaMovimiento = Vector2.zero;
             return;
@@ -48,7 +51,6 @@ public class PlayerMovement2D : MonoBehaviour
 
         entradaMovimiento = new Vector2(x, y).normalized;
 
-        // AÑADIDO: Actualiza la dirección de mirada solo cuando el jugador se está moviendo
         if (entradaMovimiento != Vector2.zero)
         {
             DireccionMirada = entradaMovimiento;
