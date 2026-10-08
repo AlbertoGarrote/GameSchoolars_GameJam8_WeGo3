@@ -9,32 +9,62 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/EscenaInicial.unity
+    path: Assets/Scenes/Menus/EscenaInicial.unity
     guid: d04939fff1f13dd44918baea36e92def
   - enabled: 1
-    path: Assets/Scenes/MenuPrincipal1.unity
+    path: Assets/Scenes/Menus/MenuPrincipal1.unity
     guid: 8c65b85906329834d8b5cdba90cbe1af
   - enabled: 1
-    path: Assets/Scenes/MenuPrincipal2.unity
+    path: Assets/Scenes/Menus/MenuPrincipal2.unity
     guid: afbd1ff70aa7df345b39fd199950f394
   - enabled: 1
-    path: Assets/Scenes/CadaOvejaMinigame.unity
+    path: Assets/Scenes/MinijuegosIniciales/CadaOvejaMinigame.unity
     guid: ea8d21f3d324735498b075ec1d141714
   - enabled: 1
-    path: Assets/Scenes/CuandoLlueveMinijuego.unity
+    path: Assets/Scenes/MinijuegosIniciales/CuandoLlueveMinijuego.unity
     guid: e53f9b89dfbcd7a449f40eefae107548
   - enabled: 1
-    path: Assets/Scenes/Casa.unity
+    path: Assets/Scenes/Mapa/Casa.unity
     guid: ca1e2fba215bd0c49b9a346d67d6ead7
   - enabled: 1
-    path: Assets/Scenes/EscenaLlamada.unity
+    path: Assets/Scenes/MinijuegosIniciales/EscenaLlamada.unity
     guid: 77f4b1a18c678704cbb9fb60aa87e18b
   - enabled: 1
-    path: Assets/Scenes/EscenaVideo.unity
+    path: Assets/Scenes/MinijuegosIniciales/EscenaVideo.unity
     guid: 5c99fc218778fc747ac887f00269f121
   - enabled: 1
-    path: "Assets/Scenes/Ba\xF1o.unity"
+    path: "Assets/Scenes/Mapa/Ba\xF1o.unity"
     guid: 893fc0eedba23bd4eb2d8c415aa9e277
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Congelador.unity
+    guid: 773107249c694c742bcb8ff5dac6e388
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Plaza.unity
+    guid: f47e47530c9a4a6468c018b3626eaf90
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Cementerio.unity
+    guid: 8b5a88ae9ab2ac241bbcabe05bbc32ce
+  - enabled: 1
+    path: "Assets/Scenes/Mapa/Monta\xF1a.unity"
+    guid: 6ce69e23d53793342830a315345c827e
+  - enabled: 1
+    path: Assets/Scenes/Mapa/ExteriorHotel.unity
+    guid: c09f0550cdae99448844f28f0f1e7abe
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Fiestas.unity
+    guid: 62fc34e221d2e604fbd2924e2b7ab096
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Gym.unity
+    guid: 62d89d386ddc47b43ace9603e6cfc5c7
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Hotel.unity
+    guid: 2d336bd90011ddd4cb6355a6402ef55a
+  - enabled: 1
+    path: Assets/Scenes/Mapa/PistaBaloncesto.unity
+    guid: 3da8fc87f04ead34fb53f1dca7376b21
+  - enabled: 1
+    path: Assets/Scenes/Mapa/Creditos.unity
+    guid: 63325cfb213c4f340af5beb87faf966b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

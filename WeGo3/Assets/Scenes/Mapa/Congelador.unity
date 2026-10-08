@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 130452990}
   - component: {fileID: 130452989}
   m_Layer: 0
-  m_Name: "ba\xF1o_0"
+  m_Name: congelador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +355,7 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6632269709350124100, guid: abe1504b6f02f7843866c2d461aa0bf5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3019758, g: 0.32651415, b: 0.5471698, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -699,7 +699,7 @@ Transform:
   m_GameObject: {fileID: 755213084}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.16, z: 0}
+  m_LocalPosition: {x: 2.01, y: -0.25, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -981,7 +981,7 @@ Transform:
   m_GameObject: {fileID: 1699335233}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0019187275, y: 0.35199994, z: -10}
+  m_LocalPosition: {x: 0.11000543, y: 0.040339947, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1216,8 +1216,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1821457339
-PolygonCollider2D:
+--- !u!61 &1821457339
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1260,19 +1260,8 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.6084308, y: 4.886094}
-      - {x: -3.3222013, y: 4.8707523}
-      - {x: -7.3153806, y: 4.904577}
-      - {x: -8.866455, y: 4.8191385}
-      - {x: -8.841647, y: -0.37331364}
-      - {x: -8.829872, y: -5.2427926}
-      - {x: -7.033671, y: -5.1460824}
-      - {x: -2.6192615, y: -5.1980124}
-      - {x: 9.122946, y: -5.1584945}
-      - {x: 9.110637, y: 4.8860598}
-  m_UseDelaunayMesh: 1
+  m_Size: {x: 19, y: 11}
+  m_EdgeRadius: 0
 --- !u!1 &1854723653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,7 +1331,7 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -5669996589023121530, guid: 62c97efdf60aaef44af233a9fd3932a3, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.8155856, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
