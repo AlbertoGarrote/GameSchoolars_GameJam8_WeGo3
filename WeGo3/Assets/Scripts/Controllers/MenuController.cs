@@ -2,6 +2,23 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    [SerializeField] private PuntoAparicionSO memoriaPosicion;
+    public void BotonContinuar()
+    {
+        if (SaveSystemManager.Instance != null && SaveSystemManager.Instance.ExistePartidaGuardada())
+        {
+            DatosGuardado datos = SaveSystemManager.Instance.CargarPartida();
+
+            if (memoriaPosicion != null)
+            {
+                memoriaPosicion.posicionDestino = new Vector3(datos.posicionX, datos.posicionY, 0f);
+                memoriaPosicion.usarPosicionGuardada = true;
+            }
+
+            TransicionController.Instance.CargarEscena(datos.nombreEscena);
+        }
+    }
+
     public void CambiarEscena(string escenaCambiar)
     {
         TransicionController.Instance.CargarEscena(escenaCambiar);

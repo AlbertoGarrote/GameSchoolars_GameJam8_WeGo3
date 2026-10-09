@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: OvejaAfterFlag
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: Oveja
+    texto: "PERO QU\xC9 HACES QUE NO EST\xC1S EN EL BA\xD1O"
+    retrato: {fileID: -8504504408042065948, guid: 9a06d64ea0273444e9aaa0506c4f5dcb, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+  opciones: []
