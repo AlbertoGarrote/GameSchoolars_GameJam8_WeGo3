@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class AccionDialogo : AccionSmartObject
 {
-    [SerializeField] private DialogoSO dialogo;
+    [SerializeField] private DialogoSO dialogoAExhibir;
 
     public override void EjecutarAccion(GameObject interactor, Action alTerminar)
     {
-        if (DialogoManager.Instance != null && dialogo != null)
+        if (dialogoAExhibir != null && DialogoManager.Instance != null)
         {
-            DialogoManager.Instance.IniciarDialogo(dialogo);
-            StartCoroutine(EsperarFinDialogo(alTerminar));
+            DialogoManager.Instance.IniciarDialogo(dialogoAExhibir);
+
+            StartCoroutine(EsperarAQueTermineDialogo(alTerminar));
         }
         else
         {
@@ -19,9 +20,12 @@ public class AccionDialogo : AccionSmartObject
         }
     }
 
-    private IEnumerator EsperarFinDialogo(Action alTerminar)
+    private IEnumerator EsperarAQueTermineDialogo(Action alTerminar)
     {
-        yield return new WaitUntil(() => !DialogoManager.Instance.EnDialogo);
+        yield return null;
+
+        yield return new WaitUntil(() => DialogoManager.Instance == null || !DialogoManager.Instance.EnDialogo);
+
         alTerminar?.Invoke();
     }
 }

@@ -26,6 +26,9 @@ public class DialogoManager : MonoBehaviour
     [SerializeField] private Color colorSeleccionado = Color.yellow;
     [SerializeField] private Color colorNormal = Color.white;
 
+    private int contadorSonido = 0;
+    [SerializeField] private int frecuenciaSonido = 2;
+
     public bool EnDialogo { get; private set; }
 
     private DialogoSO dialogoActual;
@@ -37,6 +40,7 @@ public class DialogoManager : MonoBehaviour
 
     private bool mostrandoOpciones;
     private int opcionSeleccionada = 0;
+    private bool recienAbierto;
 
     private void Awake()
     {
@@ -50,6 +54,12 @@ public class DialogoManager : MonoBehaviour
     private void Update()
     {
         if (!EnDialogo) return;
+
+        if (recienAbierto)
+        {
+            recienAbierto = false;
+            return;
+        }
 
         // 1. Navegación en el menú de opciones
         if (mostrandoOpciones)
@@ -97,6 +107,8 @@ public class DialogoManager : MonoBehaviour
 
         OcultarOpciones();
         MostrarLinea();
+
+        recienAbierto = true;
     }
 
     private void MostrarLinea()
@@ -123,14 +135,21 @@ public class DialogoManager : MonoBehaviour
     {
         estaEscribiendo = true;
         textoContenido.text = "";
+        contadorSonido = 0;
 
         foreach (char letra in linea.texto.ToCharArray())
         {
             textoContenido.text += letra;
 
+            // Solo reproducimos sonido si hay letra, hay audio y toca según la frecuencia
             if (linea.sonidoVoz != null && audioSource != null && !char.IsWhiteSpace(letra))
             {
-                audioSource.PlayOneShot(linea.sonidoVoz);
+                contadorSonido++;
+                if (contadorSonido >= frecuenciaSonido)
+                {
+                    audioSource.PlayOneShot(linea.sonidoVoz, 0.5f); // Bajamos un poco el volumen para evitar saturación
+                    contadorSonido = 0;
+                }
             }
 
             yield return new WaitForSeconds(velocidadEscritura);

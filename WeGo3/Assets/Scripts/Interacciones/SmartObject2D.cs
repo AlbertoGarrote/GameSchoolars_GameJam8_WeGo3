@@ -15,6 +15,8 @@ public class SmartObject2D : MonoBehaviour
     [Header("Opciones")]
     [SerializeField] private bool deUnSoloUso = false;
 
+    public static bool HayAccionEjecutandoseGlobal { get; set; } = false;
+
     private bool jugadorEnRango = false;
     private PlayerMovement2D jugador;
     private bool yaFueUsado = false;
@@ -46,29 +48,26 @@ public class SmartObject2D : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void OnDisable()
     {
-        if (yaFueUsado || !jugadorEnRango) return;
-
-        if (DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo) return;
-
-        if (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame))
+        if (ejecutandoAcciones)
         {
-            if (EstaJugadorMirandoAlObjeto())
-            {
-                StartCoroutine(EjecutarSecuenciaAcciones());
-            }
+            ejecutandoAcciones = false;
+            HayAccionEjecutandoseGlobal = false;
         }
     }
 
-    private bool EstaJugadorMirandoAlObjeto()
+    private void Update()
     {
-        if (jugador == null) return false;
+        if (yaFueUsado || !jugadorEnRango || ejecutandoAcciones) return;
 
-        Vector2 direccionHaciaObjeto = (transform.position - jugador.transform.position).normalized;
-        float alineacion = Vector2.Dot(jugador.DireccionMirada, direccionHaciaObjeto);
+        if (DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo) return;
 
-        return alineacion > 0.5f;
+        // Quitamos la comprobación de dirección de la mirada
+        if (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame))
+        {
+            StartCoroutine(EjecutarSecuenciaAcciones());
+        }
     }
 
     private IEnumerator EjecutarSecuenciaAcciones()
@@ -76,6 +75,7 @@ public class SmartObject2D : MonoBehaviour
         if (acciones == null || acciones.Count == 0) yield break;
 
         ejecutandoAcciones = true;
+        HayAccionEjecutandoseGlobal = true; // <--- Bloquea globalmente el movimiento
 
         if (iconoInteraccion != null)
             iconoInteraccion.SetActive(false);
@@ -83,21 +83,17 @@ public class SmartObject2D : MonoBehaviour
         if (deUnSoloUso)
             yaFueUsado = true;
 
-        // Ejecuta cada acción de la lista esperando a que la previa termine
         foreach (var accion in acciones)
         {
             if (accion != null)
             {
                 bool accionFinalizada = false;
-
-                // Ejecutamos la acción y le pasamos la orden de avisarnos al acabar
                 accion.EjecutarAccion(jugador.gameObject, () => accionFinalizada = true);
-
-                // Esperamos aquí mientras la acción esté en proceso (por ej. mientras dure el diálogo)
                 yield return new WaitUntil(() => accionFinalizada);
             }
         }
 
         ejecutandoAcciones = false;
+        HayAccionEjecutandoseGlobal = false; // <--- Libera el movimiento al terminar
     }
 }

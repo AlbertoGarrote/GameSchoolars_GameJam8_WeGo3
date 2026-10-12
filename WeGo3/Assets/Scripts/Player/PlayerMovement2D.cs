@@ -18,11 +18,12 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void Update()
     {
-        // Bloqueo de movimiento si hay un diálogo activo o se está cambiando de escena
+        // Bloqueo de movimiento si hay un diálogo activo, se está cambiando de escena o hay una cinemática/SmartObject activo
         bool estaEnDialogo = DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo;
         bool estaCambiandoEscena = TransicionController.Instance != null && TransicionController.Instance.CambiandoEscena;
+        bool smartObjectOcupado = SmartObject2D.HayAccionEjecutandoseGlobal;
 
-        if (estaEnDialogo || estaCambiandoEscena)
+        if (estaEnDialogo || estaCambiandoEscena || smartObjectOcupado)
         {
             entradaMovimiento = Vector2.zero;
             return;
