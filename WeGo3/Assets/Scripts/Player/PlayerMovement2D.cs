@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement2D : MonoBehaviour
 {
     [SerializeField] private float velocidadMovimiento = 5f;
+    [SerializeField] private Animator animator; // Arrastra aquí tu Animator desde el inspector
 
     private Rigidbody2D rb;
     private Vector2 entradaMovimiento;
@@ -14,11 +15,12 @@ public class PlayerMovement2D : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (animator == null) animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
-        // Bloqueo de movimiento si hay un diálogo activo, se está cambiando de escena o hay una cinemática/SmartObject activo
+        // Bloqueo de movimiento si hay diálogo, transición o cinemática activa
         bool estaEnDialogo = DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo;
         bool estaCambiandoEscena = TransicionController.Instance != null && TransicionController.Instance.CambiandoEscena;
         bool smartObjectOcupado = SmartObject2D.HayAccionEjecutandoseGlobal;
@@ -26,10 +28,12 @@ public class PlayerMovement2D : MonoBehaviour
         if (estaEnDialogo || estaCambiandoEscena || smartObjectOcupado)
         {
             entradaMovimiento = Vector2.zero;
+            ActualizarAnimator(Vector2.zero);
             return;
         }
 
         LeerEntradaInput();
+        ActualizarAnimator(entradaMovimiento);
     }
 
     private void FixedUpdate()
@@ -55,6 +59,30 @@ public class PlayerMovement2D : MonoBehaviour
         if (entradaMovimiento != Vector2.zero)
         {
             DireccionMirada = entradaMovimiento;
+        }
+    }
+
+    private void ActualizarAnimator(Vector2 movimiento)
+    {
+        if (animator == null) return;
+
+        bool estaMoviendo = movimiento != Vector2.zero;
+
+        // Pasamos si se está moviendo o no
+        animator.SetBool("IsWalking", estaMoviendo);
+
+        if (estaMoviendo)
+        {
+            // Mientras camina, actualizamos los ejes de movimiento exactos
+            animator.SetFloat("MoveX", movimiento.x);
+            animator.SetFloat("MoveY", movimiento.y);
+        }
+        else
+        {
+            // Cuando se para, dejamos grabada la última dirección de mirada 
+            // para que el personaje no "resetee" su pose de reposo a otra dirección
+            animator.SetFloat("MoveX", DireccionMirada.x);
+            animator.SetFloat("MoveY", DireccionMirada.y);
         }
     }
 }

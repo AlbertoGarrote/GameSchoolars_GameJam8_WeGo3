@@ -151,6 +151,7 @@ GameObject:
   - component: {fileID: 4701778056099301116}
   - component: {fileID: 8878381719345941569}
   - component: {fileID: -6704171990202972375}
+  - component: {fileID: 1312940174499633202}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -223,7 +224,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8271322593813463206, guid: 0c264db75ad0cee49965cbf7d090ef56, type: 3}
+  m_Sprite: {fileID: 968678636370580726, guid: 4066aff124010984a93ae48a6d1a7c50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -267,17 +268,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.013802128, y: 0.014099544}
+  m_Offset: {x: 0.0010048598, y: 0.018877164}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.36, y: 0.51}
+    oldSize: {x: 0.23, y: 0.39}
     newSize: {x: 0.36, y: 0.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.13399881, y: 0.044790808}
+  m_Size: {x: 0.15375051, y: 0.08222993}
   m_EdgeRadius: 0
 --- !u!50 &4701778056099301116
 Rigidbody2D:
@@ -319,6 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2D
   velocidadMovimiento: 5
+  animator: {fileID: 0}
 --- !u!114 &-6704171990202972375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +334,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnJugador
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
+--- !u!95 &1312940174499633202
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725696568055965587}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d429ecfff5a01ae4d9ac945b7245f22c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2330721667130605314
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8480533969029137993
 RectTransform:
   m_ObjectHideFlags: 0
@@ -624,8 +648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204.1, y: -0.0000019073}
-  m_SizeDelta: {x: 64.3014, y: 64.3014}
+  m_AnchoredPosition: {x: -203.8, y: -0.0000019073}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3663535147406988343
 CanvasRenderer:
@@ -1130,6 +1154,7 @@ MonoBehaviour:
   textoOpcion2: {fileID: 2461838406786966251}
   colorSeleccionado: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   colorNormal: {r: 1, g: 1, b: 1, a: 1}
+  frecuenciaSonido: 2
 --- !u!1 &8664593937899773689
 GameObject:
   m_ObjectHideFlags: 0

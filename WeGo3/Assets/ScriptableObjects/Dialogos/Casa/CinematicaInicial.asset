@@ -15,14 +15,14 @@ MonoBehaviour:
   lineas:
   - nombrePersonaje: "Se\xF1orMeon"
     texto: Hey Wego, deja de holgazanear, venga.
-    retrato: {fileID: 5933067964995544622, guid: 1447bd8fd4488624eaaf72cdf275b574, type: 3}
+    retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
   - nombrePersonaje: "Se\xF1orMeon"
     texto: "Hab\xEDamos quedado para ir a las fiestas esta noche."
-    retrato: {fileID: 5933067964995544622, guid: 1447bd8fd4488624eaaf72cdf275b574, type: 3}
+    retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
   - nombrePersonaje: "Se\xF1orMeon"
     texto: Espero que no te hayas olvidado. Te espero fuera.
-    retrato: {fileID: 5933067964995544622, guid: 1447bd8fd4488624eaaf72cdf275b574, type: 3}
+    retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
   opciones: []
