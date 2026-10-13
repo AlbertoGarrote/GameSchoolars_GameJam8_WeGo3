@@ -2394,6 +2394,8 @@ GameObject:
   m_Component:
   - component: {fileID: 424751943}
   - component: {fileID: 424751942}
+  - component: {fileID: 424751944}
+  - component: {fileID: 424751945}
   m_Layer: 0
   m_Name: "se\xF1ormeandocara_0"
   m_TagString: Untagged
@@ -2475,6 +2477,42 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &424751944
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424751941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03982cf38a1a07d4f8a4e4d1ecb660c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &424751945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424751941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9ecc07836932a4e96ebabc8a1f5ba6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  spriteRenderer: {fileID: 424751942}
+  mirandoIzquierdaPorDefecto: 1
 --- !u!1 &445795816
 GameObject:
   m_ObjectHideFlags: 0
@@ -5006,8 +5044,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AccionMoverPersonaje
   personajeAMover: {fileID: 424751943}
   posicionDestino: {x: -10, y: 0}
-  velocidad: 5
-  animatorPersonaje: {fileID: 0}
+  velocidad: 3
+  animatorPersonaje: {fileID: 424751944}
   parametroCaminando: IsWalking
 --- !u!114 &1483255443
 MonoBehaviour:
@@ -5036,8 +5074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AccionMoverPersonaje
   personajeAMover: {fileID: 424751943}
   posicionDestino: {x: -3, y: -1}
-  velocidad: 5
-  animatorPersonaje: {fileID: 0}
+  velocidad: 3
+  animatorPersonaje: {fileID: 424751944}
   parametroCaminando: IsWalking
 --- !u!114 &1483255445
 MonoBehaviour:
