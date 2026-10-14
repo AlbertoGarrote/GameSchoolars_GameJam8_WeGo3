@@ -319,8 +319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0841eda7f8dfb0d459e4bc89598f3067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2D
-  velocidadMovimiento: 5
-  animator: {fileID: 0}
+  velocidadMovimiento: 3
+  animator: {fileID: 1312940174499633202}
 --- !u!114 &-6704171990202972375
 MonoBehaviour:
   m_ObjectHideFlags: 0
