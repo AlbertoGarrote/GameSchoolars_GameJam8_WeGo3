@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5520990f3b58cd7468595fbf4c5a9052
+guid: ae9d5510298183f468f91527f379d9f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7157373871422686212
-    second: Captura de pantalla 2026-10-08 125528_0
+      213: -681073227042383315
+    second: exteriorHotel_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Captura de pantalla 2026-10-08 125528_0
+      name: exteriorHotel_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 395
-        height: 278
+        width: 349
+        height: 318
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 404cfca5d99145360800000000000000
-      internalID: 7157373871422686212
+      spriteID: d2a1c1c22875c86f0800000000000000
+      internalID: -681073227042383315
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Captura de pantalla 2026-10-08 125528_0: 7157373871422686212
+      exteriorHotel_0: -681073227042383315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
