@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0841eda7f8dfb0d459e4bc89598f3067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2D
-  velocidadMovimiento: 3
+  velocidadMovimiento: 5
   animator: {fileID: 1312940174499633202}
 --- !u!114 &-6704171990202972375
 MonoBehaviour:
@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8480533969029137993
 RectTransform:
   m_ObjectHideFlags: 0
