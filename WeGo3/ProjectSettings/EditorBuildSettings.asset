@@ -68,6 +68,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinijuegosIniciales/CuandoLlueveMinijuego.unity
     guid: 6b7575527b141b44cae29d1bc889fc45
+  - enabled: 1
+    path: Assets/Scenes/Mapa/habitacionAmor.unity
+    guid: 584e167fb323e68459b344a052b8c1cd
+  - enabled: 1
+    path: Assets/Scenes/Mapa/habitacionCortezas.unity
+    guid: 51d1f9efeeb838b43859f5f5413d3310
+  - enabled: 1
+    path: Assets/Scenes/Mapa/habitacionMaripili.unity
+    guid: 412f84ca7a934f949a4d9364f195486f
+  - enabled: 1
+    path: Assets/Scenes/Mapa/habitracionPatos.unity
+    guid: 02de9183d13dddd46bd04868251ed8ed
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

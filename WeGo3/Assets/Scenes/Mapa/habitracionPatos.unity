@@ -1495,7 +1495,7 @@ MonoBehaviour:
   dialogoBloqueo: {fileID: 0}
   nombreEscenaACargar: Hotel
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
-  posicionEnNuevaEscena: {x: -21.3, y: -0.5}
+  posicionEnNuevaEscena: {x: 7, y: 4}
   tiempoEsperaAlAparecer: 1.5
 --- !u!1 &1865932680
 GameObject:

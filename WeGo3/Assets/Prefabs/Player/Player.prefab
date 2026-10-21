@@ -1154,7 +1154,7 @@ MonoBehaviour:
   textoOpcion2: {fileID: 2461838406786966251}
   colorSeleccionado: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   colorNormal: {r: 1, g: 1, b: 1, a: 1}
-  frecuenciaSonido: 2
+  frecuenciaSonido: 3
 --- !u!1 &8664593937899773689
 GameObject:
   m_ObjectHideFlags: 0

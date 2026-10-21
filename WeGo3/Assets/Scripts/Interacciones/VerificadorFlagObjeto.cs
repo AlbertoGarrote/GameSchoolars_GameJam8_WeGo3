@@ -9,6 +9,7 @@ public class VerificadorFlagObjeto : MonoBehaviour
     [Header("Comportamiento")]
     [Tooltip("Si es true, se destruye. Si es false, simplemente se desactiva (SetActive(false)).")]
     [SerializeField] private bool destruirSiActivada = true;
+    [SerializeField] private bool Aparecer = false;
 
     private void Start()
     {
@@ -28,7 +29,7 @@ public class VerificadorFlagObjeto : MonoBehaviour
             }
             else
             {
-                gameObject.SetActive(false);
+                gameObject.SetActive(Aparecer);
             }
         }
     }
