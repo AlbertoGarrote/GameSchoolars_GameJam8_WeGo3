@@ -414,7 +414,7 @@ MonoBehaviour:
   dialogoBloqueo: {fileID: 11400000, guid: 01fe5a4c510186d439e4da606f265897, type: 2}
   nombreEscenaACargar: Plaza
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
-  posicionEnNuevaEscena: {x: 0, y: 0}
+  posicionEnNuevaEscena: {x: -9.4, y: 7.9}
   tiempoEsperaAlAparecer: 1.5
 --- !u!61 &123972069
 BoxCollider2D:
@@ -5587,7 +5587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309907875525885632, guid: a4121a9cd6d26314aa8bae36a33a1e6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

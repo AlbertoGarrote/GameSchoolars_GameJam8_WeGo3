@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MinijuegosIniciales/CadaOvejaMinigame.unity
     guid: ea8d21f3d324735498b075ec1d141714
   - enabled: 1
-    path: Assets/Scenes/MinijuegosIniciales/CuandoLlueveMinijuego.unity
+    path: Assets/Scenes/MinijuegosVerdaderos/BatallaPokemonMinigmae.unity
     guid: e53f9b89dfbcd7a449f40eefae107548
   - enabled: 1
     path: Assets/Scenes/Mapa/Casa.unity
@@ -65,6 +65,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa/Creditos.unity
     guid: 63325cfb213c4f340af5beb87faf966b
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosIniciales/CuandoLlueveMinijuego.unity
+    guid: 6b7575527b141b44cae29d1bc889fc45
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

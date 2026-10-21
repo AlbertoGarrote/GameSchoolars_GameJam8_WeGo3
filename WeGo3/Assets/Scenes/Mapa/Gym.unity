@@ -924,7 +924,7 @@ MonoBehaviour:
   dialogoBloqueo: {fileID: 0}
   nombreEscenaACargar: Plaza
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
-  posicionEnNuevaEscena: {x: 0, y: 0}
+  posicionEnNuevaEscena: {x: -12.8, y: -5}
   tiempoEsperaAlAparecer: 1.5
 --- !u!61 &461961313
 BoxCollider2D:
@@ -2261,7 +2261,7 @@ Transform:
   m_GameObject: {fileID: 1699335233}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.099993885, y: -3.8123806, z: -10}
+  m_LocalPosition: {x: -6.0090604, y: -3.8123806, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2419,7 +2419,7 @@ Transform:
   m_GameObject: {fileID: 1739633865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -6.32, z: -10}
+  m_LocalPosition: {x: -7.53, y: -6.81, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2629,7 +2629,7 @@ Transform:
   m_GameObject: {fileID: 1854723653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -7.14, z: 0}
+  m_LocalPosition: {x: -7.52, y: -7.4, z: 0}
   m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2696,8 +2696,8 @@ MonoBehaviour:
   claveFlagRequerida: 
   dialogoBloqueo: {fileID: 0}
   nombreEscenaACargar: Plaza
-  memoriaPosicion: {fileID: 0}
-  posicionEnNuevaEscena: {x: 0, y: 0}
+  memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
+  posicionEnNuevaEscena: {x: -17.5, y: -15.5}
   tiempoEsperaAlAparecer: 1.5
 --- !u!1 &1979846096
 GameObject:
@@ -3083,7 +3083,7 @@ Transform:
   m_GameObject: {fileID: 2118372535}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5206015, y: -3.99, z: 0}
+  m_LocalPosition: {x: -1.54, y: -4.02, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3103,11 +3103,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6175019036868475594, guid: a76f8fea72e610a48abab607edfcb029, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: -7.53
       objectReference: {fileID: 0}
     - target: {fileID: 6175019036868475594, guid: a76f8fea72e610a48abab607edfcb029, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.32
+      value: -6.81
       objectReference: {fileID: 0}
     - target: {fileID: 6175019036868475594, guid: a76f8fea72e610a48abab607edfcb029, type: 3}
       propertyPath: m_LocalPosition.z
