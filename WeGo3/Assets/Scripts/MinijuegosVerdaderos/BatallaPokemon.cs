@@ -11,7 +11,10 @@ public class BatallaPokemon : MonoBehaviour
     [SerializeField] private Vector2 posicionEnNuevaEscena;
     [SerializeField] private string nombreEscenaGym = "Gym";
 
-    [Header("Paneles UI")]
+    [Header("UI y Paneles de Inicio")]
+    [SerializeField] private GameObject panelInicio;
+    [SerializeField] private GameObject temporizadorInicial; // El objeto contenedor del texto de cuenta atrás
+    [SerializeField] private TMP_Text textoInicio;           // El componente de texto para "LISTOS...?" / "¡YA!"
     [SerializeField] private GameObject panelVictoria;
     [SerializeField] private GameObject panelDerrota;
 
@@ -30,10 +33,10 @@ public class BatallaPokemon : MonoBehaviour
     [SerializeField] private Key teclaEsquiva = Key.Space;
 
     [Header("Referencias Visuales y de Animación")]
-    [SerializeField] private Transform spriteEnemigo;          // Sprite del enemigo
-    [SerializeField] private Transform spriteJugador;          // Sprite del jugador
-    [SerializeField] private float distanciaEmbestida = 1.5f;   // Distancia del placaje hacia adelante
-    [SerializeField] private float distanciaEsquivaLateral = 1f; // Desplazamiento lateral del jugador
+    [SerializeField] private Transform spriteEnemigo;
+    [SerializeField] private Transform spriteJugador;
+    [SerializeField] private float distanciaEmbestida = 1.5f;
+    [SerializeField] private float distanciaEsquivaLateral = 1f;
 
     [Header("UI de Vida del Enemigo")]
     [SerializeField] private Slider sliderVidaEnemigo;
@@ -48,7 +51,7 @@ public class BatallaPokemon : MonoBehaviour
     [SerializeField] private AudioClip sonidoEsquivaExitosa;
     [SerializeField] private AudioClip sonidoEsquivaFallida;
 
-    private bool enBatalla = true;
+    private bool juegoActivo = false; // Controla si la partida está en marcha (reemplaza o actúa junto a enBatalla)
     private bool esperandoEsquiva = false;
     private float temporizadorAtaque = 0f;
     private float temporizadorVentanaEsquiva = 0f;
@@ -58,14 +61,16 @@ public class BatallaPokemon : MonoBehaviour
 
     void Start()
     {
+        // Estado inicial de la UI al abrir la escena
+        if (panelInicio != null) panelInicio.SetActive(true);
+        if (temporizadorInicial != null) temporizadorInicial.SetActive(false);
         if (panelVictoria != null) panelVictoria.SetActive(false);
         if (panelDerrota != null) panelDerrota.SetActive(false);
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
 
         vidaActualEnemigo = vidaMaximaEnemigo;
         vidasActualesJugador = vidasMaximasJugador;
-        enBatalla = true;
-        temporizadorAtaque = intervaloAtaqueEnemigo;
+        juegoActivo = false;
 
         if (spriteEnemigo != null) posicionOriginalEnemigo = spriteEnemigo.localPosition;
         if (spriteJugador != null) posicionOriginalJugador = spriteJugador.localPosition;
@@ -73,9 +78,37 @@ public class BatallaPokemon : MonoBehaviour
         ActualizarUI();
     }
 
+    // Este método se vincula al botón "Comenzar" o "Jugar" del panelInicio en el Inspector
+    public void ComenzarBoton()
+    {
+        StartCoroutine(ComenzarJuegoCorrutina());
+    }
+
+    private IEnumerator ComenzarJuegoCorrutina()
+    {
+        if (panelInicio != null) panelInicio.SetActive(false);
+        if (temporizadorInicial != null) temporizadorInicial.SetActive(true);
+
+        if (textoInicio != null) textoInicio.text = "LISTOS...?";
+        yield return new WaitForSeconds(2f);
+
+        if (textoInicio != null) textoInicio.text = "¡YA!";
+        yield return new WaitForSeconds(1f);
+
+        if (temporizadorInicial != null) temporizadorInicial.SetActive(false);
+
+        IniciarJuegoReal();
+    }
+
+    private void IniciarJuegoReal()
+    {
+        juegoActivo = true;
+        temporizadorAtaque = intervaloAtaqueEnemigo;
+    }
+
     void Update()
     {
-        if (!enBatalla) return;
+        if (!juegoActivo) return;
 
         // 1. GESTIÓN DE CLICS (Atacar)
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
@@ -123,7 +156,6 @@ public class BatallaPokemon : MonoBehaviour
         esperandoEsquiva = true;
         temporizadorVentanaEsquiva = tiempoVentanaEsquiva;
 
-        // Muestra únicamente el aviso en pantalla. El enemigo NO se mueve aún.
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(true);
     }
 
@@ -136,7 +168,6 @@ public class BatallaPokemon : MonoBehaviour
 
         ReproducirSonido(sonidoEsquivaExitosa);
 
-        // El jugador se aparta a un lado y el enemigo ejecuta el placaje hacia donde estaba
         if (spriteJugador != null) StartCoroutine(RutinaEsquivaJugador());
         if (spriteEnemigo != null) StartCoroutine(RutinaPlacajeEnemigo());
     }
@@ -152,7 +183,6 @@ public class BatallaPokemon : MonoBehaviour
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
         ReproducirSonido(sonidoEsquivaFallida);
 
-        // El enemigo ejecuta el placaje impactando al jugador
         if (spriteEnemigo != null) StartCoroutine(RutinaPlacajeEnemigo());
 
         if (vidasActualesJugador <= 0)
@@ -161,7 +191,6 @@ public class BatallaPokemon : MonoBehaviour
         }
     }
 
-    // Placaje Pokémon seco: ida acelerada en 0.08s y vuelta limpia en 0.1s
     private IEnumerator RutinaPlacajeEnemigo()
     {
         Vector3 posInicio = posicionOriginalEnemigo;
@@ -207,7 +236,7 @@ public class BatallaPokemon : MonoBehaviour
         while (t < 0.12f)
         {
             t += Time.deltaTime;
-            spriteJugador.localPosition = Vector3.Lerp(posLateral, posCentro, t / 0.2f);
+            spriteJugador.localPosition = Vector3.Lerp(posLateral, posCentro, t / 0.12f);
             yield return null;
         }
         spriteJugador.localPosition = posCentro;
@@ -223,7 +252,6 @@ public class BatallaPokemon : MonoBehaviour
 
     private void ActualizarUI()
     {
-        // 1. Actualizar barra y texto del enemigo
         if (sliderVidaEnemigo != null)
         {
             sliderVidaEnemigo.maxValue = vidaMaximaEnemigo;
@@ -234,7 +262,6 @@ public class BatallaPokemon : MonoBehaviour
             textoVidaEnemigo.text = $"{vidaActualEnemigo} / {vidaMaximaEnemigo}";
         }
 
-        // 2. Actualizar barra y texto del jugador
         if (sliderVidasJugador != null)
         {
             sliderVidasJugador.maxValue = vidasMaximasJugador;
@@ -248,7 +275,7 @@ public class BatallaPokemon : MonoBehaviour
 
     private void GanarBatalla()
     {
-        enBatalla = false;
+        juegoActivo = false;
         StopAllCoroutines();
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
         if (panelVictoria != null) panelVictoria.SetActive(true);
@@ -256,7 +283,7 @@ public class BatallaPokemon : MonoBehaviour
 
     private void PerderBatalla()
     {
-        enBatalla = false;
+        juegoActivo = false;
         StopAllCoroutines();
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
         if (panelDerrota != null) panelDerrota.SetActive(true);

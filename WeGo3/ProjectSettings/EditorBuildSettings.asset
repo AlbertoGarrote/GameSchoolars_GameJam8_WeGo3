@@ -80,6 +80,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa/habitracionPatos.unity
     guid: 02de9183d13dddd46bd04868251ed8ed
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosVerdaderos/GranjeroMinigame.unity
+    guid: 73902657f1ad7334ab23fa0ace443169
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
