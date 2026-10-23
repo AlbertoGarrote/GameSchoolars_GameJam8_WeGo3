@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda073e48416a7e4ab410a4a7ab7ac02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  memoriaPosicion: {fileID: 0}
 --- !u!1 &333575418
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,7 +916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -210.25, y: 14.81}
+  m_AnchoredPosition: {x: -210.25, y: 12.2}
   m_SizeDelta: {x: 38, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083278579
