@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 82a7d479b4f3ad046880735311582cd1
+guid: 474774eee41bdca49b935e8cbe90d5fc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6810884241178731213
-    second: placeholderTriples_0
+      213: -777448245631012381
+    second: pelotaBaloncesto_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: placeholderTriples_0
+      name: pelotaBaloncesto_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 108
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc2a3c9b12f158e50800000000000000
-      internalID: 6810884241178731213
+      spriteID: 3e1b9ef80f2f535f0800000000000000
+      internalID: -777448245631012381
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      placeholderTriples_0: 6810884241178731213
+      pelotaBaloncesto_0: -777448245631012381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
