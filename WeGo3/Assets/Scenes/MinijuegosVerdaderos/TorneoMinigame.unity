@@ -5713,7 +5713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinijuegoSupervivencia
   flagVictoria: Torneo_ganado
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
-  posicionEnNuevaEscena: {x: 0, y: 0}
+  posicionEnNuevaEscena: {x: -20, y: 3}
   nombreEscenaGym: Cementerio
   panelInicio: {fileID: 275742275}
   temporizadorInicial: {fileID: 74860809}
