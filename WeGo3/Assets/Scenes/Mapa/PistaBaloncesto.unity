@@ -573,7 +573,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmartObject2D
   iconoInteraccion: {fileID: 2109832845}
-  acciones: []
+  acciones:
+  - {fileID: 0}
   deUnSoloUso: 0
 --- !u!114 &246538953
 MonoBehaviour:
@@ -584,12 +585,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 246538947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3647761137893941b53dc0ecf34f88d, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b3dedfb05683264097e75fd1b0b9896, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VerificadorFlagObjeto
-  claveFlagRequerida: Granjero_ganado
-  ocultarSiFlagActivada: 1
-  objetoAfectado: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::AccionCargarEscena
+  nombreEscena: BaloncestoMinigame
+  memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
+  posicionEnNuevaEscena: {x: 0, y: 0}
 --- !u!1 &402051820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 845914925}
+  - component: {fileID: 845914926}
   m_Layer: 0
   m_Name: Personajes
   m_TagString: Untagged
@@ -1221,6 +1223,21 @@ Transform:
   - {fileID: 246538950}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &845914926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845914924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3647761137893941b53dc0ecf34f88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VerificadorFlagObjeto
+  claveFlagRequerida: Granjero_ganado
+  ocultarSiFlagActivada: 0
+  objetoAfectado: {fileID: 246538947}
 --- !u!1 &858393844
 GameObject:
   m_ObjectHideFlags: 0

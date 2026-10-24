@@ -83,6 +83,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinijuegosVerdaderos/GranjeroMinigame.unity
     guid: 73902657f1ad7334ab23fa0ace443169
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosVerdaderos/BaloncestoMinigame.unity
+    guid: b751fc2f7e33b5044b5266667567673d
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosVerdaderos/PogoMinijuego.unity
+    guid: 9857dadfa2cf38e478330db9d067767d
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosVerdaderos/TorneoMinigame.unity
+    guid: d11a76dbd4990fc42bd8ffe8ac932204
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
