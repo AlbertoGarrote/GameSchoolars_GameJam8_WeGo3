@@ -2126,7 +2126,7 @@ Transform:
   m_GameObject: {fileID: 1354248732}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: -3.4, z: 0}
+  m_LocalPosition: {x: -7, y: -3.699, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2166,17 +2166,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0033316314, y: -0.020656386}
+  m_Offset: {x: 0.0033316314, y: 0.051928055}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.13}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.18, y: 0.15}
     newSize: {x: 0.16, y: 0.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.124017924, y: 0.0620338}
+  m_Size: {x: 0.124017924, y: 0.0702228}
   m_EdgeRadius: 0
 --- !u!1 &1399403658
 GameObject:
@@ -2341,6 +2341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda073e48416a7e4ab410a4a7ab7ac02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  memoriaPosicion: {fileID: 0}
 --- !u!114 &1423023445
 MonoBehaviour:
   m_ObjectHideFlags: 0
