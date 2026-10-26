@@ -76,6 +76,7 @@ public class DialogoManager : MonoBehaviour
 
             if (Keyboard.current.eKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame)
             {
+                MusicSoundController.Instance.ReproducirSFX("Interactuar");
                 ConfirmarOpcion();
             }
 
@@ -91,6 +92,7 @@ public class DialogoManager : MonoBehaviour
             }
             else
             {
+                MusicSoundController.Instance.ReproducirSFX("Interactuar");
                 AvanzarDialogo();
             }
         }

@@ -46,11 +46,6 @@ public class BatallaPokemon : MonoBehaviour
     [SerializeField] private Slider sliderVidasJugador;
     [SerializeField] private TextMeshProUGUI textoVidasJugador;
 
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip sonidoEsquivaExitosa;
-    [SerializeField] private AudioClip sonidoEsquivaFallida;
-
     private bool juegoActivo = false; // Controla si la partida está en marcha (reemplaza o actúa junto a enBatalla)
     private bool esperandoEsquiva = false;
     private float temporizadorAtaque = 0f;
@@ -166,7 +161,7 @@ public class BatallaPokemon : MonoBehaviour
 
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
 
-        ReproducirSonido(sonidoEsquivaExitosa);
+        MusicSoundController.Instance.ReproducirSFX("Acierto");
 
         if (spriteJugador != null) StartCoroutine(RutinaEsquivaJugador());
         if (spriteEnemigo != null) StartCoroutine(RutinaPlacajeEnemigo());
@@ -181,7 +176,7 @@ public class BatallaPokemon : MonoBehaviour
         ActualizarUI();
 
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
-        ReproducirSonido(sonidoEsquivaFallida);
+        MusicSoundController.Instance.ReproducirSFX("Fallo");
 
         if (spriteEnemigo != null) StartCoroutine(RutinaPlacajeEnemigo());
 
@@ -242,14 +237,6 @@ public class BatallaPokemon : MonoBehaviour
         spriteJugador.localPosition = posCentro;
     }
 
-    private void ReproducirSonido(AudioClip clip)
-    {
-        if (audioSource != null && clip != null)
-        {
-            audioSource.PlayOneShot(clip);
-        }
-    }
-
     private void ActualizarUI()
     {
         if (sliderVidaEnemigo != null)
@@ -279,6 +266,8 @@ public class BatallaPokemon : MonoBehaviour
         StopAllCoroutines();
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
         if (panelVictoria != null) panelVictoria.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Ganar");
+
     }
 
     private void PerderBatalla()
@@ -287,6 +276,8 @@ public class BatallaPokemon : MonoBehaviour
         StopAllCoroutines();
         if (avisoAtaqueEnemigo != null) avisoAtaqueEnemigo.SetActive(false);
         if (panelDerrota != null) panelDerrota.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Perder");
+
     }
 
     public void volverGym(bool victoriaConseguida)

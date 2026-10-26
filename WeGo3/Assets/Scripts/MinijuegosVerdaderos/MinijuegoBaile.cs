@@ -47,11 +47,6 @@ public class MinijuegoBaile : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoVida;
     [SerializeField] private TextMeshProUGUI textoTiempo; // Solo texto (sin slider)
 
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip sonidoAcierto;
-    [SerializeField] private AudioClip sonidoFallo;
-
     // Listas para rastrear las notas activas en cada carril/columna
     private List<NotaBaile>[] notasActivasPorCarril = new List<NotaBaile>[4];
 
@@ -160,7 +155,7 @@ public class MinijuegoBaile : MonoBehaviour
 
             if (distanciaY <= toleranciaAcierto)
             {
-                ReproducirSonido(sonidoAcierto);
+                MusicSoundController.Instance.ReproducirSFX("Acierto");
                 notasActivasPorCarril[carril].RemoveAt(0);
                 Destroy(notaAChequear.gameObject);
             }
@@ -185,7 +180,7 @@ public class MinijuegoBaile : MonoBehaviour
     private void RestarVida()
     {
         vidasActuales--;
-        ReproducirSonido(sonidoFallo);
+        MusicSoundController.Instance.ReproducirSFX("Fallo");
         ActualizarUI();
 
         if (vidasActuales <= 0)
@@ -244,19 +239,13 @@ public class MinijuegoBaile : MonoBehaviour
         }
     }
 
-    private void ReproducirSonido(AudioClip clip)
-    {
-        if (audioSource != null && clip != null)
-        {
-            audioSource.PlayOneShot(clip);
-        }
-    }
-
     private void GanarPartida()
     {
         juegoActivo = false;
         StopAllCoroutines();
         if (panelVictoria != null) panelVictoria.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Ganar");
+
     }
 
     private void PerderPartida()
@@ -264,6 +253,8 @@ public class MinijuegoBaile : MonoBehaviour
         juegoActivo = false;
         StopAllCoroutines();
         if (panelDerrota != null) panelDerrota.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Perder");
+
     }
 
     public void volverGym(bool victoriaConseguida)

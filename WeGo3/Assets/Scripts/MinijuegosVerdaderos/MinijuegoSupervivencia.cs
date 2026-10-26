@@ -68,11 +68,6 @@ public class MinijuegoSupervivencia : MonoBehaviour
     [SerializeField] private Slider sliderFases;
     [SerializeField] private TextMeshProUGUI textoFases;
 
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip sonidoDanio;
-    [SerializeField] private AudioClip sonidoCambioFase;
-
     private List<GameObject> proyectilesActivos = new List<GameObject>();
 
     void Start()
@@ -192,8 +187,6 @@ public class MinijuegoSupervivencia : MonoBehaviour
             GanarPartida();
             yield break;
         }
-
-        ReproducirSonido(sonidoCambioFase);
 
         if (textoAnuncioFase != null)
         {
@@ -317,7 +310,8 @@ public class MinijuegoSupervivencia : MonoBehaviour
         if (!juegoActivo || enPausaCambioFase) return;
 
         vidasActuales--;
-        ReproducirSonido(sonidoDanio);
+        MusicSoundController.Instance.ReproducirSFX("Fallo");
+
         ActualizarUI();
 
         if (spriteJugadorRenderer != null)
@@ -390,20 +384,14 @@ public class MinijuegoSupervivencia : MonoBehaviour
         }
     }
 
-    private void ReproducirSonido(AudioClip clip)
-    {
-        if (audioSource != null && clip != null)
-        {
-            audioSource.PlayOneShot(clip);
-        }
-    }
-
     private void GanarPartida()
     {
         juegoActivo = false;
         StopAllCoroutines();
         LimpiarProyectiles();
         if (panelVictoria != null) panelVictoria.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Ganar");
+
     }
 
     private void PerderPartida()
@@ -412,6 +400,8 @@ public class MinijuegoSupervivencia : MonoBehaviour
         StopAllCoroutines();
         LimpiarProyectiles();
         if (panelDerrota != null) panelDerrota.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Perder");
+
     }
 
     public void volverGym(bool victoriaConseguida)

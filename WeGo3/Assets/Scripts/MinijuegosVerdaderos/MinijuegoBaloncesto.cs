@@ -47,11 +47,6 @@ public class MinijuegoBaloncesto : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textoPuntos;
     [SerializeField] private TextMeshProUGUI textoTiempo;
 
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip sonidoAnotar;
-    [SerializeField] private AudioClip sonidoFallar;
-
     private int puntosActuales = 0;
     private float tiempoRestante;
     private bool juegoActivo = false;
@@ -179,7 +174,7 @@ public class MinijuegoBaloncesto : MonoBehaviour
         if (acierto)
         {
             puntosActuales++;
-            ReproducirSonido(sonidoAnotar);
+            MusicSoundController.Instance.ReproducirSFX("Acierto");
             LanzarPelotaAnimacion(true);
             MoverZonaVerdeAleatoria();
         }
@@ -189,7 +184,7 @@ public class MinijuegoBaloncesto : MonoBehaviour
             puntosActuales -= penalizacionPorFallo;
             if (puntosActuales < 0) puntosActuales = 0;
 
-            ReproducirSonido(sonidoFallar);
+            MusicSoundController.Instance.ReproducirSFX("Fallo");
             LanzarPelotaAnimacion(false);
         }
 
@@ -257,19 +252,13 @@ public class MinijuegoBaloncesto : MonoBehaviour
         }
     }
 
-    private void ReproducirSonido(AudioClip clip)
-    {
-        if (audioSource != null && clip != null)
-        {
-            audioSource.PlayOneShot(clip);
-        }
-    }
-
     private void GanarPartida()
     {
         juegoActivo = false;
         StopAllCoroutines();
         if (panelVictoria != null) panelVictoria.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Ganar");
+
     }
 
     private void PerderPartida()
@@ -277,6 +266,8 @@ public class MinijuegoBaloncesto : MonoBehaviour
         juegoActivo = false;
         StopAllCoroutines();
         if (panelDerrota != null) panelDerrota.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Perder");
+
     }
 
     public void volverGym(bool victoriaConseguida)

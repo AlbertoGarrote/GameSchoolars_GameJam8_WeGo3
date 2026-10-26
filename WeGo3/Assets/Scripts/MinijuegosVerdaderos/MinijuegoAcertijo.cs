@@ -25,11 +25,6 @@ public class MinijuegoAcertijo : MonoBehaviour
     [Header("UI de Selección de Número")]
     [SerializeField] private TextMeshProUGUI textoNumeroSeleccionado; // El texto que muestra el número actual (empezando en 0)
 
-    [Header("Audio")]
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip sonidoCambioNumero;
-    [SerializeField] private AudioClip sonidoConfirmar;
-
     void Start()
     {
         // Ocultamos los paneles de fin de partida al arrancar
@@ -62,7 +57,7 @@ public class MinijuegoAcertijo : MonoBehaviour
         if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame)
         {
             numeroSeleccionado++;
-            ReproducirSonido(sonidoCambioNumero);
+            MusicSoundController.Instance.ReproducirSFX("Interactuar");
             ActualizarTextoUI();
         }
         // Bajar número (S o Flecha Abajo) - Evitamos que baje de 0
@@ -71,7 +66,7 @@ public class MinijuegoAcertijo : MonoBehaviour
             if (numeroSeleccionado > 0)
             {
                 numeroSeleccionado--;
-                ReproducirSonido(sonidoCambioNumero);
+                MusicSoundController.Instance.ReproducirSFX("Interactuar");
                 ActualizarTextoUI();
             }
         }
@@ -90,7 +85,7 @@ public class MinijuegoAcertijo : MonoBehaviour
     private void ConfirmarRespuesta()
     {
         juegoActivo = false;
-        ReproducirSonido(sonidoConfirmar);
+        MusicSoundController.Instance.ReproducirSFX("Interactuar");
 
         if (numeroSeleccionado == numeroRespuestaCorrecta)
         {
@@ -110,22 +105,18 @@ public class MinijuegoAcertijo : MonoBehaviour
         }
     }
 
-    private void ReproducirSonido(AudioClip clip)
-    {
-        if (audioSource != null && clip != null)
-        {
-            audioSource.PlayOneShot(clip);
-        }
-    }
-
     private void GanarPartida()
     {
         if (panelVictoria != null) panelVictoria.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Ganar");
+
     }
 
     private void PerderPartida()
     {
         if (panelDerrota != null) panelDerrota.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Perder");
+
     }
 
     public void volverGym(bool victoriaConseguida)

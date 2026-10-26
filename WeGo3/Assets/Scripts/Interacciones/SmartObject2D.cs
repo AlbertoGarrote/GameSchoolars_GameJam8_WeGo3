@@ -63,9 +63,9 @@ public class SmartObject2D : MonoBehaviour
 
         if (DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo) return;
 
-        // Quitamos la comprobación de dirección de la mirada
         if (Keyboard.current != null && (Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.eKey.wasPressedThisFrame))
         {
+            MusicSoundController.Instance.ReproducirSFX("Interactuar");
             StartCoroutine(EjecutarSecuenciaAcciones());
         }
     }
