@@ -206,7 +206,7 @@ RectTransform:
   m_Father: {fileID: 349374594162848357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3269546973887534419}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: ConfirmarSalirSinGuardar
         m_Mode: 6
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 9027059896698698251}
   - component: {fileID: 7648206527868444425}
   - component: {fileID: 7465431465842676359}
-  - component: {fileID: 3269546973887534419}
+  - component: {fileID: 3170071798859942208}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &3269546973887534419
+--- !u!114 &3170071798859942208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -706,10 +706,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4846744333091097406}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda073e48416a7e4ab410a4a7ab7ac02, type: 3}
+  m_Script: {fileID: 11500000, guid: 3250852763c0c3c49aa9e6e993c6b887, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuController
-  memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::MenuPausaController
   panelPausa: {fileID: 5800270234568688686}
   panelConfirmarSalir: {fileID: 8735701048625636204}
   sliderVolumenMusica: {fileID: 4884805605881976308}
@@ -805,8 +804,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3269546973887534419}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+      - m_Target: {fileID: 3170071798859942208}
+        m_TargetAssemblyTypeName: MenuPausaController, Assembly-CSharp
         m_MethodName: OnSliderSFXChanged
         m_Mode: 0
         m_Arguments:
@@ -850,7 +849,7 @@ RectTransform:
   m_Father: {fileID: 237664661581276971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1287,8 +1286,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3269546973887534419}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+      - m_Target: {fileID: 3170071798859942208}
+        m_TargetAssemblyTypeName: MenuPausaController, Assembly-CSharp
         m_MethodName: BotonIntentarSalir
         m_Mode: 1
         m_Arguments:
@@ -1316,7 +1315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5164705097133366727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1577,7 +1576,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3269546973887534419}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
         m_MethodName: ConfirmarSalirSinGuardar
         m_Mode: 6
@@ -2125,8 +2124,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3269546973887534419}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+      - m_Target: {fileID: 3170071798859942208}
+        m_TargetAssemblyTypeName: MenuPausaController, Assembly-CSharp
         m_MethodName: OnSliderMusicaChanged
         m_Mode: 0
         m_Arguments:
@@ -2407,8 +2406,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3269546973887534419}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+      - m_Target: {fileID: 3170071798859942208}
+        m_TargetAssemblyTypeName: MenuPausaController, Assembly-CSharp
         m_MethodName: BotonContinuarPausa
         m_Mode: 1
         m_Arguments:

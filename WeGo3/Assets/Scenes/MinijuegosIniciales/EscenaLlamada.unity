@@ -446,10 +446,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 245641042}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda073e48416a7e4ab410a4a7ab7ac02, type: 3}
+  m_Script: {fileID: 11500000, guid: b5a5a0659441e374bba314b1f772e702, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuController
+  m_EditorClassIdentifier: Assembly-CSharp::MenuPrincipalController
   memoriaPosicion: {fileID: 0}
+  botonContinuar: {fileID: 0}
 --- !u!1 &333575418
 GameObject:
   m_ObjectHideFlags: 0

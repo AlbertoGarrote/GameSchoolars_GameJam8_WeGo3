@@ -1,34 +1,69 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    public static MenuController Instance { get; private set; }
+
     [SerializeField] private PuntoAparicionSO memoriaPosicion;
 
+    [Header("Referencias de UI")]
+    [SerializeField] private Button botonContinuar;                // Referencia al botón de Continuar del menú
+
     [Header("Configuración de Pausa")]
-    [SerializeField] private GameObject panelPausa;               // Panel principal de pausa
-    [SerializeField] private GameObject panelConfirmarSalir;      // Panel de "¿Estás seguro? No se guardará..."
-    [SerializeField] private Slider sliderVolumenMusica;          // Slider para la música
-    [SerializeField] private Slider sliderVolumenSFX;             // Slider para los efectos de sonido
-    [SerializeField] private string nombreEscenaMenuPrincipal = "MenuPrincipal"; // Escena a la que vuelve al confirmar salir
+    [SerializeField] private GameObject panelPausa;
+    [SerializeField] private GameObject panelConfirmarSalir;
+    [SerializeField] private Slider sliderVolumenMusica;
+    [SerializeField] private Slider sliderVolumenSFX;
+    [SerializeField] private string nombreEscenaMenuPrincipal = "MenuPrincipal";
 
     private bool juegoPausado = false;
 
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
+
     void Start()
     {
-        // Asegurarnos de que los paneles de pausa estén ocultos al iniciar la escena
         if (panelPausa != null) panelPausa.SetActive(false);
         if (panelConfirmarSalir != null) panelConfirmarSalir.SetActive(false);
 
-        // Inicializar los valores de los sliders si MusicSoundController está presente (opcional)
-        // (Si usas un script global de audio, puedes sincronizar aquí los valores iniciales)
+        // Comprobar el estado del botón Continuar al iniciar
+        ActualizarEstadoBotonContinuar();
     }
 
     void Update()
     {
-        // Comprobar la tecla Escape para pausar o despausar
         ComprobarTeclaPausa();
+    }
+
+    // Método para comprobar si hay archivo y habilitar/deshabilitar el botón
+    public void ActualizarEstadoBotonContinuar()
+    {
+        if (botonContinuar != null)
+        {
+            if (SaveSystemManager.Instance != null)
+            {
+                // Si existe partida guardada, interactable = true; si no, false
+                botonContinuar.interactable = SaveSystemManager.Instance.ExistePartidaGuardada();
+            }
+            else
+            {
+                botonContinuar.interactable = false;
+            }
+        }
     }
 
     private void ComprobarTeclaPausa()
@@ -37,8 +72,7 @@ public class MenuController : MonoBehaviour
 
         if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
-            // REQUISITO: Comprobar que NO se esté en un minijuego ni en un diálogo
-            if (EstaEnMinijuegoODialogo()) return;
+            if (EstaEnMinijuegoDialogoOMenu()) return;
 
             if (juegoPausado)
             {
@@ -51,19 +85,18 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    private bool EstaEnMinijuegoODialogo()
+    private bool EstaEnMinijuegoDialogoOMenu()
     {
-        // 1. Comprobar si hay un diálogo abierto
         if (DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo)
         {
             return true;
         }
 
-        // 2. Comprobar si estamos en un minijuego (puedes verificar por nombre de escena o si existe algún script de minijuego activo)
-        // Aquí detectamos si la escena actual contiene la palabra "Minijuego" en su nombre
-        string escenaActual = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-        if (escenaActual.Contains("Minijuego") || escenaActual.Contains("minijuego"))
+        string escenaActual = SceneManager.GetActiveScene().name;
+        if (escenaActual.Contains("Minijuego") || escenaActual.Contains("minijuego") || escenaActual == nombreEscenaMenuPrincipal)
         {
+            // Nota: Si estás en el Menú Principal, puedes actualizar el estado del botón aquí también por si acaso
+            ActualizarEstadoBotonContinuar();
             return true;
         }
 
@@ -74,11 +107,9 @@ public class MenuController : MonoBehaviour
     {
         juegoPausado = true;
         if (panelPausa != null) panelPausa.SetActive(true);
-
-        // Ocultar el panel de confirmación por si acaso se quedó abierto
         if (panelConfirmarSalir != null) panelConfirmarSalir.SetActive(false);
 
-        Time.timeScale = 0f; // Congela el tiempo del juego
+        Time.timeScale = 0f;
     }
 
     public void ReanudarJuego()
@@ -87,10 +118,8 @@ public class MenuController : MonoBehaviour
         if (panelPausa != null) panelPausa.SetActive(false);
         if (panelConfirmarSalir != null) panelConfirmarSalir.SetActive(false);
 
-        Time.timeScale = 1f; // Restaura el tiempo normal
+        Time.timeScale = 1f;
     }
-
-    // --- MÉTODOS PARA LOS BOTONES DE LA PAUSA ---
 
     public void BotonContinuarPausa()
     {
@@ -99,7 +128,6 @@ public class MenuController : MonoBehaviour
 
     public void BotonIntentarSalir()
     {
-        // Muestra el panel de advertencia antes de salir sin guardar
         if (panelConfirmarSalir != null)
         {
             if (panelPausa != null) panelPausa.SetActive(false);
@@ -107,14 +135,13 @@ public class MenuController : MonoBehaviour
         }
         else
         {
-            // Si por lo que sea no hay panel de confirmación asignado, sale directamente
             ConfirmarSalirSinGuardar(true);
         }
     }
 
     public void ConfirmarSalirSinGuardar(bool confirmar)
     {
-        Time.timeScale = 1f; // Restaurar el tiempo antes de cambiar de escena
+        Time.timeScale = 1f;
 
         if (confirmar)
         {
@@ -124,19 +151,16 @@ public class MenuController : MonoBehaviour
             }
             else
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene(nombreEscenaMenuPrincipal);
+                SceneManager.LoadScene(nombreEscenaMenuPrincipal);
             }
         }
         else
         {
-            // Si dice que "No", ocultamos la advertencia y volvemos al menú de pausa principal
             if (panelConfirmarSalir != null) panelConfirmarSalir.SetActive(false);
             if (panelPausa != null) panelPausa.SetActive(true);
-            Time.timeScale = 0f; // Volver a congelar
+            Time.timeScale = 0f;
         }
     }
-
-    // --- MÉTODOS PARA LOS SLIDERS DE AUDIO (Vinculados con MusicSoundController) ---
 
     public void OnSliderMusicaChanged(float valor)
     {
@@ -153,8 +177,6 @@ public class MenuController : MonoBehaviour
             MusicSoundController.Instance.CambiarVolumenSFX(valor);
         }
     }
-
-    // --- MÉTODOS ANTERIORES DEL MENÚ PRINCIPAL ---
 
     public void BotonContinuar()
     {
@@ -174,7 +196,7 @@ public class MenuController : MonoBehaviour
 
     public void CambiarEscena(string escenaCambiar)
     {
-        Time.timeScale = 1f; // Asegurar tiempo normal al cambiar de escena
+        Time.timeScale = 1f;
         TransicionController.Instance.CargarEscena(escenaCambiar);
     }
 
@@ -188,7 +210,7 @@ public class MenuController : MonoBehaviour
         Time.timeScale = 1f;
         PlayerPrefs.SetInt("CondicionEspecialGuardada", 1);
         PlayerPrefs.Save();
-        TransicionController.Instance.CargarEscena(escenaCambiar, 5f);
+    TransicionCompany: TransicionController.Instance.CargarEscena(escenaCambiar, 5f);
     }
 
     public void AbrirEnlace(string urlDestino)

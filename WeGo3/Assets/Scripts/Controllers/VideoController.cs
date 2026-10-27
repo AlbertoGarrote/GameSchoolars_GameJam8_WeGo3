@@ -7,7 +7,7 @@ public class VideoController : MonoBehaviour
     [SerializeField] private VideoPlayer videoPlayer;
 
     [Header("Referencia al Canvas")]
-    [SerializeField] private MenuController menuController; 
+    [SerializeField] private MenuPrincipalController menuController; 
 
     private void OnEnable()
     {

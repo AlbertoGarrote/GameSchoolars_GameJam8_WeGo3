@@ -1822,8 +1822,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1423023444}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+      - m_Target: {fileID: 1423023449}
+        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
         m_MethodName: CambiarEscena
         m_Mode: 5
         m_Arguments:
@@ -2321,7 +2321,7 @@ GameObject:
   - component: {fileID: 1423023447}
   - component: {fileID: 1423023446}
   - component: {fileID: 1423023445}
-  - component: {fileID: 1423023444}
+  - component: {fileID: 1423023449}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2329,19 +2329,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1423023444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423023443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda073e48416a7e4ab410a4a7ab7ac02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuController
-  memoriaPosicion: {fileID: 0}
 --- !u!114 &1423023445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,6 +2417,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1423023449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423023443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a5a0659441e374bba314b1f772e702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuPrincipalController
+  memoriaPosicion: {fileID: 0}
+  botonContinuar: {fileID: 0}
 --- !u!1 &1424422035
 GameObject:
   m_ObjectHideFlags: 0

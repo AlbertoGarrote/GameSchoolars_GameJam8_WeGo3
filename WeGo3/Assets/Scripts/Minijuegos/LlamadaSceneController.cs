@@ -13,7 +13,7 @@ public class LlamadaSceneController : MonoBehaviour
     public Transform puntoFueraPantalla;
     public float velocidadMovimiento = 15f;
 
-    public MenuController menuController;
+    public MenuPrincipalController menuController;
 
 
     void Start()

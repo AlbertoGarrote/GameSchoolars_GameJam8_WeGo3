@@ -3070,7 +3070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3dedfb05683264097e75fd1b0b9896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionCargarEscena
-  nombreEscena: BatallaPokemonMinigmae
+  nombreEscena: BatallaPokemonMinigame
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
   posicionEnNuevaEscena: {x: 0, y: 0}
 --- !u!114 &1683143610
