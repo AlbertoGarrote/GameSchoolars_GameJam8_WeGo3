@@ -158,6 +158,54 @@ MonoBehaviour:
     pitch: 0.6
     esMusica: 0
     loop: 0
+  - nombreIdentificador: Granjero
+    clip: {fileID: 8300000, guid: c06da8270f04a834ea2a995ef2ef999e, type: 3}
+    volumen: 0.3
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Torneo
+    clip: {fileID: 8300000, guid: 6fb9efbf03b3d404ca4473f53225b5dc, type: 3}
+    volumen: 0.1
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Patos
+    clip: {fileID: 8300000, guid: b4229d01e16d2de47916f6298dc090df, type: 3}
+    volumen: 0.3
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Pogo
+    clip: {fileID: 8300000, guid: d342f731c1c338148ac55c4668fef8b3, type: 3}
+    volumen: 0.1
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Hotel
+    clip: {fileID: 8300000, guid: 67571085290ba61439290c2022c90c47, type: 3}
+    volumen: 0.05
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Fiestas
+    clip: {fileID: 8300000, guid: ff04bae69a733074e9373d2d6abbe1df, type: 3}
+    volumen: 0.1
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: "Monta\xF1a"
+    clip: {fileID: 8300000, guid: 532178bf2d581424aa8f9d01e32db0db, type: 3}
+    volumen: 0.3
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Creditos
+    clip: {fileID: 8300000, guid: b329ebe74eea86c48a81127ca477147b, type: 3}
+    volumen: 0.1
+    pitch: 1
+    esMusica: 1
+    loop: 1
   musicaPorEscenaList:
   - nombreEscena: Plaza
     nombreSonidoMusica: Plaza
@@ -179,6 +227,22 @@ MonoBehaviour:
     nombreSonidoMusica: PistaBaloncesto
   - nombreEscena: Cementerio
     nombreSonidoMusica: Cementerio
+  - nombreEscena: GranjeroMinigame
+    nombreSonidoMusica: Granjero
+  - nombreEscena: TorneoMinigame
+    nombreSonidoMusica: Torneo
+  - nombreEscena: PatosMinigame
+    nombreSonidoMusica: Patos
+  - nombreEscena: PogoMinijuego
+    nombreSonidoMusica: Pogo
+  - nombreEscena: ExteriorHotel
+    nombreSonidoMusica: Plaza
+  - nombreEscena: Hotel
+    nombreSonidoMusica: Hotel
+  - nombreEscena: Fiestas
+    nombreSonidoMusica: Fiestas
+  - nombreEscena: "Monta\xF1a"
+    nombreSonidoMusica: "Monta\xF1a"
   - nombreEscena: BaloncestoMinigame
     nombreSonidoMusica: Triples
 --- !u!1 &6612260940733513191

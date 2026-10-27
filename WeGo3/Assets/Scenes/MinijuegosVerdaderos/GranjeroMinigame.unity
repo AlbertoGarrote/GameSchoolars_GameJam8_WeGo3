@@ -672,7 +672,6 @@ GameObject:
   - component: {fileID: 203183210}
   - component: {fileID: 203183209}
   - component: {fileID: 203183208}
-  - component: {fileID: 203183207}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -680,19 +679,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &203183207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 203183206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda073e48416a7e4ab410a4a7ab7ac02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuController
-  memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
 --- !u!114 &203183208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2948,7 +2934,6 @@ GameObject:
   - component: {fileID: 1423023447}
   - component: {fileID: 1423023446}
   - component: {fileID: 1423023445}
-  - component: {fileID: 1423023444}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2956,19 +2941,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1423023444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423023443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eda073e48416a7e4ab410a4a7ab7ac02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MenuController
-  memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
 --- !u!114 &1423023445
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -40,6 +40,7 @@ public class CinematicaFinal : MonoBehaviour
 
     private IEnumerator SecuenciaCinematicaFinal()
     {
+        MusicSoundController.Instance.DetenerMusica();
         // PASO 1: Iniciar el diálogo y esperar a que termine
         if (DialogoManager.Instance != null && dialogoCinematica != null)
         {
@@ -65,6 +66,7 @@ public class CinematicaFinal : MonoBehaviour
         // PASO 3: Pasados 2 segundos, aparece el texto difuminado
         yield return new WaitForSeconds(tiempoEsperaAntesDelTexto);
 
+        MusicSoundController.Instance.ReproducerMusica("Creditos");
         if (objetoTextoDifuminado != null)
         {
             objetoTextoDifuminado.SetActive(true);
