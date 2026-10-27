@@ -143,9 +143,12 @@ public class CadaOvejaMinigame : MonoBehaviour
         {
             primerSeleccionado = item;
             primerSeleccionado.MarcarComoSeleccionado(true);
+            MusicSoundController.Instance.ReproducirSFX("Interactuar");
         }
         else if (segundoSeleccionado == null)
         {
+            MusicSoundController.Instance.ReproducirSFX("Interactuar");
+
             segundoSeleccionado = item;
             segundoSeleccionado.MarcarComoSeleccionado(true);
             bloquearInteraccion = true; 
@@ -162,6 +165,8 @@ public class CadaOvejaMinigame : MonoBehaviour
             primerSeleccionado.BloquearEmparejado();
             segundoSeleccionado.BloquearEmparejado();
             parejasRestantes--;
+            MusicSoundController.Instance.ReproducirSFX("Acierto");
+
 
             if (parejasRestantes <= 0)
             {
@@ -170,6 +175,8 @@ public class CadaOvejaMinigame : MonoBehaviour
         }
         else
         {
+            MusicSoundController.Instance.ReproducirSFX("Fallo");
+
             primerSeleccionado.MarcarComoSeleccionado(false);
             segundoSeleccionado.MarcarComoSeleccionado(false);
         }
@@ -184,6 +191,8 @@ public class CadaOvejaMinigame : MonoBehaviour
         juegoActivo = false;
         contador.SetActive(false);
         panelVictoria.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Ganar");
+
         yield return new WaitForSeconds(2f);
         botonContinuar.SetActive(true);
     }
@@ -200,6 +209,8 @@ public class CadaOvejaMinigame : MonoBehaviour
                 oveja.SetActive(false);
             }
         }
+        MusicSoundController.Instance.ReproducirSFX("Perder");
+
 
         panelDerrota.SetActive(true);
         yield return new WaitForSeconds(2f);

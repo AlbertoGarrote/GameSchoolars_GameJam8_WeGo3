@@ -118,6 +118,9 @@ public class MenuPausaController : MonoBehaviour
 
         if (confirmar)
         {
+            if (panelPausa != null) panelPausa.SetActive(false);
+            if (panelConfirmarSalir != null) panelConfirmarSalir.SetActive(false);
+
             if (TransicionController.Instance != null && !string.IsNullOrEmpty(nombreEscenaMenuPrincipal))
             {
                 TransicionController.Instance.CargarEscena(nombreEscenaMenuPrincipal);

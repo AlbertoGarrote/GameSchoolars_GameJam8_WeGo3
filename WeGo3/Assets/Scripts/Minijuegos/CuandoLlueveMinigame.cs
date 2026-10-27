@@ -138,6 +138,8 @@ public class CuandoLlueveMinigame : MonoBehaviour
         juegoActivo = false;
         LimpiarGotas();
         panelVictoria.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Ganar");
+
         yield return new WaitForSeconds(2f);
         botonContinuar.SetActive(true);
     }
@@ -147,6 +149,8 @@ public class CuandoLlueveMinigame : MonoBehaviour
         juegoActivo = false;
         LimpiarGotas();
         panelDerrota.SetActive(true);
+        MusicSoundController.Instance.ReproducirSFX("Perder");
+
         yield return new WaitForSeconds(2f);
         botonContinuar.SetActive(true);
     }

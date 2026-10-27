@@ -19,28 +19,36 @@ public class LlamadaSceneController : MonoBehaviour
     void Start()
     {
         StartCoroutine(ComenzarSecuencia());
+        MusicSoundController.Instance.DetenerMusica();
     }
 
     private IEnumerator ComenzarSecuencia()
     {
+        yield return new WaitForSeconds(1.5f);
         llamadaMadre.SetActive(true);
-        yield return new WaitForSeconds(2f);
+        MusicSoundController.Instance.ReproducirSFX("Llamada");
+
+        yield return new WaitForSeconds(3f);
         textoMadre.text = "¡NIÑO! Siempre igual. Estando con el ordenador perdiendo el tiempo en vez de hacer algo productivo...";
+        MusicSoundController.Instance.ReproducirSFX("MadreHablando");
         yield return new WaitForSeconds(8f);
         textoMadre.text = "Y me ha dicho la Conchi que el otro día te vio por la ventana tomando cosas raras. ¡AY, QUÉ DISGUSTO MÁS GRANDE CUANDO ME LO DIJO!";
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(8f);
         textoMadre.text = "Hijo, ¿no te cansas de estar todo el rato dando la nota? Que si la obsesión con el gimnasio, que si ahora esto... Me preocupas...";
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(8f);
         textoMadre.text = "¡Y TIRA LA BASURA! No volveré a entrar a tu casa hasta que la saques del congelador. Es nauseabundo... ES-PA-BI-LA.";
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(8f);
         textoMadre.text = "*Colgar*";
         yield return new WaitForSeconds(2f);
+
         textoMadre.text = " ";
         llamadaMadre.SetActive(false);
         yield return new WaitForSeconds(2f);
         panelNegro.SetActive(false);
         panelFondo.SetActive(true);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(4f);
+        MusicSoundController.Instance.ReproducirSFX("WegoLlorando");
+
 
         Vector3 destino = puntoFueraPantalla.transform.position;
 

@@ -4257,7 +4257,7 @@ MonoBehaviour:
   textoInicio: {fileID: 1315587043}
   panelVictoria: {fileID: 1399403658}
   panelDerrota: {fileID: 1695213102}
-  vidaMaximaEnemigo: 2
+  vidaMaximaEnemigo: 150
   vidasMaximasJugador: 3
   avisoAtaqueEnemigo: {fileID: 1023433028}
   intervaloAtaqueEnemigo: 3
@@ -4271,9 +4271,6 @@ MonoBehaviour:
   textoVidaEnemigo: {fileID: 119821218}
   sliderVidasJugador: {fileID: 1607456114}
   textoVidasJugador: {fileID: 822860933}
-  audioSource: {fileID: 0}
-  sonidoEsquivaExitosa: {fileID: 0}
-  sonidoEsquivaFallida: {fileID: 0}
 --- !u!4 &2124670931
 Transform:
   m_ObjectHideFlags: 0
