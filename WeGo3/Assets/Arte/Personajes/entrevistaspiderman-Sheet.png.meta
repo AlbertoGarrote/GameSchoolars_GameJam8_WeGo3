@@ -144,12 +144,12 @@ TextureImporter:
       name: entrevistaspiderman-Sheet_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 2
-        width: 23
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 64
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -166,12 +166,12 @@ TextureImporter:
       name: entrevistaspiderman-Sheet_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 2
-        width: 31
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 0
+        width: 64
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -188,12 +188,12 @@ TextureImporter:
       name: entrevistaspiderman-Sheet_2
       rect:
         serializedVersion: 2
-        x: 65
-        y: 2
-        width: 23
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 128
+        y: 0
+        width: 64
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -206,77 +206,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: entrevistaspiderman-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 2
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ba4c725e36a2681e0800000000000000
-      internalID: -2196021159761820501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: entrevistaspiderman-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 2
-        width: 23
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 04f609e4f5878e040800000000000000
-      internalID: 4677120563759574848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: entrevistaspiderman-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 2
-        width: 31
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d7177254f51f86850800000000000000
-      internalID: 6370607064399966589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b7730d73726ace0419de27e8b72c6e51
     internalID: 0
     vertices: []
     indices: 
@@ -284,14 +218,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":36.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       entrevistaspiderman-Sheet_0: -7940643985439397763
       entrevistaspiderman-Sheet_1: -1921946819069061489
       entrevistaspiderman-Sheet_2: -7226042628871195095
-      entrevistaspiderman-Sheet_3: -2196021159761820501
-      entrevistaspiderman-Sheet_4: 4677120563759574848
-      entrevistaspiderman-Sheet_5: 6370607064399966589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

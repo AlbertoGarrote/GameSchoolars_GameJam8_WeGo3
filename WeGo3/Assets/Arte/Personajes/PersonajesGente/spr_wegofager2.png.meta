@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 2510452677872506765
     second: spr_wegofager2_0
+  - first:
+      213: 186620071180388133
+    second: spr_wegofager2_1
+  - first:
+      213: -7241965389514051788
+    second: spr_wegofager2_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -130,9 +136,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
-        width: 46
-        height: 28
+        y: 0
+        width: 48
+        height: 32
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,11 +153,55 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: spr_wegofager2_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5274aaa47f1079200800000000000000
+      internalID: 186620071180388133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_wegofager2_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f675a09de5f7b90800000000000000
+      internalID: -7241965389514051788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c7a7750e0318f91448ef7f772bfd6726
+    spriteID: 2227f3a93c04aa84f8d48ab82c1802b4
     internalID: 0
     vertices: []
     indices: 
@@ -159,9 +209,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":48.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       spr_wegofager2_0: 2510452677872506765
+      spr_wegofager2_1: 186620071180388133
+      spr_wegofager2_2: -7241965389514051788
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
