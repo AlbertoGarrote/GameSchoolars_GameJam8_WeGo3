@@ -56,5 +56,5 @@ MonoBehaviour:
   - nombrePersonaje: 
     texto: "Mmmm s\xED, claro. Antes de irnos."
     retrato: {fileID: 0}
-    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

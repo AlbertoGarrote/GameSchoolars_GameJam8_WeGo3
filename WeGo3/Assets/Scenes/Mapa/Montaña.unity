@@ -1325,8 +1325,8 @@ MonoBehaviour:
   posicionYObjetivo: 3250
   nombreEscenaSiguiente: EscenaInicial
   tiempoEsperaAntesDelTexto: 2
-  tiempoEsperaAntesDeCamara: 7
-  tiempoEsperaAntesDeCreditos: 4
+  tiempoEsperaAntesDeCamara: 10
+  tiempoEsperaAntesDeCreditos: 2.4
 --- !u!1 &299104156
 GameObject:
   m_ObjectHideFlags: 0

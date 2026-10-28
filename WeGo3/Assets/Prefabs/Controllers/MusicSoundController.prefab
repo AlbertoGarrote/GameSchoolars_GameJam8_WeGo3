@@ -202,8 +202,8 @@ MonoBehaviour:
     loop: 1
   - nombreIdentificador: Creditos
     clip: {fileID: 8300000, guid: b329ebe74eea86c48a81127ca477147b, type: 3}
-    volumen: 0.1
-    pitch: 1
+    volumen: 0.4
+    pitch: 0.8
     esMusica: 1
     loop: 1
   - nombreIdentificador: Follar
