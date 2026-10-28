@@ -16,15 +16,15 @@ MonoBehaviour:
   - nombrePersonaje: 
     texto: (Un juguete interactivo de WeGoRating)
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   - nombrePersonaje: Oveja
     texto: Soy una oveja.
     retrato: {fileID: -8504504408042065948, guid: 9a06d64ea0273444e9aaa0506c4f5dcb, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   - nombrePersonaje: Oveja
     texto: "Has flipao, \xBFa que s\xED?"
     retrato: {fileID: -8504504408042065948, guid: 9a06d64ea0273444e9aaa0506c4f5dcb, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones:
   - textoOpcion: "S\xED"
     siguienteDialogo: {fileID: 11400000, guid: a0c586461d2491345ab55afcb38f077a, type: 2}

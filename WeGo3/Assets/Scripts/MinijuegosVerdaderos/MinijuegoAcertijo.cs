@@ -17,24 +17,45 @@ public class MinijuegoAcertijo : MonoBehaviour
     [SerializeField] private GameObject panelVictoria;
     [SerializeField] private GameObject panelDerrota;
 
+    [Header("Cinemática de Victoria (4 Paneles)")]
+    [SerializeField] private List<GameObject> panelesCinematicaVictoria = new List<GameObject>();
+    [SerializeField] private float tiempoPorPanelVictoria = 2f;
+
+    [Header("Cinemática de Derrota (4 Paneles)")]
+    [SerializeField] private List<GameObject> panelesCinematicaDerrota = new List<GameObject>();
+    [SerializeField] private float tiempoPorPanelDerrota = 2f;
+
+    [Header("Configuración del Fundido a Negro (UI)")]
+    [SerializeField] private Image imagenFundidoNegro;       // Una Image negra a pantalla completa para los fundidos
+    [SerializeField] private float duracionFundido = 0.5f;   // Lo que tarda en oscurecer/aclarar
+
     [Header("Configuración del Acertijo")]
     [SerializeField] private int numeroRespuestaCorrecta = 8;
     private int numeroSeleccionado = 0;
     private bool juegoActivo = false;
 
     [Header("UI de Selección de Número")]
-    [SerializeField] private TextMeshProUGUI textoNumeroSeleccionado; // El texto que muestra el número actual (empezando en 0)
+    [SerializeField] private TextMeshProUGUI textoNumeroSeleccionado;
 
     void Start()
     {
-        // Ocultamos los paneles de fin de partida al arrancar
         if (panelVictoria != null) panelVictoria.SetActive(false);
         if (panelDerrota != null) panelDerrota.SetActive(false);
 
+        OcultarListaPaneles(panelesCinematicaVictoria);
+        OcultarListaPaneles(panelesCinematicaDerrota);
+
+        // Asegurarnos de que el panel de fundido empieza transparente
+        if (imagenFundidoNegro != null)
+        {
+            Color color = imagenFundidoNegro.color;
+            color.a = 0f;
+            imagenFundidoNegro.color = color;
+            imagenFundidoNegro.gameObject.SetActive(false);
+        }
+
         numeroSeleccionado = 0;
         ActualizarTextoUI();
-
-        // El juego comienza directamente sin esperas ni cuentas atrás
         juegoActivo = true;
     }
 
@@ -42,10 +63,7 @@ public class MinijuegoAcertijo : MonoBehaviour
     {
         if (!juegoActivo) return;
 
-        // 1. CAMBIAR NÚMERO CON W / S o Flechas Arriba / Abajo
         ComprobarSeleccionTeclado();
-
-        // 2. CONFIRMAR CON ESPACIO
         ComprobarConfirmacion();
     }
 
@@ -53,14 +71,12 @@ public class MinijuegoAcertijo : MonoBehaviour
     {
         if (Keyboard.current == null) return;
 
-        // Subir número (W o Flecha Arriba)
         if (Keyboard.current.wKey.wasPressedThisFrame || Keyboard.current.upArrowKey.wasPressedThisFrame)
         {
             numeroSeleccionado++;
             MusicSoundController.Instance.ReproducirSFX("Interactuar");
             ActualizarTextoUI();
         }
-        // Bajar número (S o Flecha Abajo) - Evitamos que baje de 0
         else if (Keyboard.current.sKey.wasPressedThisFrame || Keyboard.current.downArrowKey.wasPressedThisFrame)
         {
             if (numeroSeleccionado > 0)
@@ -89,11 +105,104 @@ public class MinijuegoAcertijo : MonoBehaviour
 
         if (numeroSeleccionado == numeroRespuestaCorrecta)
         {
-            GanarPartida();
+            StartCoroutine(SecuenciaCinematicaConFundido(panelesCinematicaVictoria, panelVictoria, tiempoPorPanelVictoria, true));
         }
         else
         {
-            PerderPartida();
+            StartCoroutine(SecuenciaCinematicaConFundido(panelesCinematicaDerrota, panelDerrota, tiempoPorPanelDerrota, false));
+        }
+    }
+
+    /// <summary>
+    /// Corrutina que recorre los paneles aplicando un fundido a negro por código entre cada cambio.
+    /// </summary>
+    private IEnumerator SecuenciaCinematicaConFundido(List<GameObject> listaPaneles, GameObject panelFinal, float tiempoEspera, bool esVictoria)
+    {
+        OcultarListaPaneles(panelesCinematicaVictoria);
+        OcultarListaPaneles(panelesCinematicaDerrota);
+
+        MusicSoundController.Instance.DetenerMusica();
+
+        for (int i = 0; i < listaPaneles.Count; i++)
+        {
+            if (listaPaneles[i] != null)
+            {
+                // 1. Mostrar el panel actual
+                listaPaneles[i].SetActive(true);
+
+                // Si no es el primer panel, hacemos un fundido desde negro para revelarlo
+                if (i > 0)
+                {
+                    yield return EjectuarFundido(1f, 0f); // De negro a transparente
+                }
+
+                if (i == listaPaneles.Count - 1)
+                {
+                    if (esVictoria)
+                    {
+                        MusicSoundController.Instance.ReproducirSFX("Acierto");
+                    }
+                    else
+                    {
+                        MusicSoundController.Instance.ReproducirSFX("Fallo");
+                    }
+                }
+                else
+                {
+                    MusicSoundController.Instance.ReproducirSFX("Duda");
+
+                }
+
+
+                // 2. Esperar el tiempo configurado viendo el panel
+                yield return new WaitForSeconds(tiempoEspera);
+
+                // 3. Hacer fundido a negro antes de cambiar al siguiente o al final
+                yield return EjectuarFundido(0f, 1f); // De transparente a negro
+                listaPaneles[i].SetActive(false);     // Ocultar el panel a oscuras
+            }
+        }
+
+        if (esVictoria)
+            MusicSoundController.Instance.ReproducirSFX("Ganar");
+        else
+            MusicSoundController.Instance.ReproducirSFX("Perder");
+
+        if (panelFinal != null)
+        {
+            panelFinal.SetActive(true);
+        }
+    }
+
+    /// <summary>
+    /// Corrutina auxiliar que modifica el canal Alfa (opacidad) de la imagen negra en tiempo de ejecución.
+    /// </summary>
+    private IEnumerator EjectuarFundido(float alfaInicial, float alfaFinal)
+    {
+        if (imagenFundidoNegro == null) yield break;
+
+        imagenFundidoNegro.gameObject.SetActive(true);
+        Color color = imagenFundidoNegro.color;
+        float tiempoTranscurrido = 0f;
+
+        while (tiempoTranscurrido < duracionFundido)
+        {
+            tiempoTranscurrido += Time.deltaTime;
+            float alfaActual = Mathf.Lerp(alfaInicial, alfaFinal, tiempoTranscurrido / duracionFundido);
+            color.a = alfaActual;
+            imagenFundidoNegro.color = color;
+            yield return null;
+        }
+
+        color.a = alfaFinal;
+        imagenFundidoNegro.color = color;
+    }
+
+    private void OcultarListaPaneles(List<GameObject> lista)
+    {
+        foreach (var panel in lista)
+        {
+            if (panel != null) panel.SetActive(false);
         }
     }
 
@@ -103,20 +212,6 @@ public class MinijuegoAcertijo : MonoBehaviour
         {
             textoNumeroSeleccionado.text = numeroSeleccionado.ToString();
         }
-    }
-
-    private void GanarPartida()
-    {
-        if (panelVictoria != null) panelVictoria.SetActive(true);
-        MusicSoundController.Instance.ReproducirSFX("Ganar");
-
-    }
-
-    private void PerderPartida()
-    {
-        if (panelDerrota != null) panelDerrota.SetActive(true);
-        MusicSoundController.Instance.ReproducirSFX("Perder");
-
     }
 
     public void volverGym(bool victoriaConseguida)

@@ -13,20 +13,48 @@ MonoBehaviour:
   m_Name: Final
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
+  - nombrePersonaje: 
+    texto: Pues bueno... Por fin consigues llegar hasta mi.
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: "Se\xF1or Meon"
-    texto: Pues bueno...
-    retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  - nombrePersonaje: "Se\xF1or Meon"
-    texto: Aqui estamos.
-    retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  - nombrePersonaje: "Se\xF1or Meon"
-    texto: "Se acab\xF3."
-    retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  - nombrePersonaje: "Se\xF1or Meon"
-    texto: Fuimos.
-    retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    texto: "\xBFC\xF3mo te has sentido?"
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: 
+    texto: "Pues bueno... Podr\xEDas haberme esperado fuera de casa, \xBFsabes?"
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: "Tu madre y yo hablamos, nos preocupabas. Asi que se nos ocurri\xF3 un
+      plan para hacerte salir de casa. "
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: 
+    texto: Pues tampoco creo que haya funcionado... He seguido dando la nota... Como
+      siempre...
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: Ayudaste a mucha gente, a los patos, al granjero, a la sepulturera...
+      Incluso lo diste todo en las fiestas.
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: 
+    texto: "Yo creo que ha merecido la pena \"dar tanto la nota\" como dices t\xFA."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: 
+    texto: "Vi\xE9ndolo as\xED... Puedo llegar a creerte."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: "Pues claro que s\xED. Pero bueno, disfrutemos el artardecer antes de
+      irnos."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: 
+    texto: "Mmmm s\xED, claro. Antes de irnos."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   opciones: []

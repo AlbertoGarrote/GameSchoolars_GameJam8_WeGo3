@@ -212,6 +212,12 @@ MonoBehaviour:
     pitch: 1
     esMusica: 0
     loop: 0
+  - nombreIdentificador: Duda
+    clip: {fileID: 8300000, guid: 31561bf98a86c8b468303786372455b3, type: 3}
+    volumen: 0.2
+    pitch: 1
+    esMusica: 0
+    loop: 0
   musicaPorEscenaList:
   - nombreEscena: Plaza
     nombreSonidoMusica: Plaza

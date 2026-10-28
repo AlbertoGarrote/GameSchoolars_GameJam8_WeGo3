@@ -16,9 +16,9 @@ MonoBehaviour:
   - nombrePersonaje: 
     texto: "(Una televisi\xF3n pero parece no tener se\xF1al.)"
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  - nombrePersonaje: Wegogymson
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+  - nombrePersonaje: Wegojimson
     texto: "Desde que el casero se cabre\xF3 no he vuelto tener televisi\xF3n."
-    retrato: {fileID: 8271322593813463206, guid: 0c264db75ad0cee49965cbf7d090ef56, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

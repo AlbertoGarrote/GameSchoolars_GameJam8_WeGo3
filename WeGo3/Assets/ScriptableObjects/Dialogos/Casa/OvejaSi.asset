@@ -16,5 +16,5 @@ MonoBehaviour:
   - nombrePersonaje: Oveja
     texto: "Ya sab\xEDa yo."
     retrato: {fileID: -8504504408042065948, guid: 9a06d64ea0273444e9aaa0506c4f5dcb, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

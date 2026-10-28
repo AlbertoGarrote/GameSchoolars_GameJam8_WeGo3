@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: CinematicaInicial
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: "Se\xF1orMeon"
+  - nombrePersonaje: "Se\xF1or Me\xF3n"
     texto: Hey Wego, deja de holgazanear, venga.
     retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  - nombrePersonaje: "Se\xF1orMeon"
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: "Se\xF1or Me\xF3n"
     texto: "Hab\xEDamos quedado para ir a las fiestas esta noche."
     retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  - nombrePersonaje: "Se\xF1orMeon"
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: "Se\xF1or Me\xF3n"
     texto: Espero que no te hayas olvidado. Te espero fuera.
     retrato: {fileID: 774502250173717037, guid: 91476d830b3efce4a81da5e7515b68ed, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   opciones: []

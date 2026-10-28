@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: puertaCongelador
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: Wegogymson
+  - nombrePersonaje: Wegojimson
     texto: "Est\xE1 cerrada... \xBFD\xF3nde puse las llaves de esto?"
-    retrato: {fileID: 8271322593813463206, guid: 0c264db75ad0cee49965cbf7d090ef56, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
-  - nombrePersonaje: Wegogymson
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: Wegojimson
     texto: "M\xE1s bien... \xBFPOR QU\xC9 UN CONGELADOR TIENE CERRADURA?"
-    retrato: {fileID: 8271322593813463206, guid: 0c264db75ad0cee49965cbf7d090ef56, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

@@ -17,9 +17,9 @@ MonoBehaviour:
     texto: "Hola buneas, \xBFla casa tiene radiadores para calentarse? Que no puedo
       observar en las fotos."
     retrato: {fileID: -1542979536248825798, guid: c843867f469e132429c7c60f7a003ef4, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: 
     texto: "(Se le nota que est\xE1 desvariando y tiene cierto acento ingl\xE9s.)"
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: CinematicaInicial2
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: Wegogymson
+  - nombrePersonaje: Wegojimson
     texto: "Tendr\xE9 que hacer caso a mi madre y sacar primero la basura..."
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 5b1783e1b0caab448b92fc8ae00fac5b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []
