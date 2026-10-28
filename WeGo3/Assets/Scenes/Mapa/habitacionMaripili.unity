@@ -1598,10 +1598,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865932684}
+  - component: {fileID: 1865932685}
   - component: {fileID: 1865932683}
   - component: {fileID: 1865932682}
   - component: {fileID: 1865932681}
-  - component: {fileID: 1865932685}
   m_Layer: 0
   m_Name: maripili
   m_TagString: Untagged
