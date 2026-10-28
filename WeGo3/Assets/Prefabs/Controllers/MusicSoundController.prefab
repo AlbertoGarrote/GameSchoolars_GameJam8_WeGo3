@@ -206,6 +206,12 @@ MonoBehaviour:
     pitch: 1
     esMusica: 1
     loop: 1
+  - nombreIdentificador: Follar
+    clip: {fileID: 8300000, guid: 628476e4d4e9ef346a572ce53cc85124, type: 3}
+    volumen: 0.05
+    pitch: 1
+    esMusica: 0
+    loop: 0
   musicaPorEscenaList:
   - nombreEscena: Plaza
     nombreSonidoMusica: Plaza

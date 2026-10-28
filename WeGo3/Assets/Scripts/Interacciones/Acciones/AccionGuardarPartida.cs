@@ -12,6 +12,7 @@ public class AccionGuardarPartida : AccionSmartObject
             string escenaActual = SceneManager.GetActiveScene().name;
 
             SaveSystemManager.Instance.GuardarPartida(posicionGuardado, escenaActual);
+            MusicSoundController.Instance.ReproducirSFX("Follar");
         }
 
         alTerminar?.Invoke();

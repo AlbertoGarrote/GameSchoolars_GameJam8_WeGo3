@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7cb46cc978a731149bdbd6eb0d21a080
+guid: 949c0d0211ee6cf4a9ee9252a3b9bc68
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1990822097062845535
-    second: retratoWego_0
+      213: -1165818678663618474
+    second: weefagar_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: retratoWego_0
+      name: weefagar_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 8
         width: 64
-        height: 49
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5cdd624622d0ab10800000000000000
-      internalID: 1990822097062845535
+      spriteID: 6506db9a61e22dfe0800000000000000
+      internalID: -1165818678663618474
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      retratoWego_0: 1990822097062845535
+      weefagar_0: -1165818678663618474
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
