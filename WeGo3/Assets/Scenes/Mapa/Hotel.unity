@@ -687,7 +687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309907875525885632, guid: a4121a9cd6d26314aa8bae36a33a1e6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 7eb9ecdccb4b85e4aa864230820d5cac, type: 2}
 --- !u!114 &592347261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,7 +1492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: ff4a1a7ea2d509f47abf704ecc853420, type: 2}
 --- !u!114 &918825916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,7 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 4a5a5222fc575e64abce1eced9f2a6f0, type: 2}
 --- !u!114 &1284617348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3008,7 +3008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 30cc4cf9841623942b60dabb2ef29c7c, type: 2}
 --- !u!114 &1556468335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5172,7 +5172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 0637c21fc5d23bd45ac00157cc57d5ec, type: 2}
 --- !u!114 &1882652822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5410,7 +5410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 2f8acd17582ff04438bd06c5eb08d1d3, type: 2}
 --- !u!114 &1949585638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5807,7 +5807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d5fc5b5cfdf340469123e657939c4fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmartObject2D
-  iconoInteraccion: {fileID: 0}
+  iconoInteraccion: {fileID: 1713507406}
   acciones:
   - {fileID: 2101602423}
   deUnSoloUso: 0

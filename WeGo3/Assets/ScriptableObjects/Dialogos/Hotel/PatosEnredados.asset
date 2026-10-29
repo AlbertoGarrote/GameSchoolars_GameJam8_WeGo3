@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: PatosEnredados
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: "Pato N\xBA57"
+    texto: "\xA1Eh, t\xFA! \xA1El chico incre\xEDblemente musculado!"
+    retrato: {fileID: 4599121207734329647, guid: c2362f3062fe2a84f98edbaac1e72a39, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "\xBFY-Yo...?"
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: "Pato N\xBA3"
+    texto: "\xA1S\xED, t\xFA! A ver si nos puedes ayudar."
+    retrato: {fileID: 4599121207734329647, guid: c2362f3062fe2a84f98edbaac1e72a39, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Pato N\xBA67"
+    texto: SixSeven, digo *Cuack*.
+    retrato: {fileID: 4599121207734329647, guid: c2362f3062fe2a84f98edbaac1e72a39, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Pato N\xBA34"
+    texto: "Un pavo se puso muy gallito con nosotros y nos ret\xF3 a resolver un
+      acertijo a cambio de 20 picarats."
+    retrato: {fileID: 4599121207734329647, guid: c2362f3062fe2a84f98edbaac1e72a39, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Pato N\xBA107"
+    texto: No sabemos lo que es un picarat.
+    retrato: {fileID: 4599121207734329647, guid: c2362f3062fe2a84f98edbaac1e72a39, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Pato N\xBA12"
+    texto: "No nos pon\xEDamos de acuerdo, nos hemos peleado y hemos acabado enredados."
+    retrato: {fileID: 4599121207734329647, guid: c2362f3062fe2a84f98edbaac1e72a39, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Pato N\xBA50"
+    texto: "A ver si eres capaz de resolverlo y as\xED podr\xEDamos desenredarnos."
+    retrato: {fileID: 4599121207734329647, guid: c2362f3062fe2a84f98edbaac1e72a39, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: Mientras no sea muy complicado...
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  opciones: []

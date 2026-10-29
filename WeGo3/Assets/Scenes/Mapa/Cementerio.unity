@@ -868,7 +868,7 @@ Transform:
   m_GameObject: {fileID: 224164653}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.63, y: -12.27, z: 0}
+  m_LocalPosition: {x: 7.08, y: -12.72, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10523,7 +10523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 090b318ed7ad2614b8adb01c5dcafb28, type: 2}
 --- !u!114 &1890101070
 MonoBehaviour:
   m_ObjectHideFlags: 0

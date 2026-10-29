@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Recepcionista
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: Javi
+  - nombrePersonaje: Java
     texto: "Buenas. Est\xE1s en el hotel m\xE1s prestigioso de toda WeGoTown."
     retrato: {fileID: 679302534926252190, guid: dffc9bd52194bfd44a3dbaf3df68eb96, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
-  - nombrePersonaje: Javi
+  - nombrePersonaje: Java
     texto: "\xBFC\xF3mo? \xBFQue me parezco al recepcionista del gimnasio?"
     retrato: {fileID: 679302534926252190, guid: dffc9bd52194bfd44a3dbaf3df68eb96, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
-  - nombrePersonaje: Javi
-    texto: Mi primo Jaime y yo no nos parecemos en nada.
+  - nombrePersonaje: Java
+    texto: "Mi primo C\xE9sarp y yo no nos parecemos en nada."
     retrato: {fileID: 679302534926252190, guid: dffc9bd52194bfd44a3dbaf3df68eb96, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   opciones: []

@@ -17,7 +17,7 @@ MonoBehaviour:
     texto: (Un charco enorme de meado se te mete entre los dedos de los pies)
     retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
-  - nombrePersonaje: Wegojimsson
+  - nombrePersonaje: Wegojimson
     texto: "Todo me recuerda a \xE9l..."
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}

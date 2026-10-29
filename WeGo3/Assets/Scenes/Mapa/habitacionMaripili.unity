@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: cba9eb37516f5674e991793028a03308, type: 2}
 --- !u!114 &1865932682
 MonoBehaviour:
   m_ObjectHideFlags: 0

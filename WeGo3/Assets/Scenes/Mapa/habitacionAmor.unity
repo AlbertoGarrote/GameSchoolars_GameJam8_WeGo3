@@ -869,7 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 910fbda5891982242b3f71c8500133fc, type: 2}
 --- !u!114 &611836531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 8d6927aa8a019414797a712f8b5c00a6, type: 2}
 --- !u!114 &778290199
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoOnTrigger
   claveFlagRequerida: Patos_ganado
   claveFlagAActivarAlSaltar: Patos_ganado_d
-  dialogoAMostrar: {fileID: 11400000, guid: f82967e0826288c49b7c3903230f1305, type: 2}
+  dialogoAMostrar: {fileID: 11400000, guid: 3c53b606529e4ed4eabfca0b104df2cc, type: 2}
 --- !u!61 &300360813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 26ebb97ab23d87345b55a2c9e33b16b5, type: 2}
 --- !u!114 &616590414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3791,7 +3791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: ef8c2972561068043a8d8779aeeb7ab8, type: 2}
 --- !u!114 &1516674566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5157,6 +5157,7 @@ GameObject:
   - component: {fileID: 1995640560}
   - component: {fileID: 1995640559}
   - component: {fileID: 1995640561}
+  - component: {fileID: 1995640562}
   m_Layer: 0
   m_Name: patos-Sheet_0
   m_TagString: Untagged
@@ -5275,6 +5276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SmartObject2D
   iconoInteraccion: {fileID: 1470893604}
   acciones:
+  - {fileID: 1995640562}
   - {fileID: 1995640561}
   deUnSoloUso: 0
 --- !u!61 &1995640560
@@ -5338,6 +5340,19 @@ MonoBehaviour:
   nombreEscena: PatosMinigame
   memoriaPosicion: {fileID: 0}
   posicionEnNuevaEscena: {x: 0, y: 0}
+--- !u!114 &1995640562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1995640555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
+  dialogoAExhibir: {fileID: 11400000, guid: 39ce659d46f2ede459a6690389878d5c, type: 2}
 --- !u!1 &2091950879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5581,7 +5596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: 19ba4fe79e187a84f8f302c0b77c23bc, type: 2}
 --- !u!114 &2096618822
 MonoBehaviour:
   m_ObjectHideFlags: 0

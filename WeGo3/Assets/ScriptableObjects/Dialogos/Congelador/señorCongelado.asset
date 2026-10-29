@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: hombre congelado
-    texto: "Hola buneas, \xBFla casa tiene radiadores para calentarse? Que no puedo
+    texto: "Hola buenas, \xBFla casa tiene radiadores para calentarse? Que no puedo
       observar en las fotos."
     retrato: {fileID: -1542979536248825798, guid: c843867f469e132429c7c60f7a003ef4, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}

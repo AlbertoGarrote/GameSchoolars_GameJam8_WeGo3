@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: recepcionista
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: Jaime
+  - nombrePersonaje: "C\xE9sarp"
     texto: "Buenas, Wego. \xBFOtra d\xEDa m\xE1s a levantar hierros?"
     retrato: {fileID: 679302534926252190, guid: dffc9bd52194bfd44a3dbaf3df68eb96, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
@@ -21,7 +21,7 @@ MonoBehaviour:
     texto: "Que va. He venido a ver si estaba mi amigo por aqu\xED."
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
-  - nombrePersonaje: Jaime
+  - nombrePersonaje: "C\xE9sarp"
     texto: "Pues no lo he visto. A lo mejor puedes preguntar por ah\xED."
     retrato: {fileID: 679302534926252190, guid: dffc9bd52194bfd44a3dbaf3df68eb96, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
