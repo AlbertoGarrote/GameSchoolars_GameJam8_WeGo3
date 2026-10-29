@@ -148,7 +148,7 @@ MonoBehaviour:
     loop: 0
   - nombreIdentificador: MadreHablando
     clip: {fileID: 8300000, guid: 1e652dc89fe49e149af2a43f600b90f5, type: 3}
-    volumen: 0.4
+    volumen: 0.8
     pitch: 0.7
     esMusica: 0
     loop: 0

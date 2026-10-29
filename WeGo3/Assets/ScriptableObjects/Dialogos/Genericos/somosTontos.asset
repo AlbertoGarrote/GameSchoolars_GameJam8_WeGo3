@@ -15,7 +15,7 @@ MonoBehaviour:
   lineas:
   - nombrePersonaje: 
     texto: "Estoy mega enganchado al podcast de SomosTontos. \xBFSabes que mi prima
-      fue a clase con Xabo?"
+      fue a clase con Xobo?"
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []

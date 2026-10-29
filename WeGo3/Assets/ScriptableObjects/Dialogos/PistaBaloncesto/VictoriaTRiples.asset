@@ -26,9 +26,4 @@ MonoBehaviour:
       bien vigilada. A lo mejor le ha visto.
     retrato: {fileID: 3727076562119646306, guid: ebd312e2384b35f429843fa7c3f7e32b, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
-  - nombrePersonaje: Wegojimson
-    texto: "Mmmm deber\xEDa buscar a mi amigo pero vale, unos tiros me vendr\xEDan
-      bien."
-    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

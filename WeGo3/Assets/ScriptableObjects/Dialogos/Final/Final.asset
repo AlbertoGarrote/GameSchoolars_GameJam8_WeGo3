@@ -36,7 +36,7 @@ MonoBehaviour:
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
-    texto: Ayudaste a mucha gente, a los patos, al granjero, a la sepulturera...
+    texto: Ayudaste a mucha gente, a los patos, a la granjera, a la sepulturera...
       Incluso lo diste todo en las fiestas.
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}

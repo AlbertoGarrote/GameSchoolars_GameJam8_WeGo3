@@ -26,8 +26,7 @@ MonoBehaviour:
     retrato: {fileID: 6473921428105971981, guid: 8e8e60697b8c1964090fa1f8e8875e59, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   - nombrePersonaje: Julian
-    texto: "(Aqu\xED ten\xEDamos otro chiste planeado pero Eduardo Almarza no nos
-      ha contestado a tiempo)"
+    texto: "Aqu\xED est\xE1n todos muy delgados."
     retrato: {fileID: 6473921428105971981, guid: 8e8e60697b8c1964090fa1f8e8875e59, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   - nombrePersonaje: Wegojimson

@@ -23,7 +23,7 @@ MonoBehaviour:
     retrato: {fileID: 5352340678560164223, guid: 3ccf5039ddc11cf40a0cb3583649749f, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
-    texto: "Con mi pap\xE1"
+    texto: "Con mi pap\xE1."
     retrato: {fileID: 5352340678560164223, guid: 3ccf5039ddc11cf40a0cb3583649749f, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: Wegojimson

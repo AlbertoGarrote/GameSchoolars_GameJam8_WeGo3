@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: ???
-    texto: "\U000122AD\U0001231D\U0001222C \U00012000\U0001223E\U000121AA \U0001208D\U00012000\U0001223E\U00012362\U00012155
-      ahh es verdad, que sois tontitos por aqu\xED."
+    texto: '(*idioma incomprensible*) '
+    retrato: {fileID: 156216880360873841, guid: 0008d2f782f0bc24d8a76719395ae6d1, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: ???
+    texto: "Ahh es verdad, que sois tontitos por aqu\xED."
     retrato: {fileID: 156216880360873841, guid: 0008d2f782f0bc24d8a76719395ae6d1, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: ???
