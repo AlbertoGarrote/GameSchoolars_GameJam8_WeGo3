@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: GuarGato
-    texto: "\xA1MIAU! (Te voy a WEGOguardar la partida, que como tengas que repetir
-      esta tortura nos descalifican a este paso.)"
+    texto: "\xA1MIAU! (Te voy a WEGOguardar la partida)"
     retrato: {fileID: -5155329453913746789, guid: f7972a06fea1ee84089523e797c23879, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 02b3ddabf8e9af24689b213918052125, type: 3}
   opciones: []

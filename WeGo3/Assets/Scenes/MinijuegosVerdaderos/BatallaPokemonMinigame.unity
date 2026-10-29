@@ -4232,7 +4232,7 @@ MonoBehaviour:
   vidaMaximaEnemigo: 150
   vidasMaximasJugador: 3
   avisoAtaqueEnemigo: {fileID: 1023433028}
-  intervaloAtaqueEnemigo: 3
+  intervaloAtaqueEnemigo: 2
   tiempoVentanaEsquiva: 0.5
   teclaEsquiva: 1
   spriteEnemigo: {fileID: 157734700}

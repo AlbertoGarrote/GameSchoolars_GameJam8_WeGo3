@@ -4066,16 +4066,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MinijuegoBaloncesto
   flagVictoria: Triples_ganado
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
-  posicionEnNuevaEscena: {x: -4, y: 1}
+  posicionEnNuevaEscena: {x: -2.5, y: 0}
   nombreEscenaGym: PistaBaloncesto
   panelInicio: {fileID: 275742275}
   temporizadorInicial: {fileID: 74860809}
   textoInicio: {fileID: 1315587043}
   panelVictoria: {fileID: 1399403658}
   panelDerrota: {fileID: 1695213102}
-  puntosObjetivo: 10
+  puntosObjetivo: 15
   penalizacionPorFallo: 1
-  tiempoTotalPartida: 20
+  tiempoTotalPartida: 30
   velocidadRotacion: 400
   radioOrbita: 1.45
   centroCircunferencia: {fileID: 401718605}
