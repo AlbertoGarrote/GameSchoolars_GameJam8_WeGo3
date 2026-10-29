@@ -5563,7 +5563,7 @@ MonoBehaviour:
   duracionParpadeo: 0.5
   vecesQueParpadea: 5
   totalFases: 4
-  duracionCadaFase: 25
+  duracionCadaFase: 15
   prefabPelotaFase1: {fileID: 8921839202819393146, guid: 077534c8e77b90149975c9714eba9f24, type: 3}
   prefabRectanguloFase2: {fileID: 492518122802607750, guid: 3f6d51c3a467bd741928d4fd025b1882, type: 3}
   prefabObstaculoFase3: {fileID: 8921839202819393146, guid: a059b21d25847d44e9b04fc427fa524d, type: 3}

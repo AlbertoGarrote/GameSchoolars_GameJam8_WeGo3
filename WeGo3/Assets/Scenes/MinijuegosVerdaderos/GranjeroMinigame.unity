@@ -4757,7 +4757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pulsa en los \xF1ames rosas para ganar puntos. Si no te da tiempo o pulsas
+  m_text: "Pulsa en los \xF1emes rosas para ganar puntos. Si no te da tiempo o pulsas
     en uno marr\xF3n, pierdes puntuaci\xF3n. \xA1Llega a la puntuaci\xF3n objetivo!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}

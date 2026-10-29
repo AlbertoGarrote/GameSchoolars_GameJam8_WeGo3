@@ -4229,7 +4229,7 @@ MonoBehaviour:
   textoInicio: {fileID: 1315587043}
   panelVictoria: {fileID: 1399403658}
   panelDerrota: {fileID: 1695213102}
-  vidaMaximaEnemigo: 150
+  vidaMaximaEnemigo: 100
   vidasMaximasJugador: 3
   avisoAtaqueEnemigo: {fileID: 1023433028}
   intervaloAtaqueEnemigo: 2

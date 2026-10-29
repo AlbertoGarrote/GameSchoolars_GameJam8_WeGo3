@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: ViniloAntes
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: Vinilo
+    texto: "\xA1C\xF3mo molan estas fiestas, y encima han venido los GardenKolony! "
+    retrato: {fileID: 7053975713352161533, guid: 43bdd1c88e725154b8c2b7d19aaf0d85, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 02b3ddabf8e9af24689b213918052125, type: 3}
+  - nombrePersonaje: Vinilo
+    texto: "Vamos a darlo todo en el concierto, \xA1pero no vale caerse!"
+    retrato: {fileID: 7053975713352161533, guid: 43bdd1c88e725154b8c2b7d19aaf0d85, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 02b3ddabf8e9af24689b213918052125, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Un poco de diversi\xF3n no me vendr\xE1 mal, que llevo un trote..."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  opciones: []

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: virtualIniciio
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: 
+    texto: "\xA1Hola! Estoy buscando a gente para nuestra asociaci\xF3n de videojuegos.
+      \xBFTe quieres unir? Son solo 5 euros."
+    retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 02b3ddabf8e9af24689b213918052125, type: 3}
+  opciones:
+  - textoOpcion: "S\xED"
+    siguienteDialogo: {fileID: 11400000, guid: bb8342a38a0752b49b46d91e50e0223c, type: 2}
+    escenaACargar: 
+  - textoOpcion: No
+    siguienteDialogo: {fileID: 11400000, guid: 77238c7afb3908d448bca71769a88ebe, type: 2}
+    escenaACargar: 

@@ -4073,7 +4073,7 @@ MonoBehaviour:
   textoInicio: {fileID: 1315587043}
   panelVictoria: {fileID: 1399403658}
   panelDerrota: {fileID: 1695213102}
-  puntosObjetivo: 15
+  puntosObjetivo: 10
   penalizacionPorFallo: 1
   tiempoTotalPartida: 30
   velocidadRotacion: 400

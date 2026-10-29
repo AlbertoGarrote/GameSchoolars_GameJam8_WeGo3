@@ -18,7 +18,7 @@ MonoBehaviour:
     retrato: {fileID: -524229732588599491, guid: aa27168ce66627d44ad57499eed6aba6, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: SmokeMan
-    texto: "El d\xEDa que me de un chungo ya ver\xE1s como no me har\xE1 tanta gracias.
+    texto: "El d\xEDa que me de un chungo ya ver\xE1s como no me har\xE1 tanta gracia.
       Hasta entonces, seguir\xE9 as\xED."
     retrato: {fileID: -524229732588599491, guid: aa27168ce66627d44ad57499eed6aba6, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}

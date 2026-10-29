@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: EduAntes
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: Edoardo
+    texto: "\xBFVienes al torneo de liar cigarros?"
+    retrato: {fileID: -2443908968582167363, guid: 25da3e0155041484d885336c90764544, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Edoardo
+    texto: "Nadie lo hace como yo, llevo tres ediciones invicto. Se me da tan bien
+      que ya estoy empezando a perder la emoci\xF3n por este mundillo, igual me paso
+      al vaper."
+    retrato: {fileID: -2443908968582167363, guid: 25da3e0155041484d885336c90764544, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Yo me he comprado uno de Lotus, est\xE1 muy bien. Llevo mucho sin fumar,
+      pero nunca digo que no a un torneo. Pero te aviso de que yo no pierdo nunca."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  opciones: []

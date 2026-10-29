@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: legos
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: Lego Azul
+    texto: El rojo y yo somos los mejores.
+    retrato: {fileID: -6427291467317664234, guid: 086bc65883c77f34695ea0d10671a2b7, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+  - nombrePersonaje: Lego Rojo
+    texto: El azul y yo somos inseparables.
+    retrato: {fileID: 7190012207024804770, guid: ac077184863e87b4eb267180840c68d6, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+  opciones: []

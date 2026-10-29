@@ -19,7 +19,7 @@ MonoBehaviour:
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Wegojimson
     texto: "\xBFY-Yo...?"
-    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    retrato: {fileID: -8835564266520189691, guid: 598f52289638ad9479ce4c7c912edb6a, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: "Pato N\xBA3"
     texto: "\xA1S\xED, t\xFA! A ver si nos puedes ayudar."
