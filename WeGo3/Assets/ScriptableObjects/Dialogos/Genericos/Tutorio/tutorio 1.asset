@@ -15,11 +15,11 @@ MonoBehaviour:
   lineas:
   - nombrePersonaje: Tutorio
     texto: "\xBFLe has ganado un combate a la rata? Est\xE1s hecho un toro, Wego.  "
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Tutorio
     texto: "A ver si ahora quita sus cosas del suelo del gimnasio, que est\xE1 bloqueando
       el acceso a la azotea y no hay qui\xE9n pase."
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []

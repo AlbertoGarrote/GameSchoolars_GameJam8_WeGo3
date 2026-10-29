@@ -15,7 +15,7 @@ MonoBehaviour:
   lineas:
   - nombrePersonaje: Tutorio
     texto: "\xBFQu\xE9 tal, Wego? "
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Wegojimson
     texto: "Estoy un poco perdido, no s\xE9 ni por d\xF3nde empezar. Hab\xEDa quedado
@@ -25,12 +25,12 @@ MonoBehaviour:
   - nombrePersonaje: Tutorio
     texto: "No dependas tanto del resto, Wego. \xBFte acuerdas cuando ibas todos
       los d\xEDas al gimnasio? "
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Tutorio
     texto: "Ah\xED se te ve\xEDa feliz. Seguro que si est\xE1s en paz contigo mismo
       encontrar\xE1s lo que buscas."
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Wegojimson
     texto: "Vaya frase m\xE1s filos\xF3fica para un tutorial."
@@ -39,6 +39,6 @@ MonoBehaviour:
   - nombrePersonaje: Tutorio
     texto: "Y recuerda, cada vez que te pierdas en tu b\xFAsqueda, puedes preguntarme.
       Siempre estar\xE9 dispuesto a echarte un wegocable."
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []

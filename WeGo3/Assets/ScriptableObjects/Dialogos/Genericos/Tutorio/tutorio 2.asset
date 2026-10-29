@@ -16,12 +16,12 @@ MonoBehaviour:
   - nombrePersonaje: Tutorio
     texto: "Esa granjera no tiene ni idea, yo soy mucho m\xE1s de \xF1emas que de
       \xF1ames. "
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Tutorio
     texto: "Escucha, he visto antes a un t\xEDo un poco raro y\xE9ndose al oeste
       de la ciudad. Imagino que ir\xEDa a echarse unos triples a la pista de baloncesto."
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Wegojimson
     texto: "\xBFSer\xE1 qui\xE9n yo creo que es?"

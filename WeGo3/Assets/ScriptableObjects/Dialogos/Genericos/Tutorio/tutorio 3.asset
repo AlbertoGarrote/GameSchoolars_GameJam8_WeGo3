@@ -16,12 +16,12 @@ MonoBehaviour:
   - nombrePersonaje: Tutorio
     texto: "Te veo m\xE1s feliz, Wego. Se ve que ayudar a la gente te est\xE1 ayudando
       a sentirte mejor. "
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Tutorio
     texto: "La pobre sepulturera est\xE1 cansada de la gente que ronda \xFAltimamente
       por el cementerio, por si quieres ir a echar una mano. Est\xE1 al norte de
       la ciudad."
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []

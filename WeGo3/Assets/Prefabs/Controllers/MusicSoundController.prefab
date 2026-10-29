@@ -52,7 +52,7 @@ MonoBehaviour:
   catalogoSonidos:
   - nombreIdentificador: MenuPrincipal1
     clip: {fileID: 8300000, guid: 06abeed482c61664ea2f3d49cef76ecc, type: 3}
-    volumen: 0.2
+    volumen: 0.1
     pitch: 1
     esMusica: 1
     loop: 1

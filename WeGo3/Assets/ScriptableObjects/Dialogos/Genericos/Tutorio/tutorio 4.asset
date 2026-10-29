@@ -16,12 +16,12 @@ MonoBehaviour:
   - nombrePersonaje: Tutorio
     texto: "Hueles a tabaco, \xBFhas fumado? Como te vea tu madre... En fin, el hotel
       que est\xE1 al sureste de Wegotown est\xE1 recibiendo mucho turista \xFAltimamente. "
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Tutorio
     texto: "Ve a echar una mano por ah\xED y a ver si se te quita el olor. Vaya una
       juventud se nos est\xE1 quedando."
-    retrato: {fileID: 1067047807355941414, guid: a52e42c2be49fe340b5b9ea713e74add, type: 3}
+    retrato: {fileID: 4111569033088328193, guid: 4c266c25f0e406742bb62c7f678f7382, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Wegojimson
     texto: Prohibido divertirse.
