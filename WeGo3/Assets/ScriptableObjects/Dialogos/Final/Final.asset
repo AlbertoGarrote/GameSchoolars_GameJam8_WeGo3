@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: 
-    texto: Pues bueno... Por fin consigues llegar hasta mi.
+    texto: "Pues bueno... Por fin consigues llegar hasta m\xED."
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
@@ -26,8 +26,8 @@ MonoBehaviour:
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
-    texto: "Tu madre y yo hablamos, nos preocupabas. Asi que se nos ocurri\xF3 un
-      plan para hacerte salir de casa. "
+    texto: "Tu madre y yo hablamos, nos preocupabas. As\xED que se nos ocurri\xF3
+      un plan para hacerte salir de casa. "
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
@@ -49,11 +49,16 @@ MonoBehaviour:
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
-    texto: "Pues claro que s\xED. Pero bueno, disfrutemos el atardecer antes de irnos."
+    texto: "Pues claro que s\xED. Pero bueno, disfrutemos del atardecer antes de
+      irnos."
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
-    texto: "Mmmm s\xED, claro. Antes de irnos."
+    texto: "Mmmm s\xED, claro..."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: Antes de irnos.
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []
