@@ -1,4 +1,4 @@
- using Unity.Cinemachine; 
+using Unity.Cinemachine;
 using System.Collections;
 using UnityEngine;
 
@@ -6,6 +6,7 @@ public class CinematicaFinal : MonoBehaviour
 {
     [Header("Referencias de Diálogo")]
     [SerializeField] private DialogoSO dialogoCinematica;
+    [SerializeField] private string nombreFlagJuegoTerminado = "juego_terminado";
 
     [Header("Referencias de Cámaras")]
     [SerializeField] private CinemachineCamera camaraCinematica;
@@ -41,6 +42,7 @@ public class CinematicaFinal : MonoBehaviour
     private IEnumerator SecuenciaCinematicaFinal()
     {
         MusicSoundController.Instance.DetenerMusica();
+
         // PASO 1: Iniciar el diálogo y esperar a que termine
         if (DialogoManager.Instance != null && dialogoCinematica != null)
         {
@@ -55,6 +57,12 @@ public class CinematicaFinal : MonoBehaviour
         }
 
         // --- EL DIÁLOGO HA TERMINADO ---
+
+        // Activar la flag de juego terminado inmediatamente aquí
+        if (EstadoJuegoManager.Instance != null)
+        {
+            EstadoJuegoManager.Instance.ActivarFlag(nombreFlagJuegoTerminado);
+        }
 
         // PASO 2: Empieza a sonar la música
         if (audioSource != null && musicaFinal != null)

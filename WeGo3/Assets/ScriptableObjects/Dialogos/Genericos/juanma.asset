@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: juanma
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: 
+  - nombrePersonaje: Juanma
     texto: "Al Garroto ese, que se ha hecho famoso ahora, le di yo clase en la universidad.
       \n"
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
-  - nombrePersonaje: 
+  - nombrePersonaje: Juanma
     texto: "El t\xEDo me entregaba trabajos hechos con IA. "
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}

@@ -17,12 +17,12 @@ MonoBehaviour:
     texto: Pues bueno... Por fin consigues llegar hasta mi.
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
-  - nombrePersonaje: "Se\xF1or Meon"
+  - nombrePersonaje: 
     texto: "\xBFC\xF3mo te has sentido?"
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
-    texto: "Pues bueno... Podr\xEDas haberme esperado fuera de casa, \xBFsabes?"
+    texto: "Bueno... Podr\xEDas haberme esperado fuera de casa, \xBFsabes?"
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
@@ -36,8 +36,8 @@ MonoBehaviour:
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
-    texto: Ayudaste a mucha gente, a los patos, a la granjera, a la sepulturera...
-      Incluso lo diste todo en las fiestas.
+    texto: 'Ayudaste a mucha gente: a los patos, a la granjera, a la sepulturera...
+      Incluso lo diste todo en las fiestas.'
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
@@ -49,8 +49,7 @@ MonoBehaviour:
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
-    texto: "Pues claro que s\xED. Pero bueno, disfrutemos el artardecer antes de
-      irnos."
+    texto: "Pues claro que s\xED. Pero bueno, disfrutemos el atardecer antes de irnos."
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 

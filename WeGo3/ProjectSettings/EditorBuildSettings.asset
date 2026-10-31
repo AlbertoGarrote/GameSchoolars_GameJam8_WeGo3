@@ -95,6 +95,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinijuegosVerdaderos/PatosMinigame.unity
     guid: 6faac04cfd33faa4da5364a83bb1e29a
+  - enabled: 1
+    path: Assets/Scenes/Menus/MenuPrincipal3.unity
+    guid: b6c2d932a7b453642a00490153079ef3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

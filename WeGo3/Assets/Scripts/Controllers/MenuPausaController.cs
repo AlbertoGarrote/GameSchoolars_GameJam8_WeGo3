@@ -13,6 +13,7 @@ public class MenuPausaController : MonoBehaviour
     [SerializeField] private Slider sliderVolumenMusica;
     [SerializeField] private Slider sliderVolumenSFX;
     [SerializeField] private string nombreEscenaMenuPrincipal = "MenuPrincipal";
+    [SerializeField] private string nombreEscenaMenuFinal = "MenuPrincipal3"; // Menú al que irá si el juego terminó
 
     private bool juegoPausado = false;
 
@@ -121,13 +122,23 @@ public class MenuPausaController : MonoBehaviour
             if (panelPausa != null) panelPausa.SetActive(false);
             if (panelConfirmarSalir != null) panelConfirmarSalir.SetActive(false);
 
-            if (TransicionController.Instance != null && !string.IsNullOrEmpty(nombreEscenaMenuPrincipal))
+            // COMPROBAMOS SI EL JUEGO HA TERMINADO
+            bool juegoTerminado = PlayerPrefs.GetInt("juegoTerminado", 0) == 1;
+            if (EstadoJuegoManager.Instance != null && EstadoJuegoManager.Instance.EstaFlagActivada("juego_terminado"))
             {
-                TransicionController.Instance.CargarEscena(nombreEscenaMenuPrincipal);
+                juegoTerminado = true;
+            }
+
+            // Seleccionamos la escena de destino correcta dinámicamente
+            string escenaDestino = juegoTerminado ? nombreEscenaMenuFinal : nombreEscenaMenuPrincipal;
+
+            if (TransicionController.Instance != null && !string.IsNullOrEmpty(escenaDestino))
+            {
+                TransicionController.Instance.CargarEscena(escenaDestino);
             }
             else
             {
-                SceneManager.LoadScene(nombreEscenaMenuPrincipal);
+                SceneManager.LoadScene(escenaDestino);
             }
         }
         else

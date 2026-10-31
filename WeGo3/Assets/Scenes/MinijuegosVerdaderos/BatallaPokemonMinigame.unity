@@ -4233,7 +4233,7 @@ MonoBehaviour:
   vidasMaximasJugador: 3
   avisoAtaqueEnemigo: {fileID: 1023433028}
   intervaloAtaqueEnemigo: 2
-  tiempoVentanaEsquiva: 0.5
+  tiempoVentanaEsquiva: 0.75
   teclaEsquiva: 1
   spriteEnemigo: {fileID: 157734700}
   spriteJugador: {fileID: 514242302}

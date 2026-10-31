@@ -253,10 +253,12 @@ MonoBehaviour:
     nombreSonidoMusica: Hotel
   - nombreEscena: Fiestas
     nombreSonidoMusica: Fiestas
-  - nombreEscena: "Monta\xF1a"
-    nombreSonidoMusica: "Monta\xF1a"
   - nombreEscena: BaloncestoMinigame
     nombreSonidoMusica: Triples
+  - nombreEscena: "Monta\xF1a"
+    nombreSonidoMusica: "Monta\xF1a"
+  - nombreEscena: MenuPrincipal3
+    nombreSonidoMusica: Creditos
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0

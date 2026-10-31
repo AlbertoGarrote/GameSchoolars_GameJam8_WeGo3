@@ -15,6 +15,6 @@ MonoBehaviour:
   lineas:
   - nombrePersonaje: Wegojimson
     texto: Tengo que coger la basura primero antes de salir.
-    retrato: {fileID: 8271322593813463206, guid: 0c264db75ad0cee49965cbf7d090ef56, type: 3}
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

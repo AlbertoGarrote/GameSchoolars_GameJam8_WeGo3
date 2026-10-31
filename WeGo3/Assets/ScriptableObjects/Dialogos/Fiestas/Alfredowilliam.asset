@@ -19,7 +19,7 @@ MonoBehaviour:
     retrato: {fileID: -4410396482249818943, guid: d9d86b6ac7979594d93d9918b05781df, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: William
-    texto: Me alegra estar fuera de la oficia con Alfredo. Es mi momento de paz.
+    texto: Me alegra estar fuera de la oficina con Alfredo. Es mi momento de paz.
     retrato: {fileID: 6525578308237561328, guid: 0657367e375630843b2bd6ed3ac62618, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []

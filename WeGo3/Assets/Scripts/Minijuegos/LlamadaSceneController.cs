@@ -38,7 +38,7 @@ public class LlamadaSceneController : MonoBehaviour
         yield return new WaitForSeconds(8f);
         textoMadre.text = "¡Y TIRA LA BASURA! No volveré a entrar a tu casa hasta que la saques del congelador. Es nauseabundo... ES-PA-BI-LA.";
         yield return new WaitForSeconds(8f);
-        textoMadre.text = "*Colgar*";
+        textoMadre.text = "*Cuelga*";
         yield return new WaitForSeconds(2f);
 
         textoMadre.text = " ";
