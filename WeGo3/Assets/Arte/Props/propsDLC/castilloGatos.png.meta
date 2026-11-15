@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,12 +129,12 @@ TextureImporter:
       name: castilloGatos_0
       rect:
         serializedVersion: 2
-        x: 20
+        x: 0
         y: 0
-        width: 67
-        height: 110
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 23
+        height: 40
+      alignment: 9
+      pivot: {x: 0.50412464, y: 0.027273823}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e8f1d3e232a2d614da2c51800c957dc1
+    spriteID: 08dd078d16e8b2b45bbf09a2d9272555
     internalID: 0
     vertices: []
     indices: 

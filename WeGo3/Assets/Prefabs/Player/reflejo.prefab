@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 6175019036868475594}
   - component: {fileID: 7862402479323239914}
   - component: {fileID: 4701778056099301116}
-  - component: {fileID: 8878381719345941569}
   - component: {fileID: 1312940174499633202}
+  - component: {fileID: 828582100333215643}
   m_Layer: 0
   m_Name: reflejo
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,20 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8878381719345941569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725696568055965587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0841eda7f8dfb0d459e4bc89598f3067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement2D
-  velocidadMovimiento: 5
-  animator: {fileID: 1312940174499633202}
 --- !u!95 &1312940174499633202
 Animator:
   serializedVersion: 7
@@ -157,3 +143,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &828582100333215643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725696568055965587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5155c40ce631240a5d0dd7e88e05f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMirrorHorizontalPosition2D
+  jugadorReal: {fileID: 0}
+  ejeYEspejo: 0.5
+  animator: {fileID: 1312940174499633202}
