@@ -4,11 +4,15 @@ using UnityEngine;
 public class DialogoOnTrigger : MonoBehaviour
 {
     [Header("Condición y Registro")]
-    [Tooltip("Flag que debe estar activada para que salte el diálogo. Si se deja vacía, saltará siempre la primera vez.")]
+    [Tooltip("Flag que debe estar activada para que salte el diálogo. Si se deja vacía, saltará siempre.")]
     [SerializeField] private string claveFlagRequerida;
 
-    [Tooltip("Flag que se activará automáticamente al reproducir este diálogo para que NO vuelva a saltar más veces.")]
+    [Tooltip("Flag que se activará automáticamente (solo si NO se repite siempre).")]
     [SerializeField] private string claveFlagAActivarAlSaltar;
+
+    [Header("Configuración de Repetición")]
+    [Tooltip("Si se marca, el diálogo se repetirá cada vez que se vuelva a entrar al trigger.")]
+    [SerializeField] private bool repetirSiempre = false;
 
     [Header("Diálogo")]
     [SerializeField] private DialogoSO dialogoAMostrar;
@@ -19,31 +23,40 @@ public class DialogoOnTrigger : MonoBehaviour
     {
         if (!collision.CompareTag("Player") && !collision.CompareTag("Caminante")) return;
 
-        if (yaSeEjecutoEnEstaSesion) return;
-
-        if (!string.IsNullOrEmpty(claveFlagRequerida))
+        // 1. Si NO se repite siempre, comprobamos si ya se ejecutó o si la flag de guardado ya está activa
+        if (!repetirSiempre)
         {
-            if (EstadoJuegoManager.Instance == null || !EstadoJuegoManager.Instance.EstaFlagActivada(claveFlagRequerida))
+            if (yaSeEjecutoEnEstaSesion) return;
+
+            if (!string.IsNullOrEmpty(claveFlagAActivarAlSaltar))
             {
-                return; 
+                if (EstadoJuegoManager.Instance != null && EstadoJuegoManager.Instance.EstaFlagActivada(claveFlagAActivarAlSaltar))
+                {
+                    return;
+                }
             }
         }
 
-        if (!string.IsNullOrEmpty(claveFlagAActivarAlSaltar))
+        // 2. Comprobación de flag requerida (si la hay)
+        if (!string.IsNullOrEmpty(claveFlagRequerida))
         {
-            if (EstadoJuegoManager.Instance != null && EstadoJuegoManager.Instance.EstaFlagActivada(claveFlagAActivarAlSaltar))
+            if (EstadoJuegoManager.Instance == null || !EstadoJuegoManager.Instance.EstaFlagActivada(claveFlagRequerida))
             {
                 return;
             }
         }
 
+        // 3. Ejecución del diálogo
         if (dialogoAMostrar != null && DialogoManager.Instance != null)
         {
-            yaSeEjecutoEnEstaSesion = true;
-
-            if (!string.IsNullOrEmpty(claveFlagAActivarAlSaltar) && EstadoJuegoManager.Instance != null)
+            if (!repetirSiempre)
             {
-                EstadoJuegoManager.Instance.ActivarFlag(claveFlagAActivarAlSaltar);
+                yaSeEjecutoEnEstaSesion = true;
+
+                if (!string.IsNullOrEmpty(claveFlagAActivarAlSaltar) && EstadoJuegoManager.Instance != null)
+                {
+                    EstadoJuegoManager.Instance.ActivarFlag(claveFlagAActivarAlSaltar);
+                }
             }
 
             DialogoManager.Instance.IniciarDialogo(dialogoAMostrar);

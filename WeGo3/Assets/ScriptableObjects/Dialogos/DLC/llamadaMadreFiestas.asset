@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: llamadaMadreFiestas
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: 
+    texto: '*RING RING*'
+    retrato: {fileID: 5352340678560164223, guid: 3ccf5039ddc11cf40a0cb3583649749f, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: '!?'
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Me acabo de dar cuenta que no he mirado el m\xF3vil en toda la tarde..."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: 'Es mi madre...
+
+      Dime...'
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: WegoMadre
+    texto: "\xA1NI\xD1O! \xBFD\xF3nde andas? Se escucha fatal."
+    retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Estoy en las fiestas, mam\xE1... Estoy buscando a mi amigo."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: WegoMadre
+    texto: "\xBFOtra vez de fiesta? Mucho tiempo para tus tonter\xEDas y nunca para
+      visitar a tu madre."
+    retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: WegoMadre
+    texto: "Pues que sepas que ha terminado la manifestaci\xF3n que hab\xEDa al lado
+      de mi casa. Ya no tienes excusa para no venir a verme."
+    retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: WegoMadre
+    texto: '*CUELGA*'
+    retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Ni siquiera me ha dejado explicarme... Deber\xEDa ir a su casa..."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  opciones: []

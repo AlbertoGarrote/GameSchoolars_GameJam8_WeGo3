@@ -98,6 +98,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/MenuPrincipal3.unity
     guid: b6c2d932a7b453642a00490153079ef3
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/Hogar.unity
+    guid: 87703f4bced08f14ca3419ed73aad957
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/Desvan.unity
+    guid: 4a1d21cb33ed8164e837aa150d6b3f3b
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/jardinMadre.unity
+    guid: a3267377260955848b930dc688783000
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/Playa.unity
+    guid: 3609857b939c9cc47944c2638ae59d32
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/wegoffanys.unity
+    guid: d3bdf7a3afd5cf841a34977f49231113
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

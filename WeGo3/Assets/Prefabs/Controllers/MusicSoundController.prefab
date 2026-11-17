@@ -218,6 +218,30 @@ MonoBehaviour:
     pitch: 1
     esMusica: 0
     loop: 0
+  - nombreIdentificador: Playa
+    clip: {fileID: 8300000, guid: 9b730f51396afc743b64427dce6a2c68, type: 3}
+    volumen: 0.1
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Desvan
+    clip: {fileID: 8300000, guid: ac2ada19cb55b414a8464281aaf95b3f, type: 3}
+    volumen: 0.02
+    pitch: 0.8
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Tiffanys
+    clip: {fileID: 8300000, guid: 550064793ace36f46931c3ade03e7c75, type: 3}
+    volumen: 0.1
+    pitch: 1
+    esMusica: 1
+    loop: 1
+  - nombreIdentificador: Hogar
+    clip: {fileID: 8300000, guid: 95b17649bf8c3854783553f71629c7b1, type: 3}
+    volumen: 0.3
+    pitch: 0.6
+    esMusica: 1
+    loop: 1
   musicaPorEscenaList:
   - nombreEscena: Plaza
     nombreSonidoMusica: Plaza
@@ -259,6 +283,16 @@ MonoBehaviour:
     nombreSonidoMusica: "Monta\xF1a"
   - nombreEscena: MenuPrincipal3
     nombreSonidoMusica: Creditos
+  - nombreEscena: Playa
+    nombreSonidoMusica: Playa
+  - nombreEscena: Desvan
+    nombreSonidoMusica: Desvan
+  - nombreEscena: Hogar
+    nombreSonidoMusica: Hogar
+  - nombreEscena: jardinMadre
+    nombreSonidoMusica: Hogar
+  - nombreEscena: wegoffanys
+    nombreSonidoMusica: Tiffanys
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0

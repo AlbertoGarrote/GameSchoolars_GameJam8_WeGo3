@@ -5372,7 +5372,7 @@ MonoBehaviour:
   textoInicio: {fileID: 1315587043}
   panelVictoria: {fileID: 1399403658}
   panelDerrota: {fileID: 1695213102}
-  tiempoTotalPartida: 25
+  tiempoTotalPartida: 15
   vidasMaximas: 10
   prefabNotaIzquierda: {fileID: 5567562006848800330, guid: a9554a0742e5d9042b3f302f66dcdc19, type: 3}
   prefabNotaAbajo: {fileID: 5052566803273718956, guid: 0c589e944708b4a4bbe280a5baa2569c, type: 3}
