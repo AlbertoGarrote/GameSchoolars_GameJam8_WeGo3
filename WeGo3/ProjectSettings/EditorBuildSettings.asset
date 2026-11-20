@@ -113,6 +113,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa/DLC/wegoffanys.unity
     guid: d3bdf7a3afd5cf841a34977f49231113
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/TitanesMinijuego.unity
+    guid: 19d59ae3acc377042a6c4cd80a4f8c0d
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/CristalMinijuego.unity
+    guid: 30c640d74bff6c749954174ead2f6b96
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/CagarMinijuego.unity
+    guid: 6c5e6975598f17949b22a45d0c9fa1e6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

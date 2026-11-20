@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58a0e412a88505841bde830864fc395c
-      internalID: -1516140256
+      spriteID: 5e5936a6ce5aa3b4681d24c432f516e1
+      internalID: -243440640
       vertices: []
       indices: 
       edges: []
@@ -185,8 +185,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d4f8625f32ac2940b2ca529e52cbc88
-      internalID: 480613105
+      spriteID: 9a098ba1d2475e84791afed22caab8af
+      internalID: 1393843521
       vertices: []
       indices: 
       edges: []
@@ -207,8 +207,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fa19ab43717b48742b99218e331f3d93
-      internalID: -1752881811
+      spriteID: 43949c8a528db334493d041af03b1174
+      internalID: 1821975626
       vertices: []
       indices: 
       edges: []
@@ -217,7 +217,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0784eb8049aff684caf64dd72f364f62
+    spriteID: 07150c0dd6c7ca04dab3c78c2d212889
     internalID: 0
     vertices: []
     indices: 
@@ -230,9 +230,9 @@ TextureImporter:
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":23.0,"y":39.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       WegomadreFront-Sheet_0: 6543866446621550739
-      WegomadreFront-Sheet_1: -1516140256
-      WegomadreFront-Sheet_2: 480613105
-      WegomadreFront-Sheet_3: -1752881811
+      WegomadreFront-Sheet_1: -243440640
+      WegomadreFront-Sheet_2: 1393843521
+      WegomadreFront-Sheet_3: 1821975626
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
