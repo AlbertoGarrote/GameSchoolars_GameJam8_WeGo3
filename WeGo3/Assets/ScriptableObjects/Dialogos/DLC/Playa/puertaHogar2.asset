@@ -14,13 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Wegojimson
+    texto: "\xBF\xBFHOLA??"
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: Wegojimson
     texto: "\xBFHay alguien? Mira que le dije en su momento que necesit\xE1bamos
       un timbre..."
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: Wegojimson
-    texto: "Deber\xEDa preguntar en el Wegoffany's si saben d\xF3nde est\xE1. Tendr\xEDa
-      que haber tenido taller por la ma\xF1ana."
+    texto: "Deber\xEDa preguntar en el Wegoffany's a ver si saben d\xF3nde est\xE1.
+      Tendr\xEDa que haber tenido un taller por la ma\xF1ana."
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []
