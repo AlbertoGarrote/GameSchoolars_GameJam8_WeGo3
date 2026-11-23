@@ -137,6 +137,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa/DLC/HogarFinal.unity
     guid: c52e211df6c71cf449fb9e17b43eeaa4
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/Final.unity
+    guid: 8e1c4e3f98aa5634d928ade877034aed
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

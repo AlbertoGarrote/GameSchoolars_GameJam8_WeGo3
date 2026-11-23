@@ -2957,7 +2957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AccionCargarEscena
   nombreEscena: habitacionWego
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
-  posicionEnNuevaEscena: {x: 0, y: -2}
+  posicionEnNuevaEscena: {x: 0, y: -2.4}
 --- !u!1 &1076526369
 GameObject:
   m_ObjectHideFlags: 0

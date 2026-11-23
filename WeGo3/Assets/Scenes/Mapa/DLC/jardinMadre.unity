@@ -1078,8 +1078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a6edc70af185c4eb16c9f99f38835c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZonaTransicionPisar2D
-  claveFlagRequerida: Madre_ganada
-  dialogoBloqueo: {fileID: 11400000, guid: e1e3f6782cb237e43a769291ca47230d, type: 2}
+  claveFlagRequerida: 
+  dialogoBloqueo: {fileID: 0}
   nombreEscenaACargar: Hogar
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
   posicionEnNuevaEscena: {x: -15, y: 0}
