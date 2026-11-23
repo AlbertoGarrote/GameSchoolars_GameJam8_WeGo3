@@ -5,12 +5,6 @@ TextureImporter:
   - first:
       213: 4409749975820168309
     second: nataliaBigWalk-Sheet_0
-  - first:
-      213: -7924462986276124000
-    second: nataliaBigWalk-Sheet_1
-  - first:
-      213: -7820447308505411376
-    second: nataliaBigWalk-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -137,8 +131,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 35
+        height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +151,20 @@ TextureImporter:
       name: nataliaBigWalk-Sheet_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 35
         y: 0
-        width: 64
-        height: 64
+        width: 35
+        height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0aac74b46e6a60290800000000000000
-      internalID: -7924462986276124000
+      spriteID: bdb0ac25effbf604888bdf7a9994d3fc
+      internalID: -1223546952
       vertices: []
       indices: 
       edges: []
@@ -179,20 +173,20 @@ TextureImporter:
       name: nataliaBigWalk-Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 70
         y: 0
-        width: 64
-        height: 64
+        width: 35
+        height: 48
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0d010ef7b90387390800000000000000
-      internalID: -7820447308505411376
+      spriteID: a17cf1a278f35fa459a4fb04b684493a
+      internalID: -1144220769
       vertices: []
       indices: 
       edges: []
@@ -201,7 +195,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d327333606152ce40bffc78d8d90c2be
+    spriteID: 4576740dd7e6c444d9f4df6909e32fdb
     internalID: 0
     vertices: []
     indices: 
@@ -211,11 +205,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":35.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       nataliaBigWalk-Sheet_0: 4409749975820168309
-      nataliaBigWalk-Sheet_1: -7924462986276124000
-      nataliaBigWalk-Sheet_2: -7820447308505411376
+      nataliaBigWalk-Sheet_1: -1223546952
+      nataliaBigWalk-Sheet_2: -1144220769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

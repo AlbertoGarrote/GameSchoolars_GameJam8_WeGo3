@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: "Ant\xF3n"
-    texto: aaa
+    texto: "A\xF1os desarrollando un juego para que me paren en el supermercado y
+      me pregunten que si soy \"el del Pou\"."
     retrato: {fileID: 5847446481288053059, guid: d6df6a0fbd426fc45b1fedb12e90f5c9, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

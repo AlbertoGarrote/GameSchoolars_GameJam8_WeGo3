@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: "Andr\xE9s"
-    texto: aaa
+    texto: "\xBFSab\xEDas que piratear una 2DS es s\xFAper f\xE1cil?"
     retrato: {fileID: 1469097647864749660, guid: 72f68718bd85e60458f8be05b5720f02, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

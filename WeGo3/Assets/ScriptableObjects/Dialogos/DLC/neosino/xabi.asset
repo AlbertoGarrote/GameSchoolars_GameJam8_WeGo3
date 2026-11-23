@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Xabi
-    texto: aaa
+    texto: "Yo era muy fan de la saga Wego hasta que lanzaron la \xFAltima entrega
+      y vi que pesaba 600 MBs. "
     retrato: {fileID: 7852066339151953625, guid: e1d12e6e8e3718e439f28012a31abc70, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

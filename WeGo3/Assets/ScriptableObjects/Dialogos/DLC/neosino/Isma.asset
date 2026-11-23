@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Isma
-    texto: aaa
+    texto: Que sepas que Garrote me ha obligado a dibujarle sin camiseta.
     retrato: {fileID: -500267536271800945, guid: d4be4b6a5d8c167439630cc8675538ce, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

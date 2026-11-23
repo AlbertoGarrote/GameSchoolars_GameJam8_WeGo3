@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Gloria
-    texto: aaa
+    texto: Yo vi a Johnpo gratis en la Tatami.
     retrato: {fileID: -384688459529993251, guid: 505ed74f7a7ca5f45b1ed4997085b514, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

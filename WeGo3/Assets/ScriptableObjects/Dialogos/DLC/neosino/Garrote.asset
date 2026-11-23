@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Garrote
-    texto: aaa
+    texto: "No me gustan estos tirantes, me tapan mis incre\xEDbles tetas."
     retrato: {fileID: -6830856765996516301, guid: d223652c1fe8fd94da7af50f27e5bca2, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

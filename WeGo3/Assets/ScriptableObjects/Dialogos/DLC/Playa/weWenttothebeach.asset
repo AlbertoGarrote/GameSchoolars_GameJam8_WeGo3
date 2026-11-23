@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
-  m_Name: lauCanarias
+  m_Name: weWenttothebeach
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: Lau
-    texto: aaa
-    retrato: {fileID: 8719462843671615418, guid: 566045ea98f6f204bb6134122c978f41, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+  - nombrePersonaje: 
+    texto: "\xA1WeWent: to the beach despu\xE9s que GTA VI!"
+    retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []
