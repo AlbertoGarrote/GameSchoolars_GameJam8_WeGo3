@@ -122,6 +122,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinijuegosDLC/CagarMinijuego.unity
     guid: 6c5e6975598f17949b22a45d0c9fa1e6
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/habitacionWego.unity
+    guid: 54ad86360e12895468ef9890b791404e
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/MadreMinijuego.unity
+    guid: 137911bd9f9f9824aa8ebd7b591414ca
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/TransicionEscena.unity
+    guid: ab3f707b04fec21498818d60e5132629
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/habitacionWegoFinal.unity
+    guid: c2272dc8a539ed4449837f9d0f1aa4b6
+  - enabled: 1
+    path: Assets/Scenes/Mapa/DLC/HogarFinal.unity
+    guid: c52e211df6c71cf449fb9e17b43eeaa4
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

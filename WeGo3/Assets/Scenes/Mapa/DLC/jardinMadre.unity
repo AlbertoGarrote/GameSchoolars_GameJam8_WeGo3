@@ -392,9 +392,12 @@ GameObject:
   - component: {fileID: 185803836}
   - component: {fileID: 185803835}
   - component: {fileID: 185803840}
+  - component: {fileID: 185803842}
   - component: {fileID: 185803839}
   - component: {fileID: 185803838}
   - component: {fileID: 185803841}
+  - component: {fileID: 185803844}
+  - component: {fileID: 185803843}
   m_Layer: 0
   m_Name: WegomadreFront-Sheet_0
   m_TagString: Untagged
@@ -512,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 0}
+  dialogoAExhibir: {fileID: 11400000, guid: f82967e0826288c49b7c3903230f1305, type: 2}
 --- !u!114 &185803839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,9 +591,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b3dedfb05683264097e75fd1b0b9896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionCargarEscena
-  nombreEscena: 
-  memoriaPosicion: {fileID: 0}
+  nombreEscena: MadreMinijuego
+  memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
   posicionEnNuevaEscena: {x: 0, y: 0}
+--- !u!114 &185803842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185803834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cab44596588cc04a81941a38b4e41a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogoPorFlags
+  flagsAactivables:
+  - nombreIdentificador: 
+    flagRequerida: Madre_ganada
+    smartObject: {fileID: 185803844}
+  smartObjectPorDefecto: {fileID: 185803839}
+--- !u!114 &185803843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185803834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
+  dialogoAExhibir: {fileID: 11400000, guid: 18038255aa1423e418f0ce5968354ff2, type: 2}
+--- !u!114 &185803844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185803834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5fc5b5cfdf340469123e657939c4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmartObject2D
+  iconoInteraccion: {fileID: 1421708671}
+  acciones:
+  - {fileID: 185803843}
+  deUnSoloUso: 0
 --- !u!1 &227735200
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +952,101 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0390477, y: 0.52626514}
   m_EdgeRadius: 0
+--- !u!1 &1106046975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106046978}
+  - component: {fileID: 1106046977}
+  - component: {fileID: 1106046976}
+  m_Layer: 0
+  m_Name: VictoriaTitanes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1106046976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106046975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969480b7e44700e49980ad024142cbfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoOnTrigger
+  claveFlagRequerida: Madre_ganada
+  claveFlagAActivarAlSaltar: madre
+  repetirSiempre: 0
+  dialogoAMostrar: {fileID: 11400000, guid: 60ca15beb1e452944babc1445ccc9685, type: 2}
+--- !u!61 &1106046977
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106046975}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -2.5940673, y: -0.12243378}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.800673, y: 1.79582}
+  m_EdgeRadius: 0
+--- !u!4 &1106046978
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106046975}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.83, y: -1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1261924607
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,8 +1078,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a6edc70af185c4eb16c9f99f38835c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZonaTransicionPisar2D
-  claveFlagRequerida: 
-  dialogoBloqueo: {fileID: 0}
+  claveFlagRequerida: Madre_ganada
+  dialogoBloqueo: {fileID: 11400000, guid: e1e3f6782cb237e43a769291ca47230d, type: 2}
   nombreEscenaACargar: Hogar
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
   posicionEnNuevaEscena: {x: -15, y: 0}
@@ -1915,3 +2059,4 @@ SceneRoots:
   - {fileID: 1962055545}
   - {fileID: 1261924611}
   - {fileID: 185803837}
+  - {fileID: 1106046978}
