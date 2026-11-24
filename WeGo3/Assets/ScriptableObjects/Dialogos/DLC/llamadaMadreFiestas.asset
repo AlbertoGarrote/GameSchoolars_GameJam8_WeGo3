@@ -34,25 +34,25 @@ MonoBehaviour:
   - nombrePersonaje: WegoMadre
     texto: "\xA1NI\xD1O! \xBFD\xF3nde andas? Se escucha fatal."
     retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
   - nombrePersonaje: Wegojimson
     texto: "Estoy en las fiestas, mam\xE1... Estoy buscando a mi amigo."
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: WegoMadre
-    texto: "\xBFOtra vez de fiesta? Mucho tiempo para tus tonter\xEDas y nunca para
-      visitar a tu madre."
+    texto: "\xBFOtra vez de fiesta? Nunca tienes tiempo para visitar a tu madre."
     retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
   - nombrePersonaje: WegoMadre
     texto: "Pues que sepas que ha terminado la manifestaci\xF3n que hab\xEDa al lado
       de mi casa. Ya no tienes excusa para no venir a verme."
     retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
   - nombrePersonaje: WegoMadre
-    texto: '*CUELGA*'
+    texto: "Espero verte por aqu\xED, que hace mucho que no vienes. Te echa de menos
+      el gato.\n*CUELGA* "
     retrato: {fileID: -3576209031513807747, guid: 64881c45825dca14abec774a2540679b, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
   - nombrePersonaje: Wegojimson
     texto: "Ni siquiera me ha dejado explicarme... Deber\xEDa ir a su casa..."
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}

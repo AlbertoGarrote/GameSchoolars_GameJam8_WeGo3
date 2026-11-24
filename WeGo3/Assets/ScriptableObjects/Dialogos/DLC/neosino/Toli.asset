@@ -14,7 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Toli
-    texto: aaa
+    texto: "NOVA es un videojuego de gesti\xF3n 4X ambientado en el espacio, similar
+      a t\xEDtulos como Frostpunk o Stellaris. "
     retrato: {fileID: 2368487451603051468, guid: f0542b1ddfb2b3b43985f63806344db8, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Toli
+    texto: "Ser\xE1s el emperador de un sistema solar en decadencia, amenazado por
+      la extinci\xF3n a manos de una inminente supernova."
+    retrato: {fileID: 2368487451603051468, guid: f0542b1ddfb2b3b43985f63806344db8, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Toli
+    texto: "Tendr\xE1s que construir planetas, recolectar recursos, investigar nuevas
+      tecnolog\xEDas y "
+    retrato: {fileID: 2368487451603051468, guid: f0542b1ddfb2b3b43985f63806344db8, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Toli
+    texto: "entablar relaciones con otras especies intergal\xE1cticas para poder
+      huir antes de que todo termine."
+    retrato: {fileID: 2368487451603051468, guid: f0542b1ddfb2b3b43985f63806344db8, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   opciones: []

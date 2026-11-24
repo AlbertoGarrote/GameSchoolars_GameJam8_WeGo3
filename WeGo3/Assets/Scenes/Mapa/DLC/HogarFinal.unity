@@ -325,7 +325,7 @@ MonoBehaviour:
   dialogoBloqueo: {fileID: 0}
   nombreEscenaACargar: Final
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
-  posicionEnNuevaEscena: {x: 0, y: -15}
+  posicionEnNuevaEscena: {x: -2.25, y: -14}
   tiempoEsperaAlAparecer: 1.5
 --- !u!61 &38680170
 BoxCollider2D:

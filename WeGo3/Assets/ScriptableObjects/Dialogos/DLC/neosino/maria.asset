@@ -17,5 +17,5 @@ MonoBehaviour:
     texto: "Llevo un a\xF1o intentando vender mi libro del Diario de Greg pero cada
       vez que subo algo a WegoWallapop me habla el mismo pesado para vacilarme."
     retrato: {fileID: -1826521572983043662, guid: c333b5ab61a52a84b9c123bacb14e6d0, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 02b3ddabf8e9af24689b213918052125, type: 3}
   opciones: []

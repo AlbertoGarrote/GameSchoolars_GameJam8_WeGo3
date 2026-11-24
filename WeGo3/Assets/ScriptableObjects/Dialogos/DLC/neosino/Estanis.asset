@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Estanis
-    texto: aaa
+    texto: 'K paza pisha. Soy el Estanis. '
     retrato: {fileID: -5641060968959504080, guid: d9488b8cf26e40546bc4235d775f7556, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Estanis
+    texto: Iba a ir a la fiesta pero tengo pilates.
+    retrato: {fileID: -5641060968959504080, guid: d9488b8cf26e40546bc4235d775f7556, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   opciones: []

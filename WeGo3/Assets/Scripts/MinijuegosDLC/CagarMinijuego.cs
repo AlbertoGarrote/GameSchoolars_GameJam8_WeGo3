@@ -53,6 +53,10 @@ public class CagarMinijuego : MonoBehaviour
     [Tooltip("Segundos que permanece asomado antes de volver.")]
     [SerializeField] private float tiempoEsperaAsomado = 1f;
 
+    [Header("Sonidos")]
+    [Tooltip("Cada cuántos segundos se vuelve a disparar el SFX \"Apretar\" mientras mantienes Espacio.")]
+    [SerializeField] private float cadenciaSonidoApretar = 0.25f;
+
     [Header("Objetos que Se Asoman")]
     [SerializeField] private List<VigilanteEntrada> objetosVigilantes = new List<VigilanteEntrada>();
     [Tooltip("Tiempo mínimo (en segundos) entre una aparición y la siguiente.")]
@@ -66,6 +70,7 @@ public class CagarMinijuego : MonoBehaviour
 
     private bool manteniendoEspacio = false;
     private bool bloqueadoPorPillon = false;
+    private float temporizadorSonidoApretar = 0f;
 
     private int objetosAsomadosActivos = 0;
     private readonly Dictionary<GameObject, Coroutine> rutinasObjetos = new Dictionary<GameObject, Coroutine>();
@@ -77,6 +82,7 @@ public class CagarMinijuego : MonoBehaviour
         {
             intervaloMaximoAparicion = intervaloMinimoAparicion;
         }
+        if (cadenciaSonidoApretar < 0.05f) cadenciaSonidoApretar = 0.05f;
     }
 
     void Start()
@@ -90,6 +96,7 @@ public class CagarMinijuego : MonoBehaviour
         tiempoRestante = tiempoLimite;
         juegoActivo = false;
 
+        DetenerSonidoApretar();
         EstablecerPuertaAbierta(false);
         PrepararObjetosIniciales();
         ActualizarUI();
@@ -97,8 +104,41 @@ public class CagarMinijuego : MonoBehaviour
 
     private void EstablecerPuertaAbierta(bool abierta)
     {
+        bool estabaAbierta = puertaAbierta != null && puertaAbierta.activeSelf;
+
         if (puertaCerrada != null) puertaCerrada.SetActive(!abierta);
         if (puertaAbierta != null) puertaAbierta.SetActive(abierta);
+
+        if (abierta && !estabaAbierta && MusicSoundController.Instance != null)
+        {
+            MusicSoundController.Instance.ReproducirSFX("Abrir");
+        }
+    }
+
+    private void GestionarSonidoApretar(bool debeSonar)
+    {
+        if (!debeSonar)
+        {
+            DetenerSonidoApretar();
+            return;
+        }
+
+        temporizadorSonidoApretar -= Time.deltaTime;
+        if (temporizadorSonidoApretar <= 0f)
+        {
+            if (MusicSoundController.Instance != null)
+            {
+                MusicSoundController.Instance.ReproducirSFX("Apretar");
+            }
+            temporizadorSonidoApretar = cadenciaSonidoApretar;
+        }
+    }
+
+    private void DetenerSonidoApretar()
+    {
+        temporizadorSonidoApretar = 0f;
+        // Si tu MusicSoundController tiene un método para detener un SFX en bucle, puedes llamarlo aquí:
+        // if (MusicSoundController.Instance != null) MusicSoundController.Instance.DetenerSFX("Apretar");
     }
 
     private void PrepararObjetosIniciales()
@@ -149,6 +189,7 @@ public class CagarMinijuego : MonoBehaviour
         bloqueadoPorPillon = false;
         juegoActivo = true;
 
+        DetenerSonidoApretar();
         ActualizarUI();
 
         StartCoroutine(RutinaAparicionObjetos());
@@ -156,13 +197,18 @@ public class CagarMinijuego : MonoBehaviour
 
     void Update()
     {
-        if (!juegoActivo) return;
+        if (!juegoActivo)
+        {
+            DetenerSonidoApretar();
+            return;
+        }
 
         // 1. Temporizador general del minijuego
         tiempoRestante -= Time.deltaTime;
         if (tiempoRestante <= 0f)
         {
             tiempoRestante = 0f;
+            DetenerSonidoApretar();
             ActualizarUI();
             PerderBatalla();
             return;
@@ -177,14 +223,18 @@ public class CagarMinijuego : MonoBehaviour
             bloqueadoPorPillon = false;
         }
 
+        bool puedeSumarYSonar = manteniendoEspacio && !bloqueadoPorPillon;
+        GestionarSonidoApretar(puedeSumarYSonar);
+
         // 3. Sumar puntuación mientras mantenga Espacio y no esté bloqueado
-        if (manteniendoEspacio && !bloqueadoPorPillon)
+        if (puedeSumarYSonar)
         {
             puntuacionActual += velocidadSumaPorSegundo * Time.deltaTime;
             puntuacionActual = Mathf.Clamp(puntuacionActual, 0f, puntuacionObjetivo);
 
             if (puntuacionActual >= puntuacionObjetivo)
             {
+                DetenerSonidoApretar();
                 ActualizarUI();
                 GanarBatalla();
                 return;
@@ -323,6 +373,7 @@ public class CagarMinijuego : MonoBehaviour
     {
         puntuacionActual = Mathf.Max(0f, puntuacionActual - puntosRestaAlPillarte);
         bloqueadoPorPillon = true;
+        DetenerSonidoApretar();
 
         if (MusicSoundController.Instance != null)
         {
@@ -379,6 +430,7 @@ public class CagarMinijuego : MonoBehaviour
     private void GanarBatalla()
     {
         juegoActivo = false;
+        DetenerSonidoApretar();
         StopAllCoroutines();
         DetenerRutinasObjetos();
         PrepararObjetosIniciales();
@@ -390,6 +442,7 @@ public class CagarMinijuego : MonoBehaviour
     private void PerderBatalla()
     {
         juegoActivo = false;
+        DetenerSonidoApretar();
         StopAllCoroutines();
         DetenerRutinasObjetos();
         PrepararObjetosIniciales();
@@ -400,6 +453,8 @@ public class CagarMinijuego : MonoBehaviour
 
     public void volverGym(bool victoriaConseguida)
     {
+        DetenerSonidoApretar();
+
         if (victoriaConseguida)
         {
             if (EstadoJuegoManager.Instance != null && !string.IsNullOrEmpty(flagVictoria))

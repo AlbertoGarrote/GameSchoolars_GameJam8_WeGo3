@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 11400000, guid: f82967e0826288c49b7c3903230f1305, type: 2}
+  dialogoAExhibir: {fileID: 11400000, guid: 1b10165ffdf9fc94da1c3b7cf2550e25, type: 2}
 --- !u!114 &185803839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
-  dialogoAExhibir: {fileID: 11400000, guid: 18038255aa1423e418f0ce5968354ff2, type: 2}
+  dialogoAExhibir: {fileID: 11400000, guid: ed0c383588d5ac9499796e51fa0b656a, type: 2}
 --- !u!114 &185803844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,7 +964,7 @@ GameObject:
   - component: {fileID: 1106046977}
   - component: {fileID: 1106046976}
   m_Layer: 0
-  m_Name: VictoriaTitanes
+  m_Name: VictoriaMadre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -985,7 +985,7 @@ MonoBehaviour:
   claveFlagRequerida: Madre_ganada
   claveFlagAActivarAlSaltar: madre
   repetirSiempre: 0
-  dialogoAMostrar: {fileID: 11400000, guid: 60ca15beb1e452944babc1445ccc9685, type: 2}
+  dialogoAMostrar: {fileID: 11400000, guid: a8a5b3bc0e4818e48aa13ae87a703c4e, type: 2}
 --- !u!61 &1106046977
 BoxCollider2D:
   m_ObjectHideFlags: 0

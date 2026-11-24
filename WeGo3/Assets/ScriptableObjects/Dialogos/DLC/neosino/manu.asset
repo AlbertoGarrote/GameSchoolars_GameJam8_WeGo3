@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Manu
-    texto: aaa
+    texto: "\xBFHas visto que el pan que habla va a venir a Wegotown? Est\xE1 todo
+      el mundo como loco."
     retrato: {fileID: -6061513458382460674, guid: 0ca67f37bda8f8e46bc937d4b191b82e, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

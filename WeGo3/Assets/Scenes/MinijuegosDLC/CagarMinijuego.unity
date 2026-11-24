@@ -4057,6 +4057,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3044046644777429697, guid: 5d937e154fb14f946900bcc02e576087, type: 3}
+      propertyPath: catalogoSonidos.Array.data[37].pitch
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044046644777429697, guid: 5d937e154fb14f946900bcc02e576087, type: 3}
+      propertyPath: catalogoSonidos.Array.data[38].pitch
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044046644777429697, guid: 5d937e154fb14f946900bcc02e576087, type: 3}
+      propertyPath: catalogoSonidos.Array.data[37].volumen
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044046644777429697, guid: 5d937e154fb14f946900bcc02e576087, type: 3}
+      propertyPath: catalogoSonidos.Array.data[38].volumen
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5303912238774164454, guid: 5d937e154fb14f946900bcc02e576087, type: 3}
       propertyPath: m_Name
       value: MusicSoundController
@@ -4687,6 +4703,7 @@ MonoBehaviour:
   velocidadMovimiento: 7
   multiplicadorVelocidadRetorno: 2.5
   tiempoEsperaAsomado: 1
+  cadenciaSonidoApretar: 0.25
   objetosVigilantes:
   - nombre: a
     objeto: {fileID: 1638243144}

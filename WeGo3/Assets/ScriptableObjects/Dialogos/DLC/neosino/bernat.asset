@@ -14,7 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Bernat
-    texto: aaa
+    texto: "\xA1Hey, Wego! \xBFPuedo dormir en tu casa?"
     retrato: {fileID: 156216880360873841, guid: a93987d7e7ab2654dab7a3d84c4191f7, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Sin problema, Berni. \xBFTienes ensayo o algo?"
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: Bernat
+    texto: "Qu\xE9 va, pero me gusta dormir en casas ajenas."
+    retrato: {fileID: 156216880360873841, guid: a93987d7e7ab2654dab7a3d84c4191f7, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   opciones: []

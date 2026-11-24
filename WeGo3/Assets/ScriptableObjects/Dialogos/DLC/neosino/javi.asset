@@ -17,7 +17,7 @@ MonoBehaviour:
     texto: "Estas vacaciones se pagan solas gracias a la contribuci\xF3n mensual
       de mis mecenas en WegoPatreon."
     retrato: {fileID: -794346491725443234, guid: 09fa2c77eae139b4d991771fd5a5d0a5, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   - nombrePersonaje: Wegojimson
     texto: " \xBFMecenas?"
     retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
@@ -27,5 +27,5 @@ MonoBehaviour:
 
 '
     retrato: {fileID: -794346491725443234, guid: 09fa2c77eae139b4d991771fd5a5d0a5, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []

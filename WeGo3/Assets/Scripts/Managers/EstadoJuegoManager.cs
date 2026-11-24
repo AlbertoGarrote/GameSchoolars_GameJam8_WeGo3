@@ -30,6 +30,16 @@ public class EstadoJuegoManager : MonoBehaviour
         }
     }
 
+    public void DesactivarFlag(string claveFlag)
+    {
+        if (string.IsNullOrEmpty(claveFlag)) return;
+
+        if (!flagsCompletadas.Contains(claveFlag))
+        {
+            flagsCompletadas.Remove(claveFlag);
+        }
+    }
+
     public bool EstaFlagActivada(string claveFlag)
     {
         if (string.IsNullOrEmpty(claveFlag)) return false;

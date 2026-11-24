@@ -20,5 +20,5 @@ MonoBehaviour:
   - nombrePersonaje: "Iv\xE1n"
     texto: "Fleje Guagua Gofio Cruz Cafun\xE9 Papas Quevedo Baifo Pelete."
     retrato: {fileID: 8719462843671615418, guid: 566045ea98f6f204bb6134122c978f41, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []
