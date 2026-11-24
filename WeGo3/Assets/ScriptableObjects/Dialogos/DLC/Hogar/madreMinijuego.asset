@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: madreMinijuego
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: 
+    texto: "Pues no s\xE9 por d\xF3nde empezar la verdad..."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: Tranquilo, hijo. Aunque a veces me ponga de los nervios me puedes contar
+      lo que sea.
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: "Gracias, mam\xE1. Es que ver\xE1s, no encuentro a mi amigo por ninguna
+      parte y estoy empezando a preocuparme."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: "Mmmm, creo que estar\xE1 bien. \xBFT\xFA como te encuentras? "
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: "No lo s\xE9... Creo que tienes raz\xF3n y debo espabilar en muchos aspectos."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: "No te lo tomes tan a pecho, hijo. Es verdad que perd\xED un poco los
+      nervios al encontrarme la basura en el congelador. Lo siento."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: "Pero tienes raz\xF3n, mam\xE1. Siento que he estado perdido en algunos
+      momentos y a veces no s\xE9 si me he llegado a encontrar..."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: "Es normal sentirse as\xED. No siempre tendr\xE1s claro todo lo que haces.
+      Es normal fallar, es normal no sentirse bien."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: "Siempre y cuando pienses en despertarte ma\xF1ana."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: ...
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: No hace falta que encuentres lo que eres ahora mismo. Hay gente que pasa
+      toda su vida buscando y nunca termina de vivir su propia vida.
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: "Deber\xEDas descansar un poco, hijo. \xC9chate una siesta en tu cama
+      y en un rato ya encontrar\xE1s lo que est\xE1s buscando."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: "...gracias, mam\xE1."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: "Para eso estamos, hijo m\xEDo."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  opciones: []

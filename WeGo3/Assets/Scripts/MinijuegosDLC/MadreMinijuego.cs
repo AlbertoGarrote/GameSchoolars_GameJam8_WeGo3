@@ -1,137 +1,223 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MadreMinijuego : MonoBehaviour
 {
-    [Header("Referencias de Retorno")]
-    [SerializeField] private string flagVictoria;
+    [Header("Diálogo Inicial")]
+    [SerializeField] private DialogoSO dialogoAlEntrar;
+    [Tooltip("Pequeña pausa tras cargar la escena antes de lanzar el diálogo.")]
+    [SerializeField] private float retrasoInicial = 0.25f;
+
+    [Header("Botón Tras Terminar el Diálogo")]
+    [SerializeField] private Button botonContinuar;
+
+    [Header("Objetos y Movimiento")]
+    [SerializeField] private GameObject objeto1;
+    [SerializeField] private Transform destinoObjeto1;
+    [SerializeField] private GameObject objeto2;
+    [SerializeField] private Transform destinoObjeto2;
+    [SerializeField] private float velocidadMovimiento = 4f;
+    [Tooltip("Segundos que esperan los dos objetos tras llegar a su destino antes de desaparecer.")]
+    [SerializeField] private float tiempoAntesDeDesaparecer = 2f;
+
+    [Header("Aparición y Diálogo Final")]
+    [Tooltip("GameObject que aparecerá cuando los dos objetos desaparezcan.")]
+    [SerializeField] private GameObject objetoAparecer;
+    [Tooltip("Segundos que esperamos tras aparecer el objeto antes de lanzar el diálogo final (o cambiar de escena si no hay diálogo final).")]
+    [SerializeField] private float segundosAntesDeCambiarEscena = 2f;
+    [Tooltip("Diálogo que se lanzará al final; al terminarlo se cambiará de escena. Si se deja vacío, cambia directo.")]
+    [SerializeField] private DialogoSO dialogoFinal;
+
+    [Header("Destino y Flag al Terminar")]
+    [SerializeField] private string flagAActivarAlTerminar;
+    [SerializeField] private string nombreEscenaDestino;
     [SerializeField] private PuntoAparicionSO memoriaPosicion;
     [SerializeField] private Vector2 posicionEnNuevaEscena;
-    [SerializeField] private string nombreEscenaGym = "Gym";
 
-    [Header("UI y Paneles")]
-    [SerializeField] private GameObject panelInicio;
-    [SerializeField] private GameObject temporizadorInicial;
-    [SerializeField] private TMP_Text textoInicio;
-    [SerializeField] private GameObject panelVictoria;
-    [SerializeField] private GameObject panelDerrota;
+    private bool dialogoIniciado = false;
+    private bool dialogoTerminado = false;
+    private bool secuenciaIniciada = false;
 
-    [Header("Configuración Placeholder")]
-    [SerializeField] private float duracionMinijuego = 5f;
-    [SerializeField] private TMP_Text textoTemporizador;
-
-    private float tiempoRestante;
-    private bool juegoActivo = false;
-
-    void Start()
+    private void Awake()
     {
-        if (panelInicio != null) panelInicio.SetActive(true);
-        if (temporizadorInicial != null) temporizadorInicial.SetActive(false);
-        if (panelVictoria != null) panelVictoria.SetActive(false);
-        if (panelDerrota != null) panelDerrota.SetActive(false);
-
-        tiempoRestante = duracionMinijuego;
-        juegoActivo = false;
-
-        ActualizarTextoTiempo();
-    }
-
-    public void ComenzarBoton()
-    {
-        StartCoroutine(ComenzarJuegoCorrutina());
-    }
-
-    private IEnumerator ComenzarJuegoCorrutina()
-    {
-        if (panelInicio != null) panelInicio.SetActive(false);
-        if (temporizadorInicial != null) temporizadorInicial.SetActive(true);
-
-        if (textoInicio != null) textoInicio.text = "LISTOS...?";
-        yield return new WaitForSeconds(2f);
-
-        if (textoInicio != null) textoInicio.text = "¡YA!";
-        yield return new WaitForSeconds(1f);
-
-        if (temporizadorInicial != null) temporizadorInicial.SetActive(false);
-
-        IniciarJuegoReal();
-    }
-
-    private void IniciarJuegoReal()
-    {
-        tiempoRestante = duracionMinijuego;
-        juegoActivo = true;
-        ActualizarTextoTiempo();
-    }
-
-    void Update()
-    {
-        if (!juegoActivo) return;
-
-        tiempoRestante -= Time.deltaTime;
-
-        if (tiempoRestante <= 0f)
+        if (botonContinuar != null)
         {
-            tiempoRestante = 0f;
-            ActualizarTextoTiempo();
-            GanarMinijuego();
-            return;
+            botonContinuar.gameObject.SetActive(false);
+            botonContinuar.onClick.AddListener(AlPulsarBoton);
         }
 
-        ActualizarTextoTiempo();
-    }
-
-    private void ActualizarTextoTiempo()
-    {
-        if (textoTemporizador != null)
+        if (objetoAparecer != null)
         {
-            textoTemporizador.text = $"{Mathf.CeilToInt(tiempoRestante)}s";
+            objetoAparecer.SetActive(false);
         }
     }
 
-    private void GanarMinijuego()
+    private void Start()
     {
-        juegoActivo = false;
-        StopAllCoroutines();
-
-        if (panelVictoria != null) panelVictoria.SetActive(true);
-        if (MusicSoundController.Instance != null) MusicSoundController.Instance.ReproducirSFX("Ganar");
+        StartCoroutine(IniciarSecuencia());
     }
 
-    public void ForzarDerrota()
+    private IEnumerator IniciarSecuencia()
     {
-        if (!juegoActivo) return;
-
-        juegoActivo = false;
-        StopAllCoroutines();
-
-        if (panelDerrota != null) panelDerrota.SetActive(true);
-        if (MusicSoundController.Instance != null) MusicSoundController.Instance.ReproducirSFX("Perder");
-    }
-
-    public void volverGym(bool victoriaConseguida)
-    {
-        if (victoriaConseguida)
+        if (retrasoInicial > 0f)
         {
-            if (EstadoJuegoManager.Instance != null && !string.IsNullOrEmpty(flagVictoria))
+            yield return new WaitForSeconds(retrasoInicial);
+        }
+
+        float tiempoEspera = 0f;
+        while (DialogoManager.Instance == null && tiempoEspera < 3f)
+        {
+            tiempoEspera += Time.deltaTime;
+            yield return null;
+        }
+
+        if (dialogoAlEntrar != null && DialogoManager.Instance != null)
+        {
+            dialogoIniciado = true;
+            DialogoManager.Instance.IniciarDialogo(dialogoAlEntrar);
+        }
+        else
+        {
+            dialogoTerminado = true;
+            MostrarBotonContinuar();
+        }
+    }
+
+    private void Update()
+    {
+        if (!dialogoIniciado || dialogoTerminado || secuenciaIniciada) return;
+
+        if (DialogoManager.Instance != null && !DialogoManager.Instance.EnDialogo)
+        {
+            dialogoTerminado = true;
+            MostrarBotonContinuar();
+        }
+    }
+
+    private void MostrarBotonContinuar()
+    {
+        if (botonContinuar != null)
+        {
+            botonContinuar.gameObject.SetActive(true);
+        }
+        else
+        {
+            // Por seguridad, si no asignaste botón en el Inspector, arranca la secuencia directamente
+            AlPulsarBoton();
+        }
+    }
+
+    public void AlPulsarBoton()
+    {
+        if (secuenciaIniciada) return;
+        secuenciaIniciada = true;
+
+        if (botonContinuar != null)
+        {
+            botonContinuar.gameObject.SetActive(false);
+        }
+
+        if (MusicSoundController.Instance != null)
+        {
+            MusicSoundController.Instance.ReproducirSFX("Interactuar");
+        }
+
+        StartCoroutine(EjecutarSecuenciaCompleta());
+    }
+
+    private IEnumerator EjecutarSecuenciaCompleta()
+    {
+        // 1. Mover ambos objetos hacia sus puntos de destino en paralelo
+        while (NecesitaMoverse(objeto1, destinoObjeto1) || NecesitaMoverse(objeto2, destinoObjeto2))
+        {
+            MoverHaciaDestino(objeto1, destinoObjeto1);
+            MoverHaciaDestino(objeto2, destinoObjeto2);
+            yield return null;
+        }
+
+        FijarEnDestino(objeto1, destinoObjeto1);
+        FijarEnDestino(objeto2, destinoObjeto2);
+
+        // 2. Esperar 2 segundos (o el valor configurado) antes de desaparecer
+        if (tiempoAntesDeDesaparecer > 0f)
+        {
+            yield return new WaitForSeconds(tiempoAntesDeDesaparecer);
+        }
+
+        if (MusicSoundController.Instance != null)
+        {
+            MusicSoundController.Instance.DetenerMusica();
+            MusicSoundController.Instance.ReproducirSFX("Acierto");
+        }
+
+        // 3. Desaparecen los dos objetos y aparece el tercero
+        if (objeto1 != null) objeto1.SetActive(false);
+        if (objeto2 != null) objeto2.SetActive(false);
+        if (objetoAparecer != null) objetoAparecer.SetActive(true);
+
+        // 4. Espera configurable en el editor tras aparecer el objeto
+        if (segundosAntesDeCambiarEscena > 0f)
+        {
+            yield return new WaitForSeconds(segundosAntesDeCambiarEscena);
+        }
+
+        // 5. Lanzar diálogo final si está asignado y esperar a que termine
+        if (dialogoFinal != null && DialogoManager.Instance != null)
+        {
+            DialogoManager.Instance.IniciarDialogo(dialogoFinal);
+            yield return null;
+
+            while (DialogoManager.Instance != null && DialogoManager.Instance.EnDialogo)
             {
-                EstadoJuegoManager.Instance.ActivarFlag(flagVictoria);
+                yield return null;
             }
         }
 
-        if (!string.IsNullOrEmpty(nombreEscenaGym))
-        {
-            if (memoriaPosicion != null)
-            {
-                memoriaPosicion.posicionDestino = posicionEnNuevaEscena;
-                memoriaPosicion.usarPosicionGuardada = true;
-            }
+        EjecutarTransicion();
+    }
 
-            if (TransicionController.Instance != null)
-            {
-                TransicionController.Instance.CargarEscena(nombreEscenaGym);
-            }
+    private bool NecesitaMoverse(GameObject obj, Transform destino)
+    {
+        if (obj == null || destino == null || !obj.activeInHierarchy) return false;
+        return Vector3.Distance(obj.transform.position, destino.position) > 0.01f;
+    }
+
+    private void MoverHaciaDestino(GameObject obj, Transform destino)
+    {
+        if (!NecesitaMoverse(obj, destino)) return;
+
+        obj.transform.position = Vector3.MoveTowards(
+            obj.transform.position,
+            destino.position,
+            velocidadMovimiento * Time.deltaTime
+        );
+    }
+
+    private void FijarEnDestino(GameObject obj, Transform destino)
+    {
+        if (obj != null && destino != null)
+        {
+            obj.transform.position = destino.position;
+        }
+    }
+
+    private void EjecutarTransicion()
+    {
+        if (!string.IsNullOrEmpty(flagAActivarAlTerminar) && EstadoJuegoManager.Instance != null)
+        {
+            EstadoJuegoManager.Instance.ActivarFlag(flagAActivarAlTerminar);
+        }
+
+        if (memoriaPosicion != null)
+        {
+            memoriaPosicion.posicionDestino = posicionEnNuevaEscena;
+            memoriaPosicion.usarPosicionGuardada = true;
+        }
+
+        if (!string.IsNullOrEmpty(nombreEscenaDestino) && TransicionController.Instance != null)
+        {
+            TransicionController.Instance.CargarEscena(nombreEscenaDestino);
         }
     }
 }

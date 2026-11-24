@@ -140,6 +140,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa/DLC/Final.unity
     guid: 8e1c4e3f98aa5634d928ade877034aed
+  - enabled: 1
+    path: Assets/Scenes/Menus/MenuPrincipal4.unity
+    guid: 11e7ea3987f55fb459f42c1f2d26b108
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
