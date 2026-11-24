@@ -1588,6 +1588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoOnTrigger
   claveFlagRequerida: Triples_ganado
   claveFlagAActivarAlSaltar: Triples_ganado_d
+  repetirSiempre: 0
   dialogoAMostrar: {fileID: 11400000, guid: a743aed1615b6d24993a6006ce7114c3, type: 2}
 --- !u!61 &858447882
 BoxCollider2D:
@@ -3732,7 +3733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309907875525885632, guid: a4121a9cd6d26314aa8bae36a33a1e6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

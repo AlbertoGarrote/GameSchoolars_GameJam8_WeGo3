@@ -1315,6 +1315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CinematicaFinal
   dialogoCinematica: {fileID: 11400000, guid: 1874aa5234171c0439bd16d2dc170282, type: 2}
+  nombreFlagJuegoTerminado: juego_terminado
   camaraCinematica: {fileID: 1368655096}
   prioridadAlta: 30
   audioSource: {fileID: 0}
@@ -5510,7 +5511,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309907875525885632, guid: a4121a9cd6d26314aa8bae36a33a1e6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

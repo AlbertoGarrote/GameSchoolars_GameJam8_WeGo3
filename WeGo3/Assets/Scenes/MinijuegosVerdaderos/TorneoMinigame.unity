@@ -5567,15 +5567,15 @@ MonoBehaviour:
   prefabPelotaFase1: {fileID: 8921839202819393146, guid: 077534c8e77b90149975c9714eba9f24, type: 3}
   prefabRectanguloFase2: {fileID: 492518122802607750, guid: 3f6d51c3a467bd741928d4fd025b1882, type: 3}
   prefabObstaculoFase3: {fileID: 8921839202819393146, guid: a059b21d25847d44e9b04fc427fa524d, type: 3}
-  velocidadPelotaFase1: 5
-  velocidadRectanguloFase2: 7
-  velocidadBalaFase3: 10
-  velocidadRectanguloFase4: 5
-  velocidadBalaFase4: 12
+  velocidadPelotaFase1: 4
+  velocidadRectanguloFase2: 5
+  velocidadBalaFase3: 8
+  velocidadRectanguloFase4: 4
+  velocidadBalaFase4: 10
   intervaloSpawnFase1: 0.8
   intervaloSpawnFase2: 1
-  intervaloSpawnFase3: 0.6
-  intervaloSpawnFase4: 0.7
+  intervaloSpawnFase3: 0.8
+  intervaloSpawnFase4: 0.8
   puntosSpawnFase1:
   - {fileID: 586911889}
   - {fileID: 915031704}
