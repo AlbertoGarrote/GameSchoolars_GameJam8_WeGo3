@@ -18,7 +18,7 @@ MonoBehaviour:
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   - nombrePersonaje: 
-    texto: (El olor del suavizante tiene ligeros tonos florales.)
+    texto: (El olor del suavizante tiene ligeras notas florales.)
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

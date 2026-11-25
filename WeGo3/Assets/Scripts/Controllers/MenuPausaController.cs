@@ -14,6 +14,10 @@ public class MenuPausaController : MonoBehaviour
     [SerializeField] private Slider sliderVolumenSFX;
     [SerializeField] private string nombreEscenaMenuPrincipal = "MenuPrincipal";
     [SerializeField] private string nombreEscenaMenuFinal = "MenuPrincipal3"; // Menú al que irá si el juego terminó
+    [SerializeField] private string nombreEscenaMenuDLC = "MenuPrincipal4";   // Menú al que irá si se completó el DLC
+
+    private const string PREF_JUEGO_TERMINADO = "juegoTerminado";
+    private const string PREF_JUEGO_TERMINADO_DLC = "juegoTerminado_dlc";
 
     private bool juegoPausado = false;
 
@@ -119,24 +123,41 @@ public class MenuPausaController : MonoBehaviour
 
         if (confirmar)
         {
+            juegoPausado = false;
+
             if (panelPausa != null) panelPausa.SetActive(false);
             if (panelConfirmarSalir != null) panelConfirmarSalir.SetActive(false);
 
-            // COMPROBAMOS SI EL JUEGO HA TERMINADO
-            bool juegoTerminado = PlayerPrefs.GetInt("juegoTerminado", 0) == 1;
+            // Comprobamos si el DLC ya se ha terminado
+            bool juegoTerminadoDLC = PlayerPrefs.GetInt(PREF_JUEGO_TERMINADO_DLC, 0) == 1;
+            if (EstadoJuegoManager.Instance != null && EstadoJuegoManager.Instance.EstaFlagActivada(PREF_JUEGO_TERMINADO_DLC))
+            {
+                juegoTerminadoDLC = true;
+            }
+
+            // Comprobamos si el juego base ya se ha terminado
+            bool juegoTerminado = PlayerPrefs.GetInt(PREF_JUEGO_TERMINADO, 0) == 1;
             if (EstadoJuegoManager.Instance != null && EstadoJuegoManager.Instance.EstaFlagActivada("juego_terminado"))
             {
                 juegoTerminado = true;
             }
 
-            // Seleccionamos la escena de destino correcta dinámicamente
-            string escenaDestino = juegoTerminado ? nombreEscenaMenuFinal : nombreEscenaMenuPrincipal;
+            // Jerarquía de decisión de menús (DLC primero)
+            string escenaDestino = nombreEscenaMenuPrincipal;
+            if (juegoTerminadoDLC)
+            {
+                escenaDestino = nombreEscenaMenuDLC;
+            }
+            else if (juegoTerminado)
+            {
+                escenaDestino = nombreEscenaMenuFinal;
+            }
 
             if (TransicionController.Instance != null && !string.IsNullOrEmpty(escenaDestino))
             {
                 TransicionController.Instance.CargarEscena(escenaDestino);
             }
-            else
+            else if (!string.IsNullOrEmpty(escenaDestino))
             {
                 SceneManager.LoadScene(escenaDestino);
             }

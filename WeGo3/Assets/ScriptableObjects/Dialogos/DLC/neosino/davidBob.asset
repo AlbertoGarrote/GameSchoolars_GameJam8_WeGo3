@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Bob Dylan
-    texto: Mama, take this badge off of me
+    texto: "\u266B Mama, take this badge off of me \u266B "
     retrato: {fileID: -6722134640200344936, guid: 9c68e4a8c7342d6489110b56600f7a8d, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 2e1f452e6864f1f499544d8f3b74ad58, type: 3}
   - nombrePersonaje: Bob Dylan
-    texto: "I can\u2019t use it anymore"
+    texto: "\u266B I can\u2019t use it anymore \u266B"
     retrato: {fileID: -6722134640200344936, guid: 9c68e4a8c7342d6489110b56600f7a8d, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 2e1f452e6864f1f499544d8f3b74ad58, type: 3}
   - nombrePersonaje: Bob Dylan
-    texto: "It\u2019s gettin\u2019 dark, too dark for me to see"
+    texto: "\u266B It\u2019s gettin\u2019 dark, too dark for me to see \u266B"
     retrato: {fileID: -6722134640200344936, guid: 9c68e4a8c7342d6489110b56600f7a8d, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 2e1f452e6864f1f499544d8f3b74ad58, type: 3}
   - nombrePersonaje: Bob Dylan
-    texto: "I feel like I\u2019m knockin\u2019 on heaven\u2019s door"
+    texto: "\u266B I feel like I\u2019m knockin\u2019 on heaven\u2019s door \u266B"
     retrato: {fileID: -6722134640200344936, guid: 9c68e4a8c7342d6489110b56600f7a8d, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 2e1f452e6864f1f499544d8f3b74ad58, type: 3}
   - nombrePersonaje: Bob Dylan
-    texto: "Knock, knock, knockin\u2019 on heaven\u2019s door"
+    texto: "\u266B Knock, knock, knockin\u2019 on heaven\u2019s door \u266B"
     retrato: {fileID: -6722134640200344936, guid: 9c68e4a8c7342d6489110b56600f7a8d, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 2e1f452e6864f1f499544d8f3b74ad58, type: 3}
   opciones: []

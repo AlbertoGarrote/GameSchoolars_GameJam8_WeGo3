@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Markel
-    texto: "\xBFC\xF3mo ha ido la caza. jefe?"
+    texto: "\xBFC\xF3mo ha ido la caza, jefe?"
     retrato: {fileID: -1018290731986040823, guid: 2c87c932a3a67ca40ba2456abdfe699b, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: Markel
-    texto: "Nos han tra\xEDdo directamente desde La Rioja un Brandy Peinado con 20
-      a\xF1os de maduraci\xF3n."
+    texto: "Nos han tra\xEDdo, directamente desde La Rioja, un Brandy Peinado con
+      20 a\xF1os de maduraci\xF3n."
     retrato: {fileID: -1018290731986040823, guid: 2c87c932a3a67ca40ba2456abdfe699b, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: Wegojimson

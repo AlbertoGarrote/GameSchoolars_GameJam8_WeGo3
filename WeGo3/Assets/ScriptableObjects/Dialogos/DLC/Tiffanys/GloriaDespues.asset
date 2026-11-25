@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Gloria Blanca
-    texto: b
+    texto: "En verdad es el primer d\xEDa que he venido aqu\xED, pero los ancianos
+      est\xE1n encantados conmigo. "
     retrato: {fileID: 818971151365147011, guid: 7714b00d81e508948806b33ec389e29e, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
   opciones: []

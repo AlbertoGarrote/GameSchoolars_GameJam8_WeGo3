@@ -459,6 +459,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 960234775532370161, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 960234775532370161, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_fontSize
       value: 35
       objectReference: {fileID: 0}
@@ -468,11 +472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 960234775532370161, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_VerticalAlignment
-      value: 512
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 960234775532370161, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_HorizontalAlignment
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1149803263102147824, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_IsActive
@@ -496,15 +500,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3836971937272319103, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 730.7869
+      value: 662.3529
       objectReference: {fileID: 0}
     - target: {fileID: 3836971937272319103, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.000002861
       objectReference: {fileID: 0}
     - target: {fileID: 3836971937272319103, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000047684
+      value: -6.2215
       objectReference: {fileID: 0}
     - target: {fileID: 5229365112976359809, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -529,6 +533,10 @@ PrefabInstance:
     - target: {fileID: 6493281484246655573, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_Name
       value: DialogoManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361099918778936306, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9198493371821932943, guid: bfcc79278e0870f4aa0c78a35088aad3, type: 3}
       propertyPath: m_LocalPosition.x

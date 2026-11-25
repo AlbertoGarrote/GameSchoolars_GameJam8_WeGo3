@@ -14,7 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
   - nombrePersonaje: Gloria Blanca
-    texto: c
+    texto: "\xA1Qu\xE9 talento con los cristales! Tu t\xE9cnica se parece mucho a
+      la de tu madre, se ve que lo llevas en la sangre. "
     retrato: {fileID: 818971151365147011, guid: 7714b00d81e508948806b33ec389e29e, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: Gloria Blanca
+    texto: "Ahora que lo pienso... alguna vez la he visto por el WegoDesv\xE1n, por
+      si quieres ir a echar un vistazo. Me lo he pasado genial, deber\xEDas volver
+      otro d\xEDa. Porfa."
+    retrato: {fileID: 818971151365147011, guid: 7714b00d81e508948806b33ec389e29e, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: Gloria Blanca
+    texto: ' Pinkypromise. Somos oficialmente Wegocolegas.'
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

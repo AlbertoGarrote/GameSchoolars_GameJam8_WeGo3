@@ -302,6 +302,12 @@ MonoBehaviour:
     pitch: 1
     esMusica: 1
     loop: 1
+  - nombreIdentificador: volley
+    clip: {fileID: 8300000, guid: 564692eb3019a554d860017db445dd93, type: 3}
+    volumen: 0.05
+    pitch: 0.8
+    esMusica: 1
+    loop: 1
   musicaPorEscenaList:
   - nombreEscena: Plaza
     nombreSonidoMusica: Plaza
@@ -363,6 +369,8 @@ MonoBehaviour:
     nombreSonidoMusica: olas
   - nombreEscena: MadreMinijuego
     nombreSonidoMusica: madre
+  - nombreEscena: MinijuegoVolley
+    nombreSonidoMusica: volley
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0

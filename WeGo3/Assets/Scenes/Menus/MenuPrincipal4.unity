@@ -2093,8 +2093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182.9, y: 144.47}
-  m_SizeDelta: {x: 468.7979, y: 161.05}
+  m_AnchoredPosition: {x: 173.1, y: 119}
+  m_SizeDelta: {x: 435.36, y: 189.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1204947462
 MonoBehaviour:
@@ -2109,14 +2109,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.9345881, b: 0.43867922, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 055f3b5a4d1fb1b4f8999033f058f8af, type: 3}
+  m_Texture: {fileID: 2800000, guid: 597782ab73a8523469fcb08ec792c69f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -3590,7 +3590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309907875525885632, guid: a4121a9cd6d26314aa8bae36a33a1e6e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

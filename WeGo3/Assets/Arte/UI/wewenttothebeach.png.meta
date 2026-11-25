@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: 597782ab73a8523469fcb08ec792c69f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7563795235511256883
+    second: wewenttothebeach_0
+  - first:
+      213: 407622052106517865
+    second: wewenttothebeach_1
+  - first:
+      213: 5936599458595223009
+    second: wewenttothebeach_2
+  - first:
+      213: -9066305488588803914
+    second: wewenttothebeach_3
+  - first:
+      213: 9038599731025296656
+    second: wewenttothebeach_4
+  - first:
+      213: 899701264226552489
+    second: wewenttothebeach_5
+  - first:
+      213: -2987710905852501403
+    second: wewenttothebeach_6
+  - first:
+      213: 3047235693653051264
+    second: wewenttothebeach_7
+  - first:
+      213: 454846806658813620
+    second: wewenttothebeach_8
+  - first:
+      213: 8872785017947618906
+    second: wewenttothebeach_9
+  - first:
+      213: 2852599146880193108
+    second: wewenttothebeach_10
+  - first:
+      213: -8084829821119849518
+    second: wewenttothebeach_11
+  - first:
+      213: -1061324204555854755
+    second: wewenttothebeach_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wewenttothebeach_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 197
+        width: 143
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337c07621bff7f860800000000000000
+      internalID: 7563795235511256883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 197
+        width: 74
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96dbc62c81a28a500800000000000000
+      internalID: 407622052106517865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 99
+        width: 122
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5385f01c9036250800000000000000
+      internalID: 5936599458595223009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_3
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 99
+        width: 96
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b07d7781330e2280800000000000000
+      internalID: -9066305488588803914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_4
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 102
+        width: 92
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d34ba119e8f6d70800000000000000
+      internalID: 9038599731025296656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_5
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 105
+        width: 128
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa813278816c7c00800000000000000
+      internalID: 899701264226552489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_6
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 139
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562e91db2c48986d0800000000000000
+      internalID: -2987710905852501403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_7
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 109
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087c41be7b4f94a20800000000000000
+      internalID: 3047235693653051264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_8
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 33
+        width: 44
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be8e12c2c0ff4600800000000000000
+      internalID: 454846806658813620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_9
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 38
+        width: 34
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5efc2bb6f6722b70800000000000000
+      internalID: 8872785017947618906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_10
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 8
+        width: 139
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45250647fc7769720800000000000000
+      internalID: 2852599146880193108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_11
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 11
+        width: 186
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db9aaaec1aeccf80800000000000000
+      internalID: -8084829821119849518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wewenttothebeach_12
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 11
+        width: 62
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5c9ce3524b6541f0800000000000000
+      internalID: -1061324204555854755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      wewenttothebeach_0: 7563795235511256883
+      wewenttothebeach_1: 407622052106517865
+      wewenttothebeach_10: 2852599146880193108
+      wewenttothebeach_11: -8084829821119849518
+      wewenttothebeach_12: -1061324204555854755
+      wewenttothebeach_2: 5936599458595223009
+      wewenttothebeach_3: -9066305488588803914
+      wewenttothebeach_4: 9038599731025296656
+      wewenttothebeach_5: 899701264226552489
+      wewenttothebeach_6: -2987710905852501403
+      wewenttothebeach_7: 3047235693653051264
+      wewenttothebeach_8: 454846806658813620
+      wewenttothebeach_9: 8872785017947618906
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

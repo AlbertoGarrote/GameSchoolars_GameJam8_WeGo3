@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: cagarDespues
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: Wegojimson
+    texto: Por fin, casi no lo cuento.
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: "Benjam\xEDn el Gnomo"
+    texto: " \xA1Mamma m\xEDa! Qu\xE9 habilidad la tuya, muchacho. Ya eres una leyenda
+      dentro de este bar."
+    retrato: {fileID: -7515755925467194108, guid: 160910de44a986b40b7366a30e94e8ff, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Benjam\xEDn el Gnomo"
+    texto: "Una se\xF1ora que se parec\xEDa mucho a ti ha intentado cagar esta ma\xF1ana,
+      pero no hab\xEDa manera de hacerlo sin que le abrieran la puerta. "
+    retrato: {fileID: -7515755925467194108, guid: 160910de44a986b40b7366a30e94e8ff, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Benjam\xEDn el Gnomo"
+    texto: Se ha tenido que ir a casa y todo.
+    retrato: {fileID: -7515755925467194108, guid: 160910de44a986b40b7366a30e94e8ff, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Pero si en casa no tenemos ba\xF1o..."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  opciones: []
