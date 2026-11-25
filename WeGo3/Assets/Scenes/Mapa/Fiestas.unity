@@ -4900,10 +4900,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 969480b7e44700e49980ad024142cbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogoOnTrigger
-  claveFlagRequerida: Pogo_ganado
+  claveFlagRequerida: juego_terminado
   claveFlagAActivarAlSaltar: llamadaMadre
   repetirSiempre: 0
-  cooldownRepeticion: 2
   dialogoAMostrar: {fileID: 11400000, guid: 4ee0349f778e5914884c40499311438a, type: 2}
 --- !u!61 &486529532
 BoxCollider2D:
@@ -9252,7 +9251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32a6edc70af185c4eb16c9f99f38835c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ZonaTransicionPisar2D
-  claveFlagRequerida: llamadaMadre
+  claveFlagRequerida: juego_terminado
   dialogoBloqueo: {fileID: 11400000, guid: baeb262a486b5b9418c027123face86e, type: 2}
   nombreEscenaACargar: Plaza
   memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
@@ -14247,7 +14246,6 @@ MonoBehaviour:
   claveFlagRequerida: Pogo_ganado
   claveFlagAActivarAlSaltar: 
   repetirSiempre: 1
-  cooldownRepeticion: 1
   dialogoAMostrar: {fileID: 11400000, guid: 572bf23d61cf8fa4f903af0a1bac1e4f, type: 2}
 --- !u!61 &1313132863
 BoxCollider2D:
@@ -15997,7 +15995,6 @@ MonoBehaviour:
   claveFlagRequerida: Pogo_ganado
   claveFlagAActivarAlSaltar: Pogo_ganado_d
   repetirSiempre: 0
-  cooldownRepeticion: 2
   dialogoAMostrar: {fileID: 11400000, guid: 6cf4211d53aa2b54da5fab77cb4ad65a, type: 2}
 --- !u!61 &1527307162
 BoxCollider2D:
@@ -17117,11 +17114,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6175019036868475594, guid: a76f8fea72e610a48abab607edfcb029, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.36
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 6175019036868475594, guid: a76f8fea72e610a48abab607edfcb029, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.77
+      value: -10.75
       objectReference: {fileID: 0}
     - target: {fileID: 6175019036868475594, guid: a76f8fea72e610a48abab607edfcb029, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17417,7 +17414,7 @@ Transform:
   m_GameObject: {fileID: 1699335233}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0846353, y: -12.187073, z: -10}
+  m_LocalPosition: {x: -1.0846353, y: -10.750003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18573,7 +18570,7 @@ Transform:
   m_GameObject: {fileID: 1739633865}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.36, y: -12.77, z: -10}
+  m_LocalPosition: {x: -4.5, y: -10.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1322,9 +1322,9 @@ MonoBehaviour:
   musicaFinal: {fileID: 0}
   objetoTextoDifuminado: {fileID: 1705085198}
   objetoCreditos: {fileID: 1237069065}
-  velocidadMovimientoCreditos: 100
+  velocidadMovimientoCreditos: 130
   posicionYObjetivo: 8040
-  nombreEscenaSiguiente: EscenaInicial
+  nombreEscenaSiguiente: TransicionEscenaFinal
   tiempoEsperaAntesDelTexto: 2
   tiempoEsperaAntesDeCamara: 10
   tiempoEsperaAntesDeCreditos: 2.4

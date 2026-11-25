@@ -20,7 +20,8 @@ public class CinematicaFinalDLC : MonoBehaviour
     [Header("Créditos y Movimiento")]
     [SerializeField] private RectTransform objetoCreditos;              // El texto/panel de los créditos (si es UI, usa RectTransform)
     [SerializeField] private float velocidadMovimientoCreditos = 50f;   // Velocidad a la que suben los créditos
-    [SerializeField] private float posicionYObjetivo = 800f;            // Coordenada Y exacta en la que cambiará de escena
+    [SerializeField] private float posicionYObjetivo = 800f;            // Coordenada Y exacta en la que se paran los créditos
+    [SerializeField] private float tiempoEsperaTrasCreditos = 5f;       // Segundos que esperan parados antes de cambiar de escena
     [SerializeField] private string nombreEscenaSiguiente = "MenuPrincipal"; // Escena a la que se viajará al terminar
 
     [Header("Configuración de Tiempos")]
@@ -74,7 +75,11 @@ public class CinematicaFinalDLC : MonoBehaviour
         // PASO 3: Pasados 2 segundos, aparece el texto difuminado
         yield return new WaitForSeconds(tiempoEsperaAntesDelTexto);
 
-        MusicSoundController.Instance.ReproducerMusica("FinalDLC");
+        if (MusicSoundController.Instance != null)
+        {
+            MusicSoundController.Instance.ReproducerMusica("FinalDLC");
+        }
+
         if (objetoTextoDifuminado != null)
         {
             objetoTextoDifuminado.SetActive(true);
@@ -106,9 +111,20 @@ public class CinematicaFinalDLC : MonoBehaviour
                 objetoCreditos.anchoredPosition += Vector2.up * velocidadMovimientoCreditos * Time.deltaTime;
                 yield return null;
             }
+
+            // Paramos exactamente en la posición Y objetivo
+            Vector2 posFinal = objetoCreditos.anchoredPosition;
+            posFinal.y = posicionYObjetivo;
+            objetoCreditos.anchoredPosition = posFinal;
         }
 
-        // PASO 6: Al llegar a la Y en concreto, cambiar de escena con TransicionController
+        // Esperamos 5 segundos (o el valor configurado) con los créditos ya parados
+        if (tiempoEsperaTrasCreditos > 0f)
+        {
+            yield return new WaitForSeconds(tiempoEsperaTrasCreditos);
+        }
+
+        // PASO 6: Cambiar de escena con TransicionController
         if (TransicionController.Instance != null && !string.IsNullOrEmpty(nombreEscenaSiguiente))
         {
             TransicionController.Instance.CargarEscena(nombreEscenaSiguiente);
