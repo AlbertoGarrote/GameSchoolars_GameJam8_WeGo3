@@ -22,7 +22,7 @@ MonoBehaviour:
   opciones:
   - textoOpcion: "S\xED"
     siguienteDialogo: {fileID: 0}
-    escenaACargar: menuInfinito
+    escenaACargar: MenuInfinito
   - textoOpcion: No
     siguienteDialogo: {fileID: 0}
     escenaACargar: 

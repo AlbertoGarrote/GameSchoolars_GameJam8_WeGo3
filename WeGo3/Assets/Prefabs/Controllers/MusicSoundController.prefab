@@ -337,8 +337,6 @@ MonoBehaviour:
     nombreSonidoMusica: Cementerio
   - nombreEscena: GranjeroMinigame
     nombreSonidoMusica: Granjero
-  - nombreEscena: TorneoMinigame
-    nombreSonidoMusica: Torneo
   - nombreEscena: PatosMinigame
     nombreSonidoMusica: Patos
   - nombreEscena: PogoMinijuego
@@ -349,8 +347,6 @@ MonoBehaviour:
     nombreSonidoMusica: Hotel
   - nombreEscena: Fiestas
     nombreSonidoMusica: Fiestas
-  - nombreEscena: BaloncestoMinigame
-    nombreSonidoMusica: Triples
   - nombreEscena: "Monta\xF1a"
     nombreSonidoMusica: "Monta\xF1a"
   - nombreEscena: MenuPrincipal3
@@ -367,8 +363,6 @@ MonoBehaviour:
     nombreSonidoMusica: Tiffanys
   - nombreEscena: TitanesMinijuego
     nombreSonidoMusica: Titanes
-  - nombreEscena: CristalMinijuego
-    nombreSonidoMusica: Cristales
   - nombreEscena: CagarMinijuego
     nombreSonidoMusica: Cagar
   - nombreEscena: Final
@@ -379,6 +373,18 @@ MonoBehaviour:
     nombreSonidoMusica: volley
   - nombreEscena: MinijuegoSubwaySurfers
     nombreSonidoMusica: subway
+  - nombreEscena: BaloncestoMinigame
+    nombreSonidoMusica: Triples
+  - nombreEscena: baloncestoInfinito
+    nombreSonidoMusica: Triples
+  - nombreEscena: TorneoMinigame
+    nombreSonidoMusica: Torneo
+  - nombreEscena: cigarrosInfinito
+    nombreSonidoMusica: Torneo
+  - nombreEscena: CristalMinijuego
+    nombreSonidoMusica: Cristales
+  - nombreEscena: cristalInfinito
+    nombreSonidoMusica: Cristales
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0

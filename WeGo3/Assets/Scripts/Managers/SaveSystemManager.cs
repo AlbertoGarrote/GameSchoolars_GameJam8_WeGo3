@@ -29,10 +29,10 @@ public class SaveSystemManager : MonoBehaviour
         datos.posicionX = posicionGuardado.x;
         datos.posicionY = posicionGuardado.y;
 
-        // Obtenemos las flags activas de tu EstadoJuegoManager
         if (EstadoJuegoManager.Instance != null)
         {
             datos.flagsCompletadas = EstadoJuegoManager.Instance.ObtenerListaFlags();
+            datos.puntuacionesMinijuegos = EstadoJuegoManager.Instance.ObtenerListaPuntuaciones();
         }
 
         string json = JsonUtility.ToJson(datos, true);
@@ -53,10 +53,10 @@ public class SaveSystemManager : MonoBehaviour
         string json = File.ReadAllText(rutaArchivo);
         DatosGuardado datos = JsonUtility.FromJson<DatosGuardado>(json);
 
-        // Restauramos las flags en EstadoJuegoManager
         if (EstadoJuegoManager.Instance != null)
         {
             EstadoJuegoManager.Instance.CargarListaFlags(datos.flagsCompletadas);
+            EstadoJuegoManager.Instance.CargarListaPuntuaciones(datos.puntuacionesMinijuegos);
         }
 
         return datos;

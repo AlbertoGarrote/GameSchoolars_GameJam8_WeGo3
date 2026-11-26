@@ -202,16 +202,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: cigarrosInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &30666634
@@ -1081,16 +1081,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: cristalInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &408614124
@@ -1351,9 +1351,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: Salir
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: EjecutarTransicion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1484,16 +1484,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: pokemonInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &578486888
@@ -1617,16 +1617,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: titanesInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &607928184
@@ -1853,7 +1853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309907875525885632, guid: a4121a9cd6d26314aa8bae36a33a1e6e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1943,16 +1943,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: subwayInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1114169432
@@ -1968,7 +1968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.36320752, g: 1, b: 0.4139157, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.080246925, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2181,6 +2181,7 @@ GameObject:
   - component: {fileID: 1257781587}
   - component: {fileID: 1257781586}
   - component: {fileID: 1257781585}
+  - component: {fileID: 1257781589}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2282,6 +2283,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1257781589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257781584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f17cf7b5580f28409994fb8372b55bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuInifinito
+  nombreEscenaDestino: Desvan
+  memoriaPosicion: {fileID: 11400000, guid: bdec4ace946d5d5489c4aa10f6e2649a, type: 2}
+  posicionEnNuevaEscena: {x: 9.8, y: 7}
 --- !u!1 &1278469033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,16 +2520,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: baloncestoInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1336834628
@@ -2748,7 +2764,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Batalla \nPokemon"
+  m_text: Cagar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}
   m_sharedMaterial: {fileID: -4912272818492799566, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}
@@ -2911,16 +2927,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: volleyInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1465892325
@@ -2936,7 +2952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.36320752, g: 1, b: 0.4139157, a: 1}
+  m_Color: {r: 0.73236406, g: 1, b: 0.25, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3044,16 +3060,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: pogoInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1478371968
@@ -3177,16 +3193,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: granjeroInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1478668885
@@ -3554,7 +3570,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Batalla \nPokemon"
+  m_text: 'Volley
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}
   m_sharedMaterial: {fileID: -4912272818492799566, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}
@@ -3691,7 +3709,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Batalla \nPokemon"
+  m_text: 'Surferos del
+
+    Subway'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}
   m_sharedMaterial: {fileID: -4912272818492799566, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}
@@ -3854,16 +3874,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalController, Assembly-CSharp
-        m_MethodName: CambiarEscena
+      - m_Target: {fileID: 1257781589}
+        m_TargetAssemblyTypeName: MenuInifinito, Assembly-CSharp
+        m_MethodName: IrAEscena
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CadaOvejaMinigame
+          m_StringArgument: cagarInfinito
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2068508504
@@ -3879,7 +3899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.36320752, g: 1, b: 0.4139157, a: 1}
+  m_Color: {r: 0.2216981, g: 0.26843515, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
