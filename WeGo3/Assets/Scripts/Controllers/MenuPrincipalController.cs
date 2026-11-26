@@ -6,6 +6,9 @@ public class MenuPrincipalController : MonoBehaviour
     [SerializeField] private PuntoAparicionSO memoriaPosicion;
     [SerializeField] private Button botonContinuar; // Referencia al botón "Continuar" del menú principal
 
+    [SerializeField] private string escenaGuardado = "Fiestas";
+    [SerializeField] private Vector2 posicionGuardado = new Vector2(-4.5f, -10.75f);
+
     void Start()
     {
         ActualizarEstadoBotonContinuar();
@@ -42,6 +45,48 @@ public class MenuPrincipalController : MonoBehaviour
             if (TransicionController.Instance != null)
             {
                 TransicionController.Instance.CargarEscena(datos.nombreEscena);
+            }
+        }
+    }
+
+    public void BotonContinuar2()
+    {
+        if (EstadoJuegoManager.Instance.EstaFlagActivada("llamadaMadre"))
+        {
+            if (SaveSystemManager.Instance != null && SaveSystemManager.Instance.ExistePartidaGuardada())
+            {
+                DatosGuardado datos = SaveSystemManager.Instance.CargarPartida();
+
+                if (memoriaPosicion != null)
+                {
+                    memoriaPosicion.posicionDestino = new Vector3(datos.posicionX, datos.posicionY, 0f);
+                    memoriaPosicion.usarPosicionGuardada = true;
+                }
+
+                if (TransicionController.Instance != null)
+                {
+                    TransicionController.Instance.CargarEscena(datos.nombreEscena);
+                }
+            }
+        }
+        else
+        {
+            SaveSystemManager.Instance.GuardarPartida(posicionGuardado, escenaGuardado);
+
+            if (SaveSystemManager.Instance != null && SaveSystemManager.Instance.ExistePartidaGuardada())
+            {
+                DatosGuardado datos = SaveSystemManager.Instance.CargarPartida();
+
+                if (memoriaPosicion != null)
+                {
+                    memoriaPosicion.posicionDestino = new Vector3(datos.posicionX, datos.posicionY, 0f);
+                    memoriaPosicion.usarPosicionGuardada = true;
+                }
+
+                if (TransicionController.Instance != null)
+                {
+                    TransicionController.Instance.CargarEscena(datos.nombreEscena);
+                }
             }
         }
     }

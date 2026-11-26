@@ -10,9 +10,8 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     private enum TipoElemento
     {
         VallaBaja,      // Se salta o se cambia de carril
-        BarreraAlta,    // Se agacha/desliza o se cambia de carril
-        TrenCompleto,   // Solo se esquiva cambiando de carril
-        Moneda          // Suma puntos extra
+        BarreraAlta,    // Se agacha/desliza (pasa por debajo cambiando Sorting Layer / Order) o se cambia de carril
+        TrenCompleto    // Solo se esquiva cambiando de carril
     }
 
     private class ElementoPista
@@ -41,23 +40,24 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     [SerializeField] private int vidasMaximas = 3;
     [SerializeField] private TMP_Text textoTemporizador;
     [SerializeField] private TMP_Text textoVidas;
-    [SerializeField] private TMP_Text textoMonedas;
     [SerializeField] private Slider sliderProgresoTiempo;
     [SerializeField] private Slider sliderVidas;
 
-    [Header("Fondo en Bucle (Pixel Art 192x108 -> 1920x1080)")]
-    [Tooltip("Primer tramo del fondo (abajo/inicial).")]
+    [Header("Fondo Infinito (3 GameObjects)")]
     [SerializeField] private Transform fondoA;
-    [Tooltip("Segundo tramo idéntico del fondo colocado justo encima del primero.")]
     [SerializeField] private Transform fondoB;
-    [Tooltip("Si es > 0, usa esta altura exacta en unidades de mundo (o píxeles si es UI). Si es 0, intenta calcularla sola.")]
-    [SerializeField] private float alturaTramoFondo = 0f;
-    [Tooltip("Multiplicador de velocidad del fondo respecto a la velocidad de la pista.")]
+    [SerializeField] private Transform fondoC;
+    [SerializeField] private float limiteInferiorY = -10f; // Cuando baje de esta Y, salta arriba
+    [SerializeField] private float separacionY = 10f;      // Distancia vertical entre fondos (10)
     [SerializeField] private float multiplicadorVelocidadFondo = 1f;
 
     [Header("Jugador y 3 Carriles")]
     [SerializeField] private Transform jugador;
     [SerializeField] private SpriteRenderer spriteJugador;
+    [Tooltip("Nombre del Sorting Layer al que pasa el jugador al pulsar S para pasar por debajo de barreras altas.")]
+    [SerializeField] private string sortingLayerDebajoBarrera = "Default";
+    [Tooltip("Order in Layer que toma el jugador al pulsar S.")]
+    [SerializeField] private int orderInLayerAgachado = 0;
     [SerializeField] private float posicionXCentro = 0f;
     [SerializeField] private float separacionCarriles = 2.5f;
     [SerializeField] private float velocidadCambioCarril = 18f;
@@ -73,7 +73,6 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     [SerializeField] private GameObject prefabVallaBaja;
     [SerializeField] private GameObject prefabBarreraAlta;
     [SerializeField] private GameObject prefabTrenCompleto;
-    [SerializeField] private GameObject prefabMoneda;
     [SerializeField] private float alturaSpawnY = 7f;
     [SerializeField] private float alturaDestruccionY = -7f;
     [SerializeField] private float velocidadInicialPista = 7f;
@@ -83,19 +82,26 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
     [Header("Detección de Impacto e Inmunidad")]
     [SerializeField] private float rangoColisionY = 0.75f;
+    [Tooltip("Rango vertical mayor para trenes por su longitud en Y.")]
+    [SerializeField] private float rangoColisionTrenY = 1.35f;
+    [Tooltip("Margen horizontal respecto al centro del carril para detectar golpe con trenes.")]
+    [SerializeField] private float margenXColisionTren = 0.9f;
     [SerializeField] private float tiempoInvulnerable = 1.2f;
 
     private float tiempoRestante;
     private int vidasActuales;
-    private int monedasRecogidas;
     private bool juegoActivo = false;
 
-    // Fondo
-    private float alturaCalculadaFondo = 0f;
+    // Fondo en mundo 2D (3 GameObjects)
+    private Transform trFondoA;
+    private Transform trFondoB;
+    private Transform trFondoC;
     private Vector3 posInicialFondoA;
     private Vector3 posInicialFondoB;
+    private Vector3 posInicialFondoC;
+    private float pasoFondoMundo = 0f;
 
-    // Estado del jugador
+    // Estado del jugador y Sorting Layer / Order
     private int carrilActual = 1; // 0 = Izquierda, 1 = Centro, 2 = Derecha
     private float alturaSalto = 0f;
     private float velocidadVerticalSalto = 0f;
@@ -103,6 +109,10 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     private bool estaAgachado = false;
     private float temporizadorAgachado = 0f;
     private float temporizadorInvulnerable = 0f;
+
+    private int sortingLayerIDOriginal;
+    private int orderInLayerOriginal;
+    private bool tieneSortingOriginal = false;
 
     private Vector3 escalaBaseJugador = Vector3.one;
     private readonly List<ElementoPista> elementosActivos = new List<ElementoPista>();
@@ -119,45 +129,45 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
             }
         }
 
+        if (spriteJugador != null)
+        {
+            sortingLayerIDOriginal = spriteJugador.sortingLayerID;
+            orderInLayerOriginal = spriteJugador.sortingOrder;
+            tieneSortingOriginal = true;
+        }
+
         ConfigurarFondo();
     }
 
     private void ConfigurarFondo()
     {
-        if (fondoA == null || fondoB == null) return;
+        trFondoA = fondoA != null ? fondoA.transform : null;
+        trFondoB = fondoB != null ? fondoB.transform : null;
+        trFondoC = fondoC != null ? fondoC.transform : null;
 
-        posInicialFondoA = fondoA.position;
-        posInicialFondoB = fondoB.position;
+        if (trFondoA != null) posInicialFondoA = trFondoA.position;
+        if (trFondoB != null) posInicialFondoB = trFondoB.position;
+        if (trFondoC != null) posInicialFondoC = trFondoC.position;
 
-        if (alturaTramoFondo > 0f)
+        if (trFondoA != null)
         {
-            alturaCalculadaFondo = alturaTramoFondo;
-            return;
+            SpriteRenderer sr = trFondoA.GetComponentInChildren<SpriteRenderer>();
+            if (sr != null && sr.sprite != null)
+            {
+                pasoFondoMundo = sr.sprite.bounds.size.y * Mathf.Abs(trFondoA.lossyScale.y);
+            }
+            else if (trFondoB != null && Mathf.Abs(posInicialFondoB.y - posInicialFondoA.y) > 0.01f)
+            {
+                pasoFondoMundo = Mathf.Abs(posInicialFondoB.y - posInicialFondoA.y);
+            }
         }
-
-        RectTransform rectA = fondoA.GetComponent<RectTransform>();
-        if (rectA != null && rectA.rect.height > 0f)
-        {
-            alturaCalculadaFondo = rectA.rect.height * Mathf.Abs(fondoA.lossyScale.y);
-            return;
-        }
-
-        SpriteRenderer srA = fondoA.GetComponent<SpriteRenderer>();
-        if (srA != null && srA.sprite != null)
-        {
-            alturaCalculadaFondo = srA.bounds.size.y;
-            return;
-        }
-
-        alturaCalculadaFondo = Mathf.Abs(fondoB.position.y - fondoA.position.y);
     }
 
     private void ResetearFondo()
     {
-        if (fondoA == null || fondoB == null) return;
-
-        fondoA.position = posInicialFondoA;
-        fondoB.position = posInicialFondoB;
+        if (trFondoA != null) trFondoA.position = posInicialFondoA;
+        if (trFondoB != null) trFondoB.position = posInicialFondoB;
+        if (trFondoC != null) trFondoC.position = posInicialFondoC;
     }
 
     private void Start()
@@ -169,7 +179,6 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
         tiempoRestante = duracionMinijuego;
         vidasActuales = vidasMaximas;
-        monedasRecogidas = 0;
         juegoActivo = false;
 
         ResetearJugador();
@@ -206,7 +215,6 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
         tiempoRestante = duracionMinijuego;
         vidasActuales = vidasMaximas;
-        monedasRecogidas = 0;
         temporizadorSpawn = 0.3f;
         temporizadorInvulnerable = 0f;
         juegoActivo = true;
@@ -223,6 +231,8 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
         estaAgachado = false;
         temporizadorAgachado = 0f;
 
+        RestaurarSortingJugador();
+
         if (jugador != null)
         {
             Vector3 pos = jugador.position;
@@ -233,9 +243,35 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
         if (spriteJugador != null)
         {
+            spriteJugador.flipX = false; // Mira a la derecha por defecto
             Color c = spriteJugador.color;
             c.a = 1f;
             spriteJugador.color = c;
+        }
+    }
+
+    private void AplicarSortingAgachado()
+    {
+        if (spriteJugador == null) return;
+
+        if (!string.IsNullOrEmpty(sortingLayerDebajoBarrera))
+        {
+            int idDestino = SortingLayer.NameToID(sortingLayerDebajoBarrera);
+            if (idDestino != 0 || sortingLayerDebajoBarrera == "Default")
+            {
+                spriteJugador.sortingLayerID = idDestino;
+            }
+        }
+
+        spriteJugador.sortingOrder = orderInLayerAgachado;
+    }
+
+    private void RestaurarSortingJugador()
+    {
+        if (spriteJugador != null && tieneSortingOriginal)
+        {
+            spriteJugador.sortingLayerID = sortingLayerIDOriginal;
+            spriteJugador.sortingOrder = orderInLayerOriginal;
         }
     }
 
@@ -283,28 +319,41 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
     private void ActualizarScrollFondo(float velocidadFondo)
     {
-        if (fondoA == null || fondoB == null || alturaCalculadaFondo <= 0.01f) return;
+        if (fondoA == null || fondoB == null || fondoC == null) return;
 
-        Vector3 desplazamiento = Vector3.down * velocidadFondo * Time.deltaTime;
-        fondoA.position += desplazamiento;
-        fondoB.position += desplazamiento;
+        Vector3 bajada = Vector3.down * Mathf.Abs(velocidadFondo) * Time.deltaTime;
+        fondoA.position += bajada;
+        fondoB.position += bajada;
+        fondoC.position += bajada;
 
-        // Si un tramo baja por completo por debajo de su posición inicial menos su altura,
-        // lo enviamos justo arriba del otro tramo para mantener el bucle sin cortes.
-        float limiteInferiorA = posInicialFondoA.y - alturaCalculadaFondo;
-        if (fondoA.position.y <= limiteInferiorA)
+        // Si A baja de limiteInferiorY -> se coloca encima de C
+        if (fondoA.position.y < limiteInferiorY)
         {
-            Vector3 pos = fondoA.position;
-            pos.y = fondoB.position.y + alturaCalculadaFondo;
-            fondoA.position = pos;
+            fondoA.position = new Vector3(
+                fondoA.position.x,
+                fondoC.position.y + separacionY,
+                fondoA.position.z
+            );
         }
 
-        float limiteInferiorB = posInicialFondoB.y - alturaCalculadaFondo;
-        if (fondoB.position.y <= limiteInferiorB)
+        // Si B baja de limiteInferiorY -> se coloca encima de A
+        if (fondoB.position.y < limiteInferiorY)
         {
-            Vector3 pos = fondoB.position;
-            pos.y = fondoA.position.y + alturaCalculadaFondo;
-            fondoB.position = pos;
+            fondoB.position = new Vector3(
+                fondoB.position.x,
+                fondoA.position.y + separacionY,
+                fondoB.position.z
+            );
+        }
+
+        // Si C baja de limiteInferiorY -> se coloca encima de B
+        if (fondoC.position.y < limiteInferiorY)
+        {
+            fondoC.position = new Vector3(
+                fondoC.position.x,
+                fondoB.position.y + separacionY,
+                fondoC.position.z
+            );
         }
     }
 
@@ -312,8 +361,11 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     {
         if (Keyboard.current == null) return;
 
+        // Cambio de carril (Izquierda / Derecha) + orientación del sprite
         if (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.leftArrowKey.wasPressedThisFrame)
         {
+            if (spriteJugador != null) spriteJugador.flipX = true;
+
             if (carrilActual > 0)
             {
                 carrilActual--;
@@ -322,6 +374,8 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
         }
         else if (Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame)
         {
+            if (spriteJugador != null) spriteJugador.flipX = false;
+
             if (carrilActual < 2)
             {
                 carrilActual++;
@@ -329,6 +383,7 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
             }
         }
 
+        // Saltar (W / Flecha Arriba / Espacio)
         if (Keyboard.current.wKey.wasPressedThisFrame ||
             Keyboard.current.upArrowKey.wasPressedThisFrame ||
             Keyboard.current.spaceKey.wasPressedThisFrame)
@@ -337,11 +392,13 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
             {
                 estaSaltando = true;
                 estaAgachado = false;
+                RestaurarSortingJugador();
                 velocidadVerticalSalto = fuerzaSalto;
                 ReproducirSFXSeguro("Interactuar");
             }
         }
 
+        // Agacharse / Pasar por debajo de barrera alta (S / Flecha Abajo)
         if (Keyboard.current.sKey.wasPressedThisFrame || Keyboard.current.downArrowKey.wasPressedThisFrame)
         {
             if (estaSaltando)
@@ -351,6 +408,7 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
             estaAgachado = true;
             temporizadorAgachado = duracionAgachado;
+            AplicarSortingAgachado();
             ReproducirSFXSeguro("Interactuar");
         }
     }
@@ -383,6 +441,7 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
             if (temporizadorAgachado <= 0f)
             {
                 estaAgachado = false;
+                RestaurarSortingJugador();
             }
         }
 
@@ -420,14 +479,7 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
         for (int c = 0; c < 3; c++)
         {
-            if (c == carrilLibre)
-            {
-                if (prefabMoneda != null && Random.value < 0.65f)
-                {
-                    InstanciarElemento(TipoElemento.Moneda, c);
-                }
-                continue;
-            }
+            if (c == carrilLibre) continue;
 
             if (Random.value < 0.72f)
             {
@@ -456,7 +508,6 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
             case TipoElemento.VallaBaja: prefab = prefabVallaBaja; break;
             case TipoElemento.BarreraAlta: prefab = prefabBarreraAlta; break;
             case TipoElemento.TrenCompleto: prefab = prefabTrenCompleto; break;
-            case TipoElemento.Moneda: prefab = prefabMoneda; break;
         }
 
         if (prefab == null) return;
@@ -477,6 +528,8 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     {
         if (jugador == null) return;
 
+        if (elementosActivos.Count < 0) return;
+
         for (int i = elementosActivos.Count - 1; i >= 0; i--)
         {
             ElementoPista elem = elementosActivos[i];
@@ -488,12 +541,18 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
             elem.obj.transform.position += Vector3.down * velocidadActual * Time.deltaTime;
 
-            if (!elem.procesado && Mathf.Abs(elem.obj.transform.position.y - jugador.position.y) <= rangoColisionY)
+            float rangoY = (elem.tipo == TipoElemento.TrenCompleto) ? rangoColisionTrenY : rangoColisionY;
+            bool dentroEnY = Mathf.Abs(elem.obj.transform.position.y - jugador.position.y) <= rangoY;
+
+            bool coincideCarrilOEnTren = (elem.carril == carrilActual);
+            if (!coincideCarrilOEnTren && elem.tipo == TipoElemento.TrenCompleto)
             {
-                if (elem.carril == carrilActual)
-                {
-                    EvaluarInteraccion(elem);
-                }
+                coincideCarrilOEnTren = Mathf.Abs(elem.obj.transform.position.x - jugador.position.x) <= margenXColisionTren;
+            }
+
+            if (!elem.procesado && dentroEnY && coincideCarrilOEnTren)
+            {
+                EvaluarInteraccion(elem);
             }
 
             if (elem.obj != null && elem.obj.transform.position.y <= alturaDestruccionY)
@@ -506,15 +565,6 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
     private void EvaluarInteraccion(ElementoPista elem)
     {
-        if (elem.tipo == TipoElemento.Moneda)
-        {
-            elem.procesado = true;
-            monedasRecogidas++;
-            ReproducirSFXSeguro("Acierto");
-            Destroy(elem.obj);
-            return;
-        }
-
         bool esquivado = false;
         if (elem.tipo == TipoElemento.VallaBaja && estaSaltando && alturaSalto > 0.35f)
         {
@@ -578,11 +628,6 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
             textoVidas.text = $"{vidasActuales} / {vidasMaximas}";
         }
 
-        if (textoMonedas != null)
-        {
-            textoMonedas.text = $"{monedasRecogidas}";
-        }
-
         if (sliderProgresoTiempo != null)
         {
             sliderProgresoTiempo.minValue = 0f;
@@ -609,6 +654,7 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     private void GanarMinijuego()
     {
         juegoActivo = false;
+        RestaurarSortingJugador();
         StopAllCoroutines();
         LimpiarPista();
 
@@ -619,6 +665,7 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
     private void PerderMinijuego()
     {
         juegoActivo = false;
+        RestaurarSortingJugador();
         StopAllCoroutines();
         LimpiarPista();
 
@@ -628,6 +675,8 @@ public class MinijuegoSubwaySurfers : MonoBehaviour
 
     public void volverGym(bool victoriaConseguida)
     {
+        RestaurarSortingJugador();
+
         if (victoriaConseguida)
         {
             if (EstadoJuegoManager.Instance != null && !string.IsNullOrEmpty(flagVictoria))

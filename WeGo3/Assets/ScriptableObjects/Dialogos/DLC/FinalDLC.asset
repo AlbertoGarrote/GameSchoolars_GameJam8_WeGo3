@@ -18,61 +18,44 @@ MonoBehaviour:
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
-    texto: "Hombre, bello durmiente, \xBFqu\xE9 tal has descansado?"
+    texto: "\xBFQu\xE9 tal, Wego? Te noto algo diferente."
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
-    texto: Hola, hijo. Le he avisado yo.
+    texto: 'Tu amigo me ha contado todo lo que has hecho por los vecinos de WeGoTown. '
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
   - nombrePersonaje: 
-    texto: "\xBFT\xFA sab\xEDas d\xF3nde estaba todo este tiempo?"
-    retrato: {fileID: 0}
-    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
-  - nombrePersonaje: 
-    texto: "Tu amigo y yo planeamos todo esto. Nos preocupabas, as\xED que le dije
-      que hiciera el plan de ir a la fiesta contigo para que te despejaras."
+    texto: Estoy muy orgullosa de ti.
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
   - nombrePersonaje: 
-    texto: "No s\xE9 si ha funcionado mucho, sigo pensando en lo que te dije ayer..."
-    retrato: {fileID: 0}
-    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
-  - nombrePersonaje: 
-    texto: "No es un cambio que se hace de la noche a la ma\xF1ana, Wego. Pero centr\xE1te
-      en lo que te expliqu\xE9: "
-    retrato: {fileID: 0}
-    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
-  - nombrePersonaje: 
-    texto: "Intenta vivir tu vida. Rod\xE9ate de gente que te haga el mismo bien
-      que t\xFA le haces a ellos."
-    retrato: {fileID: 0}
-    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
-  - nombrePersonaje: 
-    texto: "Y disfruta de las peque\xF1as cosas que te brinda la vida, como este
-      amanecer tan bonito."
-    retrato: {fileID: 0}
-    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
-  - nombrePersonaje: 
-    texto: "...creo que tienes raz\xF3n, mam\xE1... Muchas gracias a los dos, de
-      verdad."
-    retrato: {fileID: 0}
-    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
-  - nombrePersonaje: 
-    texto: "No hay de qu\xE9, ya sabes que si quieres hacer cualquier plan, aqu\xED
-      me tienes."
+    texto: "Es posible que dar tanto la nota no est\xE9 tan mal, siempre y cuando
+      sea como lo haces t\xFA."
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
   - nombrePersonaje: 
-    texto: Me apunto a lo que sea.
+    texto: "\xBFT\xFA crees?"
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   - nombrePersonaje: 
-    texto: "De momento, chicos, disfrutemos de este amanecer un poco m\xE1s."
+    texto: En la vida, cada uno elige su propio camino.
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
   - nombrePersonaje: 
-    texto: "S\xED... Hag\xE1moslo..."
+    texto: "Me gusta mucho el que has elegido t\xFA."
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 63ac06d826ef2904c98a43a3891ddb3e, type: 3}
+  - nombrePersonaje: 
+    texto: Muchas gracias... a los dos.
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: 
+    texto: Ahora disfrutemos de este amanecer todos juntos.
+    retrato: {fileID: 0}
+    sonidoVoz: {fileID: 8300000, guid: 0f450ea706440784b892277334fab526, type: 3}
+  - nombrePersonaje: 
+    texto: Claro, juntos.
     retrato: {fileID: 0}
     sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

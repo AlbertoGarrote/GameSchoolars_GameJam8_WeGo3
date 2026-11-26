@@ -13,8 +13,16 @@ MonoBehaviour:
   m_Name: "ni\xF1oAntes"
   m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
   lineas:
-  - nombrePersonaje: 
-    texto: "Jooo, no me puedo pasar este juego. Ay\xFAdame."
-    retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
-    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Estas juventudes... todo el d\xEDa con la pantalla."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: Ipad Kid
+    texto: "\xA1Wego! \xBFHas jugado al surfeadores del Subway? \xA1Sales t\xFA!"
+    retrato: {fileID: 8812940694987223254, guid: 781c974cef6c7d44f93a6bf707d98c70, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: "Si hombre, qu\xE9 guapo. A ver, dame la maquinita."
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
   opciones: []

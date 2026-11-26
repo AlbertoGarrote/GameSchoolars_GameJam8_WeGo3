@@ -21,4 +21,12 @@ MonoBehaviour:
     texto: Y dale... QUE NO SOY ESE TAL GORROTO.
     retrato: {fileID: -884595802290766163, guid: 43d1e4dfebd36fa45995b4c64fdbb0d9, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
+  - nombrePersonaje: Wegojimson
+    texto: Hostia, perdona, siempre os confundo. Lo siento, Xobo.
+    retrato: {fileID: 1990822097062845535, guid: 7cb46cc978a731149bdbd6eb0d21a080, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 4d44b46eedbfadc48bdcd96c28bfb0d3, type: 3}
+  - nombrePersonaje: AlexElCapo
+    texto: "Me cago en tu put\xEDsima madre."
+    retrato: {fileID: -884595802290766163, guid: 43d1e4dfebd36fa45995b4c64fdbb0d9, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones: []

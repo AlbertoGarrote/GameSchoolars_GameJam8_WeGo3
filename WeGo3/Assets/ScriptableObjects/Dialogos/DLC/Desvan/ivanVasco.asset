@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b08e0677fcb01489e01d1098416517, type: 3}
+  m_Name: ivanVasco
+  m_EditorClassIdentifier: Assembly-CSharp::DialogoSO
+  lineas:
+  - nombrePersonaje: "Iv\xE1n"
+    texto: "\xBFSab\xEDas que, si un enjambre se escapa, su due\xF1o tiene derecho
+      a perseguirlo por terrenos ajenos?"
+    retrato: {fileID: -7053689455348574336, guid: fb3511a69b10cfe49bff3f3657be7ca3, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Iv\xE1n"
+    texto: "Pero, si deja de perseguirlo durante dos d\xEDas, pierde la propiedad
+      para siempre y el due\xF1o de la finca donde aterricen las abejas se las puede
+      quedar."
+    retrato: {fileID: -7053689455348574336, guid: fb3511a69b10cfe49bff3f3657be7ca3, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  - nombrePersonaje: "Iv\xE1n"
+    texto: "El WegoC\xF3digo Civil de WegoTown nunca dejar\xE1 de sorprenderme."
+    retrato: {fileID: -7053689455348574336, guid: fb3511a69b10cfe49bff3f3657be7ca3, type: 3}
+    sonidoVoz: {fileID: 8300000, guid: 9cade6e64582c344694f51611d488223, type: 3}
+  opciones: []

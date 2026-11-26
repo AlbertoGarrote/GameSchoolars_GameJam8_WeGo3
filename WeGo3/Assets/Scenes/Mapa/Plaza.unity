@@ -1364,6 +1364,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3118924620691678567, guid: 9abfc0bddfe1fe44a85ee8fca1ba182a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 87828581}
+    - targetCorrespondingSourceObject: {fileID: 3118924620691678567, guid: 9abfc0bddfe1fe44a85ee8fca1ba182a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 435682573}
+    - targetCorrespondingSourceObject: {fileID: 3118924620691678567, guid: 9abfc0bddfe1fe44a85ee8fca1ba182a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 435682572}
   m_SourcePrefab: {fileID: 100100000, guid: 9abfc0bddfe1fe44a85ee8fca1ba182a, type: 3}
 --- !u!1 &87828577 stripped
 GameObject:
@@ -1383,6 +1389,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogoPorFlags
   flagsAactivables:
+  - nombreIdentificador: 
+    flagRequerida: Pogo_ganado
+    smartObject: {fileID: 435682572}
   - nombreIdentificador: 
     flagRequerida: Patos_ganado
     smartObject: {fileID: 87828586}
@@ -4726,6 +4735,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3383980605961978388, guid: 9abfc0bddfe1fe44a85ee8fca1ba182a, type: 3}
   m_PrefabInstance: {fileID: 87828576}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &435682572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87828577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d5fc5b5cfdf340469123e657939c4fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SmartObject2D
+  iconoInteraccion: {fileID: 87828580}
+  acciones:
+  - {fileID: 435682573}
+  deUnSoloUso: 0
+--- !u!114 &435682573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87828577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2759aaaadd8415469d61301969921df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccionDialogo
+  dialogoAExhibir: {fileID: 11400000, guid: 5a9f14791039584409e3597de926351e, type: 2}
 --- !u!1 &444090136
 GameObject:
   m_ObjectHideFlags: 0
@@ -16398,7 +16436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8309907875525885632, guid: a4121a9cd6d26314aa8bae36a33a1e6e, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

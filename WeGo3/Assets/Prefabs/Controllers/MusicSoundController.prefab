@@ -308,6 +308,12 @@ MonoBehaviour:
     pitch: 0.8
     esMusica: 1
     loop: 1
+  - nombreIdentificador: subway
+    clip: {fileID: 8300000, guid: 4e3c7c9cc898e904aa70939522b27ad6, type: 3}
+    volumen: 0.05
+    pitch: 1
+    esMusica: 1
+    loop: 1
   musicaPorEscenaList:
   - nombreEscena: Plaza
     nombreSonidoMusica: Plaza
@@ -371,6 +377,8 @@ MonoBehaviour:
     nombreSonidoMusica: madre
   - nombreEscena: MinijuegoVolley
     nombreSonidoMusica: volley
+  - nombreEscena: MinijuegoSubwaySurfers
+    nombreSonidoMusica: subway
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0
