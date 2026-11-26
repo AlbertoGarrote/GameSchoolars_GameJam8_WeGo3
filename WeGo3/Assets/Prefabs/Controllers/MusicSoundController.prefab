@@ -355,16 +355,12 @@ MonoBehaviour:
     nombreSonidoMusica: Hogar
   - nombreEscena: wegoffanys
     nombreSonidoMusica: Tiffanys
-  - nombreEscena: TitanesMinijuego
-    nombreSonidoMusica: Titanes
   - nombreEscena: CagarMinijuego
     nombreSonidoMusica: Cagar
   - nombreEscena: Final
     nombreSonidoMusica: olas
   - nombreEscena: MadreMinijuego
     nombreSonidoMusica: madre
-  - nombreEscena: MinijuegoVolley
-    nombreSonidoMusica: volley
   - nombreEscena: BaloncestoMinigame
     nombreSonidoMusica: Triples
   - nombreEscena: baloncestoInfinito
@@ -393,6 +389,14 @@ MonoBehaviour:
     nombreSonidoMusica: subway
   - nombreEscena: subwayInfinito
     nombreSonidoMusica: subway
+  - nombreEscena: TitanesMinijuego
+    nombreSonidoMusica: Titanes
+  - nombreEscena: titanesInfinito
+    nombreSonidoMusica: Titanes
+  - nombreEscena: MinijuegoVolley
+    nombreSonidoMusica: volley
+  - nombreEscena: volleyInfinito
+    nombreSonidoMusica: volley
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0

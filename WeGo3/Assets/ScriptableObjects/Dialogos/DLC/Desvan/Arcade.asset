@@ -15,8 +15,7 @@ MonoBehaviour:
   lineas:
   - nombrePersonaje: 
     texto: "Bienvenido al modo arcade, \xBFquieres jugar?\n(recuerda guardar partida
-      para que se guarden las puntuaciones despu\xE9s de jugar. Por si sales del
-      juego.)"
+      para que se guarden las puntuaciones. Por si sales del juego.)"
     retrato: {fileID: 6593822253507500307, guid: e2efca1492facd84e8acfae49a724baa, type: 3}
     sonidoVoz: {fileID: 8300000, guid: 813eecc38417e4c45b01a53a0ad0d899, type: 3}
   opciones:
