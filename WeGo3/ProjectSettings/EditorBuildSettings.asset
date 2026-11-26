@@ -152,6 +152,36 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinijuegosDLC/MinijuegoSubwaySurfers.unity
     guid: c7637c78bbd984a45a09e24013451380
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/baloncestoInfinito.unity
+    guid: 357c689960a33124c80fd04d3610fb6b
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/cagarInfinito.unity
+    guid: 9b2c1461847ef894e9a983034039ec26
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/granjeroInfinito.unity
+    guid: 48fc71ded200b3844bb8b5cef080d63a
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/cristalInfinito.unity
+    guid: cc29c27afb9a72b478689151ec628bfd
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/cigarrosInfinito.unity
+    guid: c9198b9b0c240b647a4757a3702438f5
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/pokemonInfinito.unity
+    guid: 414acea329f2246498adbbe162012dd1
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/subwayInfinito.unity
+    guid: 72b3f74120099204ca37f13e8f4fa8bf
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/titanesInfinito.unity
+    guid: 025893993b99b2d499b548a279c63385
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/volleyInfinito.unity
+    guid: 46159838df989c147892fb90a2aae57e
+  - enabled: 1
+    path: Assets/Scenes/MinijuegosDLC/modoInfinito/pogoInfinito.unity
+    guid: 0dde800436b8c35449b956aafd068795
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
