@@ -327,8 +327,6 @@ MonoBehaviour:
     nombreSonidoMusica: minijuego1
   - nombreEscena: CuandoLlueveMinijuego
     nombreSonidoMusica: minijuego1
-  - nombreEscena: BatallaPokemonMinigame
-    nombreSonidoMusica: Batalla
   - nombreEscena: Gym
     nombreSonidoMusica: Gym
   - nombreEscena: PistaBaloncesto
@@ -367,8 +365,6 @@ MonoBehaviour:
     nombreSonidoMusica: madre
   - nombreEscena: MinijuegoVolley
     nombreSonidoMusica: volley
-  - nombreEscena: MinijuegoSubwaySurfers
-    nombreSonidoMusica: subway
   - nombreEscena: BaloncestoMinigame
     nombreSonidoMusica: Triples
   - nombreEscena: baloncestoInfinito
@@ -389,6 +385,14 @@ MonoBehaviour:
     nombreSonidoMusica: Pogo
   - nombreEscena: pogoInfinito
     nombreSonidoMusica: Pogo
+  - nombreEscena: BatallaPokemonMinigame
+    nombreSonidoMusica: Batalla
+  - nombreEscena: pokemonInfinito
+    nombreSonidoMusica: Batalla
+  - nombreEscena: MinijuegoSubwaySurfers
+    nombreSonidoMusica: subway
+  - nombreEscena: subwayInfinito
+    nombreSonidoMusica: subway
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0
