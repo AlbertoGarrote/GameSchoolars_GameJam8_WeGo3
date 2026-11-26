@@ -172,7 +172,7 @@ MonoBehaviour:
     loop: 1
   - nombreIdentificador: Pogo
     clip: {fileID: 8300000, guid: d342f731c1c338148ac55c4668fef8b3, type: 3}
-    volumen: 0.1
+    volumen: 0.05
     pitch: 1
     esMusica: 1
     loop: 1
@@ -335,12 +335,8 @@ MonoBehaviour:
     nombreSonidoMusica: PistaBaloncesto
   - nombreEscena: Cementerio
     nombreSonidoMusica: Cementerio
-  - nombreEscena: GranjeroMinigame
-    nombreSonidoMusica: Granjero
   - nombreEscena: PatosMinigame
     nombreSonidoMusica: Patos
-  - nombreEscena: PogoMinijuego
-    nombreSonidoMusica: Pogo
   - nombreEscena: ExteriorHotel
     nombreSonidoMusica: Plaza
   - nombreEscena: Hotel
@@ -385,6 +381,14 @@ MonoBehaviour:
     nombreSonidoMusica: Cristales
   - nombreEscena: cristalInfinito
     nombreSonidoMusica: Cristales
+  - nombreEscena: GranjeroMinigame
+    nombreSonidoMusica: Granjero
+  - nombreEscena: granjeroInfinito
+    nombreSonidoMusica: Granjero
+  - nombreEscena: PogoMinijuego
+    nombreSonidoMusica: Pogo
+  - nombreEscena: pogoInfinito
+    nombreSonidoMusica: Pogo
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0
