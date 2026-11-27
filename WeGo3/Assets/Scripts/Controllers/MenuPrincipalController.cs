@@ -51,12 +51,20 @@ public class MenuPrincipalController : MonoBehaviour
 
     public void BotonContinuar2()
     {
+        DatosGuardado datos = SaveSystemManager.Instance.CargarPartida();
+
+        EstadoJuegoManager.Instance.CargarListaFlags(datos.flagsCompletadas);
+
+        EstadoJuegoManager.Instance.ActivarFlag("juego_terminado");
+        EstadoJuegoManager.Instance.ActivarFlag("Pogo_ganado");
+        EstadoJuegoManager.Instance.ActivarFlag("Patos_ganado");
+        EstadoJuegoManager.Instance.ActivarFlag("Triples_ganado");
+
         if (EstadoJuegoManager.Instance.EstaFlagActivada("llamadaMadre"))
         {
             if (SaveSystemManager.Instance != null && SaveSystemManager.Instance.ExistePartidaGuardada())
             {
-                DatosGuardado datos = SaveSystemManager.Instance.CargarPartida();
-
+              
                 if (memoriaPosicion != null)
                 {
                     memoriaPosicion.posicionDestino = new Vector3(datos.posicionX, datos.posicionY, 0f);
@@ -75,7 +83,6 @@ public class MenuPrincipalController : MonoBehaviour
 
             if (SaveSystemManager.Instance != null && SaveSystemManager.Instance.ExistePartidaGuardada())
             {
-                DatosGuardado datos = SaveSystemManager.Instance.CargarPartida();
 
                 if (memoriaPosicion != null)
                 {

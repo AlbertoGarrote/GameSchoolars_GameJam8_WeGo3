@@ -6119,7 +6119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogoPorFlags
   flagsAactivables:
   - nombreIdentificador: 
-    flagRequerida: Pogo_ganado
+    flagRequerida: juego_terminado
     smartObject: {fileID: 591197531}
   smartObjectPorDefecto: {fileID: 591197528}
 --- !u!1 &592705107
@@ -18181,7 +18181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3647761137893941b53dc0ecf34f88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VerificadorFlagObjeto
-  claveFlagRequerida: Pogo_ganado
+  claveFlagRequerida: juego_terminado
   ocultarSiFlagActivada: 1
   objetoAfectado: {fileID: 1713694955}
 --- !u!4 &1790302661
@@ -18213,7 +18213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3647761137893941b53dc0ecf34f88d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VerificadorFlagObjeto
-  claveFlagRequerida: Pogo_ganado
+  claveFlagRequerida: juego_terminado
   ocultarSiFlagActivada: 0
   objetoAfectado: {fileID: 968370473}
 --- !u!1 &1792036987

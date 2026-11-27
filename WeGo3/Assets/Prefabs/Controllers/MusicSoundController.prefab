@@ -355,8 +355,6 @@ MonoBehaviour:
     nombreSonidoMusica: Hogar
   - nombreEscena: wegoffanys
     nombreSonidoMusica: Tiffanys
-  - nombreEscena: CagarMinijuego
-    nombreSonidoMusica: Cagar
   - nombreEscena: Final
     nombreSonidoMusica: olas
   - nombreEscena: MadreMinijuego
@@ -397,6 +395,10 @@ MonoBehaviour:
     nombreSonidoMusica: volley
   - nombreEscena: volleyInfinito
     nombreSonidoMusica: volley
+  - nombreEscena: CagarMinijuego
+    nombreSonidoMusica: Cagar
+  - nombreEscena: cagarInfinito
+    nombreSonidoMusica: Cagar
 --- !u!1 &6612260940733513191
 GameObject:
   m_ObjectHideFlags: 0

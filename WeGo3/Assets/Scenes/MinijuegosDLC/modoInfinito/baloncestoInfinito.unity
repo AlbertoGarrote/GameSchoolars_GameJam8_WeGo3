@@ -3064,7 +3064,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Haz click cuando la bola est\xE9 en la zona verde. Si fallas te restar\xE1
-    puntos. Consigue la myor puntuaci\xF3n en 30 segundos."
+    puntos. Consigue la mayor puntuaci\xF3n en 30 segundos."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}
   m_sharedMaterial: {fileID: -4912272818492799566, guid: 6bbe6085374b5374e8b7cc04617bf084, type: 2}

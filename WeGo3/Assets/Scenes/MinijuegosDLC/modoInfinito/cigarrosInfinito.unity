@@ -4544,9 +4544,9 @@ MonoBehaviour:
   prefabPelota: {fileID: 8921839202819393146, guid: e63ca59aa6f05f240893320c0ee6755d, type: 3}
   prefabRectangulo: {fileID: 492518122802607750, guid: 1917042b6c5c2ec49ab8b8dbbef7236e, type: 3}
   prefabBalaRapida: {fileID: 8921839202819393146, guid: 0238d4db013bdd14fa5cd056153bb2e9, type: 3}
-  velocidadPelota: 5
+  velocidadPelota: 6
   velocidadRectangulo: 4.5
-  velocidadBalaRapida: 10
+  velocidadBalaRapida: 13
   intervaloSpawn: 0.7
   puntosSpawnPelota:
   - {fileID: 586911889}
